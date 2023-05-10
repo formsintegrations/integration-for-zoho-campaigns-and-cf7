@@ -1,0 +1,27 @@
+{
+  "name": "formsintegrations/zcforminator",
+  "description": "An Integration plugin for wordpress",
+  "license": "gpl-2",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "FormInteg\\ZOCACFLite\\": "includes/"
+    }
+  },
+  "scripts": {
+    "lint": "./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
+    "unused:variable": "phpcs -p --standard=VariableAnalysis includes",
+    "compat": "./vendor/bin/phpcs -p ./includes --standard=PHPCompatibilityWP --runtime-set testVersion 5.6-"
+   },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.10",
+    "sirbrillig/phpcs-variable-analysis": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "phpcompatibility/phpcompatibility-wp": "*"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+const params = new URLSearchParams(window.location.search)
+export const configs = params.has('page') ? window[params.get('page').replace('-', '_')] : {}
+
+export const slug = params.has('page') ? params.get('page') : ''
+export const nonce = configs?.nonce
+export const prefix = configs?.prefix
+export const trigger = configs?.trigger
+export const action = configs?.action
+export const appTitle = configs?.title
+export const assetsURL = configs?.assetsURL
+export const baseURL = configs?.baseURL || `${window.location.pathname + window.location.search}#`
+export const siteURL = configs?.siteURL
+export const ajaxURL = configs?.ajaxURL
+export const proUrl = configs?.proUrl
+export const isPro = configs?.isPro
+export const api = configs?.api
+export const dateFormat = configs?.dateFormat
+export const timeFormat = configs?.timeFormat
+export const timeZone = configs?.timeZone
+export const userMail = configs?.userMail
