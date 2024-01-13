@@ -9,3 +9,4 @@ frontend-dev/.eslintrc.js
 .vscode/settings.json
 .idea
 .php-cs-fixer.cache
+pnpm-lock.yaml
