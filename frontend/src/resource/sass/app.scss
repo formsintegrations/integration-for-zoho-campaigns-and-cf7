@@ -1,8 +1,8 @@
 :root {
   --tooltip-txt: "";
-  --tt-left    : 50%;
-  --tt-width   : auto;
-  --tt-wrap    : nowrap;
+  --tt-left: 50%;
+  --tt-width: auto;
+  --tt-wrap: nowrap;
 }
 
 ::-webkit-datetime-edit {
@@ -15,25 +15,25 @@
 //$light-bg: #f2f3f7;
 //$light-bg: #eaf0f7;
 // $bg: #f2f3f7;
-$bdr-rad      : 0px;
-$prim         : #99e3ff;
-$blue         : #0069ff;
+$bdr-rad : 0px;
+$prim : #99e3ff;
+$blue : #0069ff;
 $light-blue-bg: #f0f5ff;
-$dp-blue      : #031b4e;
-$dp-bg        : #13233c;
-$light-bg     : #fff;
-$light-txt    : #8fa4bd;
-$bg           : #f7f8fc;
-$red          : #ff4646;
-$dp-txt       : #545582;
-$gray         : #e2e2e2;
+$dp-blue : #031b4e;
+$dp-bg : #13233c;
+$light-bg : #fff;
+$light-txt : #8fa4bd;
+$bg : #f7f8fc;
+$red : #ff4646;
+$dp-txt : #545582;
+$gray : #e2e2e2;
 $select-arrow : "data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3C!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ --%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='22' width='22' y='-1' x='-1'/%3E%3Cg display='none' overflow='visible' y='0' x='0' height='100%25' width='100%25' id='canvasGrid'%3E%3Crect fill='url(%23gridpattern)' stroke-width='0' y='0' x='0' height='100%25' width='100%25'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cline transform='rotate(45 9.707600593566898,10.544168472290037) ' stroke-linecap='undefined' stroke-linejoin='undefined' id='svg_2' y2='14.860267' x2='9.7076' y1='6.228069' x1='9.7076' stroke-width='1.5' stroke='%238c8c8c' fill='none'/%3E%3Cline transform='rotate(-45 4.444442749023432,10.544166564941404) ' stroke-linecap='undefined' stroke-linejoin='undefined' id='svg_1' y2='14.860266' x2='4.444443' y1='6.228067' x1='4.444443' stroke-width='1.5' stroke='%238c8c8c' fill='none'/%3E%3C/g%3E%3C/svg%3E";
 
 html,
 body {
   background: white;
-  margin    : 0;
-  padding   : 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -42,20 +42,20 @@ a {
 
 a:active,
 a:hover {
-  color     : #005ca7;
+  color: #005ca7;
   box-shadow: none;
 }
 
 #btcd-app {
-  color                  : $dp-blue;
-  direction              : ltr !important;
-  font-family            : "Montserrat", sans-serif !important;
-  -webkit-font-smoothing : antialiased;
+  color: $dp-blue;
+  direction: ltr !important;
+  font-family: "Montserrat", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height             : 82vh;
-  height                 : auto;
-  font-size              : 16px;
-  background-color       : #f5f8ff;
+  min-height: 82vh;
+  height: auto;
+  font-size: 16px;
+  background-color: #f5f8ff;
 
   & a {
     text-decoration: none;
@@ -63,14 +63,14 @@ a:hover {
 }
 
 * {
-  box-sizing : border-box;
+  box-sizing: border-box;
   line-height: 1;
 }
 
 // WP OVERRIDE START
 
 #wpcontent {
-  background  : #f5f8ff;
+  background: #f5f8ff;
   padding-left: 0;
 }
 
@@ -100,12 +100,12 @@ a:hover {
 
 .wp-core-ui .attachment-preview {
   border-radius: 8px !important;
-  overflow     : hidden;
+  overflow: hidden;
 }
 
 .media-toolbar .button-primary {
-  background   : $blue !important;
-  color        : white !important;
+  background: $blue !important;
+  color: white !important;
   border-radius: 20px !important;
 
   &:hover {
@@ -116,7 +116,7 @@ a:hover {
 .wp-core-ui .button-primary:disabled,
 .wp-core-ui .button-primary[disabled] {
   background: transparentize($blue, 0.6) !important;
-  color     : white !important;
+  color: white !important;
 }
 
 .media-sidebar {
@@ -128,7 +128,7 @@ a:hover {
 }
 
 .thumbnail {
-  overflow     : hidden;
+  overflow: hidden;
   border-radius: 8px;
 }
 
@@ -160,9 +160,9 @@ button.check {
   & input,
   textarea,
   select {
-    height       : auto I !important;
+    height: auto I !important;
     border-radius: 8px !important;
-    border-color : lightgray !important;
+    border-color: lightgray !important;
 
     &:hover {
       border-color: gray !important;
@@ -170,7 +170,7 @@ button.check {
 
     &:focus {
       border-color: $blue !important;
-      box-shadow  : 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
+      box-shadow: 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
     }
   }
 }
@@ -217,7 +217,7 @@ input[type="checkbox"].disabled:checked:before {
 
 .o-a {
   overflow: auto;
-  height  : 100%;
+  height: 100%;
 }
 
 .font-w-m {
@@ -241,8 +241,8 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .bg-pro {
-  background   : lightgoldenrodyellow;
-  padding      : 20px;
+  background: lightgoldenrodyellow;
+  padding: 20px;
   border-radius: 8px;
 }
 
@@ -263,49 +263,49 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .upsert_rec {
-  display      : block;
+  display: block;
   border-radius: 8px;
-  border       : 1px solid lightgray;
-  padding      : 5px 10px;
-  cursor       : -webkit-grab;
-  cursor       : grab;
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .pro-blur {
-  background             : #07316f38;
-  position               : absolute;
-  top                    : -15px;
-  left                   : -20px;
-  height                 : 115%;
-  justify-content        : center;
-  width                  : 115%;
-  border-radius          : 8px;
+  background: #07316f38;
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  height: 115%;
+  justify-content: center;
+  width: 115%;
+  border-radius: 8px;
   -webkit-backdrop-filter: blur(1px);
-  backdrop-filter        : blur(1px);
-  z-index                : 9;
+  backdrop-filter: blur(1px);
+  z-index: 9;
 
   & .pro {
-    background      : white;
-    padding         : 12px 21px;
-    border-radius   : 10px;
+    background: white;
+    padding: 12px 21px;
+    border-radius: 10px;
     background-color: white;
-    box-shadow      : 0px 0 29px -9px rgb(30, 29, 63);
+    box-shadow: 0px 0 29px -9px rgb(30, 29, 63);
   }
 }
 
 .unselectable {
-  -moz--ms-user-select   : none;
-  -webkit-user-select    : none;
+  -moz--ms-user-select: none;
+  -webkit-user-select: none;
   -webkit--ms-user-select: none;
-  -webkit-user-select    : none;
-  -ms--ms-user-select    : none;
-  -webkit-user-select    : none;
-  -ms-user-select        : none;
-  -webkit-user-select    : none;
-  -webkit-user-drag      : none;
-  user-select            : none;
+  -webkit-user-select: none;
+  -ms--ms-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
   // user-drag: none;
-  pointer-events         : none;
+  pointer-events: none;
 }
 
 .drag-enter {
@@ -314,7 +314,7 @@ input[type="checkbox"].disabled:checked:before {
 
 //scroll bar style start
 ::-webkit-scrollbar {
-  width : 10px;
+  width: 10px;
   height: 10px;
 }
 
@@ -323,12 +323,12 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 ::-webkit-scrollbar-track:hover {
-  background   : #f1f1f1;
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background   : #dcdcdc;
+  background: #dcdcdc;
   border-radius: 10px;
 }
 
@@ -339,7 +339,7 @@ input[type="checkbox"].disabled:checked:before {
 //scroll bar style end
 
 [draggable="true"] {
-  -khtml-user-drag : element;
+  -khtml-user-drag: element;
   -webkit-user-drag: element;
 }
 
@@ -354,7 +354,7 @@ input[type="checkbox"].disabled:checked:before {
 .blue {
   //background: $blue !important;
   background: linear-gradient(145deg, $blue, #097fe6) !important;
-  color     : white !important;
+  color: white !important;
 
   &:hover {
     //background: #016fcf !important;
@@ -373,7 +373,7 @@ input[type="checkbox"].disabled:checked:before {
 
 .dp-blue {
   background: $dp-bg !important;
-  color     : white !important;
+  color: white !important;
 
   &:hover {
     background: rgb(28, 43, 83) !important;
@@ -386,7 +386,7 @@ input[type="checkbox"].disabled:checked:before {
 
 .green {
   background: #00f8a4;
-  color     : #022217;
+  color: #022217;
 
   &:hover {
     background: #00e699;
@@ -403,7 +403,7 @@ input[type="checkbox"].disabled:checked:before {
 
 .red {
   background: $red;
-  color     : white !important;
+  color: white !important;
 
   &:hover {
     background: #fc0000;
@@ -457,14 +457,14 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .note {
-  color        : #666;
-  padding      : 15px;
-  border       : 2px dotted #bebebe;
+  color: #666;
+  padding: 15px;
+  border: 2px dotted #bebebe;
   border-radius: 8px;
-  margin-top   : 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  min-width    : 300px;
-  max-width    : 400px;
+  min-width: 300px;
+  max-width: 400px;
 
   .note-text {
     color: #888;
@@ -475,7 +475,7 @@ input[type="checkbox"].disabled:checked:before {
 
     ul {
       margin-left: 15px;
-      list-style : disc;
+      list-style: disc;
     }
 
     b {
@@ -494,14 +494,14 @@ input[type="checkbox"].disabled:checked:before {
 
 .tile {
   background: gray;
-  width     : 150px;
-  height    : 200px;
+  width: 150px;
+  height: 200px;
 }
 
 .layout-wrapper {
-  margin    : auto;
+  margin: auto;
   margin-top: 3px;
-  height    : calc(100% - 40px);
+  height: calc(100% - 40px);
 }
 
 .isDragging {
@@ -509,7 +509,7 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .layout {
-  overflow  : hidden;
+  overflow: hidden;
   min-height: 100px !important;
 }
 
@@ -518,39 +518,39 @@ input[type="checkbox"].disabled:checked:before {
 } */
 
 .toolBar-wrp {
-  background    : $bg;
-  height        : 100%;
-  overflow      : hidden;
-  max-width     : 165px;
-  min-width     : 55px;
-  padding       : 5px;
+  background: $bg;
+  height: 100%;
+  overflow: hidden;
+  max-width: 165px;
+  min-width: 55px;
+  padding: 5px;
   padding-bottom: 35px;
-  transition    : width 500ms;
+  transition: width 500ms;
 
   &>h4 {
-    width     : 100%;
-    margin    : 10px 0;
+    width: 100%;
+    margin: 10px 0;
     text-align: center;
   }
 }
 
 .btcd-toolbar-title {
-  display            : flex;
-  white-space        : nowrap;
-  word-break         : keep-all;
+  display: flex;
+  white-space: nowrap;
+  word-break: keep-all;
   -webkit-user-select: none;
-  -ms-user-select    : none;
-  -webkit-user-drag  : none;
-  justify-content    : space-between;
-  align-items        : center;
-  margin             : 5px 0 10px 12px;
-  font-weight        : bold;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 10px 12px;
+  font-weight: bold;
 
   &>button {
-    background : $bg;
-    color      : #73818e;
-    width      : 25px;
-    height     : 25px;
+    background: $bg;
+    color: #73818e;
+    width: 25px;
+    height: 25px;
     font-weight: bold;
 
     &:hover {
@@ -560,43 +560,43 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .toolBar {
-  display       : flex;
+  display: flex;
   padding-bottom: 80px;
-  flex-wrap     : wrap;
+  flex-wrap: wrap;
 }
 
 .tools {
-  display      : flex;
-  background   : white;
-  color        : $dp-blue;
-  font-weight  : 500;
-  font-size    : 15px;
-  white-space  : nowrap;
-  word-break   : keep-all;
-  width        : 145px;
-  height       : 35px;
-  padding      : 8px;
+  display: flex;
+  background: white;
+  color: $dp-blue;
+  font-weight: 500;
+  font-size: 15px;
+  white-space: nowrap;
+  word-break: keep-all;
+  width: 145px;
+  height: 35px;
+  padding: 8px;
   border-radius: 8px;
-  align-items  : center;
-  cursor       : -webkit-grab;
-  cursor       : grab;
-  overflow     : hidden;
-  margin       : 5px;
-  box-shadow   : 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition   : all 200ms;
+  align-items: center;
+  cursor: -webkit-grab;
+  cursor: grab;
+  overflow: hidden;
+  margin: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 200ms;
 
   &>span {
-    display     : flex;
-    color       : $dp-blue;
-    font-size   : 25px;
+    display: flex;
+    color: $dp-blue;
+    font-size: 25px;
     margin-right: 5px;
   }
 
   &:hover,
   &:focus {
-    color     : $blue;
-    outline   : none;
-    transform : scale(1.05);
+    color: $blue;
+    outline: none;
+    transform: scale(1.05);
     box-shadow: 0 1px 11px -4px #b1b1b1;
 
     &>span {
@@ -606,8 +606,8 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .tool-img {
-  width       : 21px;
-  min-width   : 21px;
+  width: 21px;
+  min-width: 21px;
   margin-right: 15px;
 }
 
@@ -615,53 +615,53 @@ input[type="checkbox"].disabled:checked:before {
   color: #d1d8ed;
 
   &>span {
-    display  : block;
+    display: block;
     font-size: 50px;
   }
 }
 
 .btcd-ck-wrp {
-  display            : inline-flex;
-  color              : rgb(54, 54, 54);
-  position           : relative;
-  align-items        : center;
-  padding-left       : 35px;
-  font-weight        : normal;
-  cursor             : pointer;
-  font-size          : 17px;
-  -ms-user-select    : none;
+  display: inline-flex;
+  color: rgb(54, 54, 54);
+  position: relative;
+  align-items: center;
+  padding-left: 35px;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 17px;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  user-select        : none;
-  min-height         : 25px;
-  margin             : 8px;
-  width              : auto;
+  user-select: none;
+  min-height: 25px;
+  margin: 8px;
+  width: auto;
 }
 
 .btcd-ck-wrp input {
   position: absolute;
-  opacity : 0;
-  cursor  : pointer;
-  height  : 0;
-  width   : 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .btcd-ck-con {
-  display   : flex;
-  flex-wrap : wrap;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 8px;
 }
 
 .btcd-mrk {
-  position        : absolute;
-  top             : 0;
-  left            : 0;
-  height          : 20px;
-  width           : 20px;
-  box-sizing      : content-box;
-  border-radius   : 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  box-sizing: content-box;
+  border-radius: 3px;
   background-color: #fff;
-  border          : 2px solid rgb(212, 212, 212);
-  transition      : border-color 0.3s;
+  border: 2px solid rgb(212, 212, 212);
+  transition: border-color 0.3s;
 }
 
 .btcd-ck-wrp:hover input~.btcd-mrk {
@@ -670,21 +670,21 @@ input[type="checkbox"].disabled:checked:before {
 
 .btcd-ck-wrp input:checked~.btcd-mrk {
   background-color: $blue;
-  border-color    : $blue !important;
+  border-color: $blue !important;
 }
 
 .btc-range {
   & .icn {
     & svg {
       height: 13px;
-      width : 13px;
+      width: 13px;
     }
   }
 
   & .inp-grp {
     &:hover {
       .icn {
-        color           : $blue;
+        color: $blue;
         background-color: transparentize($blue, 0.92);
 
         & .line-icn {
@@ -703,27 +703,27 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   & .icn {
-    background     : rgb(238, 243, 250);
-    width          : 30px;
-    max-width      : 30px;
-    min-width      : 30px;
-    max-height     : 30px;
-    height         : 30px;
+    background: rgb(238, 243, 250);
+    width: 30px;
+    max-width: 30px;
+    min-width: 30px;
+    max-height: 30px;
+    height: 30px;
     justify-content: center;
   }
 
   & input[type="number"] {
-    width        : 55px;
-    line-height  : 1 !important;
-    outline      : none;
+    width: 55px;
+    line-height: 1 !important;
+    outline: none;
     border-radius: 5px;
-    border       : 1px solid rgb(224, 224, 224);
-    font-size    : 14px;
-    padding      : 4px;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: 14px;
+    padding: 4px;
 
     &:hover,
     :focus {
-      box-shadow  : none;
+      box-shadow: none;
       border-color: gray;
     }
   }
@@ -733,17 +733,17 @@ input[type="checkbox"].disabled:checked:before {
   $track-color: #eceff1 !default;
   $thumb-color: transparentize($dp-blue, 0.2) !default;
 
-  $thumb-radius      : 12px !default;
-  $thumb-height      : 13px !default;
-  $thumb-width       : 13px !default;
+  $thumb-radius : 12px !default;
+  $thumb-height : 13px !default;
+  $thumb-width : 13px !default;
   $thumb-shadow-size : 2px !default;
   $thumb-shadow-blur : 4px !default;
   $thumb-shadow-color: rgba(0, 0, 0, 0.2) !default;
   $thumb-border-width: 1.5px !default;
   $thumb-border-color: #ff7777 !default;
 
-  $track-width       : 100% !default;
-  $track-height      : 6px !default;
+  $track-width : 100% !default;
+  $track-height : 6px !default;
   $track-shadow-size : 0px !default;
   $track-shadow-blur : 0px !default;
   $track-shadow-color: rgba(0, 0, 0, 0.2) !default;
@@ -751,7 +751,7 @@ input[type="checkbox"].disabled:checked:before {
   $track-border-color: #dccfcf !default;
 
   $track-radius: 5px !default;
-  $contrast    : 7% !default;
+  $contrast : 7% !default;
 
   $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
@@ -761,30 +761,30 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   @mixin track {
-    cursor    : default;
-    height    : $track-height;
+    cursor: default;
+    height: $track-height;
     transition: all 0.2s ease;
-    width     : $track-width;
+    width: $track-width;
   }
 
   @mixin thumb {
-    background   : $thumb-color;
-    border       : $thumb-border-width solid $thumb-border-color;
+    background: $thumb-color;
+    border: $thumb-border-width solid $thumb-border-color;
     border-radius: $thumb-radius;
-    box-sizing   : border-box;
-    cursor       : pointer;
-    height       : $thumb-height;
-    width        : $thumb-width;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: $thumb-height;
+    width: $thumb-width;
     @include shadow($thumb-shadow-size,
       $thumb-shadow-blur,
       $thumb-shadow-color);
   }
 
   [type="range"] {
-    background        : transparent;
+    background: transparent;
     -webkit-appearance: none;
-    margin            : calc($thumb-height / 2) 0;
-    width             : $track-width;
+    margin: calc($thumb-height / 2) 0;
+    width: $track-width;
 
     &::-moz-focus-outer {
       border: 0;
@@ -821,8 +821,8 @@ input[type="checkbox"].disabled:checked:before {
     }
 
     &::-webkit-slider-runnable-track {
-      background   : $track-color;
-      border       : $track-border-width solid $track-border-color;
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
       border-radius: $track-radius;
       @include track;
       @include shadow($track-shadow-size,
@@ -832,15 +832,15 @@ input[type="checkbox"].disabled:checked:before {
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
-      margin-top        : calc(($track-border-width * 2 + $track-height) / 2 - ($thumb-height / 2));
+      margin-top: calc(($track-border-width * 2 + $track-height) / 2 - ($thumb-height / 2));
       @include thumb;
     }
 
     &::-moz-range-track {
-      background   : $track-color;
-      border       : $track-border-width solid $track-border-color;
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
       border-radius: $track-radius;
-      height       : calc($track-height / 2);
+      height: calc($track-height / 2);
       @include shadow($track-shadow-size,
         $track-shadow-blur,
         $track-shadow-color);
@@ -852,16 +852,16 @@ input[type="checkbox"].disabled:checked:before {
     }
 
     &::-ms-track {
-      background  : transparent;
-      color       : transparent;
+      background: transparent;
+      color: transparent;
       border-color: transparent;
       border-width: calc($thumb-height / 2) 0;
       @include track;
     }
 
     &::-ms-fill-lower {
-      background   : $ie-bottom-track-color;
-      border       : $track-border-width solid $track-border-color;
+      background: $ie-bottom-track-color;
+      border: $track-border-width solid $track-border-color;
       border-radius: calc($track-radius * 2);
       @include shadow($track-shadow-size,
         $track-shadow-blur,
@@ -869,8 +869,8 @@ input[type="checkbox"].disabled:checked:before {
     }
 
     &::-ms-fill-upper {
-      background   : $track-color;
-      border       : $track-border-width solid $track-border-color;
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
       border-radius: calc($track-radius * 2);
       @include shadow($track-shadow-size,
         $track-shadow-blur,
@@ -897,9 +897,9 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .btcd-mrk:after {
-  display : none;
+  display: none;
   position: absolute;
-  content : "";
+  content: "";
 }
 
 .btcd-ck-wrp input:checked~.btcd-mrk:after {
@@ -907,39 +907,39 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .btcd-ck-wrp .btcd-mrk:not(.rdo):after {
-  top         : 47%;
-  left        : 50%;
-  width       : 5px;
-  height      : 10px;
-  border      : solid white;
+  top: 47%;
+  left: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
   border-width: 0 3px 3px 0;
-  transform   : translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .icn-rotate-45 {
-  display  : inline-block;
+  display: inline-block;
   transform: rotate(45deg);
 }
 
 .btcd-ck-wrp .btcd-mrk:not(.ck):after {
-  background   : white;
-  top          : 50%;
-  left         : 50%;
-  transform    : translate(-50%, -50%);
-  width        : 45%;
-  height       : 45%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 45%;
   border-radius: 50%;
 }
 
 .btcd-no-data {
-  position   : absolute;
-  top        : 240px;
-  right      : 45%;
+  position: absolute;
+  top: 240px;
+  right: 45%;
   font-weight: 500;
-  opacity    : 0.6;
+  opacity: 0.6;
 
   &>div {
-    color    : #374072;
+    color: #374072;
     font-size: 18px;
   }
 
@@ -950,20 +950,20 @@ input[type="checkbox"].disabled:checked:before {
 
 .bar {
   background: #f3f3f3;
-  width     : 8px;
-  cursor    : e-resize !important;
+  width: 8px;
+  cursor: e-resize !important;
 
   &>div {
     cursor: e-resize !important;
   }
 
   &::before {
-    color     : #b1b1b1;
-    position  : absolute;
-    top       : 47vh;
-    left      : -2px;
-    content   : "\02551";
-    height    : 64px;
+    color: #b1b1b1;
+    position: absolute;
+    top: 47vh;
+    left: -2px;
+    content: "\02551";
+    height: 64px;
     text-align: center;
   }
 
@@ -973,8 +973,8 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .bar-l {
-  background    : #f8f8f8;
-  width         : 0;
+  background: #f8f8f8;
+  width: 0;
   pointer-events: none;
 
   &::before {
@@ -982,7 +982,7 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   &:hover {
-    width       : 8px;
+    width: 8px;
     border-right: 1px solid #c7c7c7;
   }
 }
@@ -995,7 +995,7 @@ input[type="checkbox"].disabled:checked:before {
 
     &>div {
       border-left: 3px solid $blue;
-      width      : 12px;
+      width: 12px;
     }
   }
 }
@@ -1006,13 +1006,13 @@ input[type="checkbox"].disabled:checked:before {
 
 .style-acc {
   overflow: hidden;
-  margin  : auto;
+  margin: auto;
 
   & .btgl {
-    cursor     : pointer;
-    padding    : 10px;
-    font-size  : 16 px;
-    outline    : none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16 px;
+    outline: none;
     font-weight: 600;
 
     & .btcd-icn {
@@ -1031,7 +1031,7 @@ input[type="checkbox"].disabled:checked:before {
 
 .style-acc.active,
 .delay-overflow {
-  overflow : visible;
+  overflow: visible;
   animation: 800ms delay-overflow;
 }
 
@@ -1042,14 +1042,14 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .btc-pick {
-  background   : white;
-  position     : absolute;
-  top          : 10px;
-  right        : -8px;
-  z-index      : 99;
+  background: white;
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  z-index: 99;
   border-radius: 8px;
-  overflow     : hidden;
-  box-shadow   : 0 1px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
   & .ui-color-picker {
     margin: 0;
@@ -1060,34 +1060,34 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   & .gradient-controls {
-    height       : 45px;
+    height: 45px;
     margin-bottom: 0px;
   }
 }
 
 .clr-pick {
-  cursor    : pointer;
-  height    : 30px;
-  width     : 30px;
-  outline   : none;
-  border    : 2px solid white;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  border: 2px solid white;
   box-shadow: 0 0 0 2px $dp-txt;
 }
 
 .btc-pk-enter {
-  transform : scale(0);
+  transform: scale(0);
   transition: transform 150ms;
 }
 
 .btc-pk-enter-active {
-  transform : scale(1.03);
+  transform: scale(1.03);
   transition: transform 150ms;
 }
 
 .btc-pk-enter-done {
-  position  : relative;
-  z-index   : 99;
-  transform : scale(1);
+  position: relative;
+  z-index: 99;
+  transform: scale(1);
   transition: transform 100ms;
 }
 
@@ -1097,16 +1097,16 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   & button {
-    background   : transparent;
-    color        : $dp-txt;
-    position     : relative;
-    font-size    : 13px;
-    border       : 1px solid lightgray;
-    border-right : 0;
+    background: transparent;
+    color: $dp-txt;
+    position: relative;
+    font-size: 13px;
+    border: 1px solid lightgray;
+    border-right: 0;
     border-radius: 0;
-    outline      : none;
-    padding      : 3px 7px;
-    cursor       : pointer;
+    outline: none;
+    padding: 3px 7px;
+    cursor: pointer;
 
     & .btcd-icn {
       font-size: 15px;
@@ -1115,12 +1115,12 @@ input[type="checkbox"].disabled:checked:before {
 
   & button:last-child {
     border-radius: 0 7px 7px 0;
-    border-right : 1px solid lightgray;
+    border-right: 1px solid lightgray;
   }
 
   & button.active {
-    background  : $blue;
-    color       : white;
+    background: $blue;
+    color: white;
     border-color: $blue;
 
     & .line-icn {
@@ -1134,8 +1134,8 @@ input[type="checkbox"].disabled:checked:before {
 
   & svg {
     display: block;
-    height : 13px;
-    width  : 13px;
+    height: 13px;
+    width: 13px;
 
     & .line-icn {
       stroke: $dp-blue;
@@ -1149,37 +1149,37 @@ input[type="checkbox"].disabled:checked:before {
 
 // components style
 .com-wrp {
-  width : 100%;
+  width: 100%;
   height: 100%;
   cursor: default;
 }
 
 .blk-icn-wrp {
   background: rgba(255, 255, 255, 0.658);
-  right     : 0;
-  height    : 0;
-  width     : 0;
+  right: 0;
+  height: 0;
+  width: 0;
 
   &>button {
-    background   : transparent;
-    color        : $dp-blue;
-    width        : 22px;
-    height       : 22px;
+    background: transparent;
+    color: $dp-blue;
+    width: 22px;
+    height: 22px;
     border-radius: 3px;
-    border       : none;
-    transform    : scale(0);
-    transition   : transform 300ms;
+    border: none;
+    transform: scale(0);
+    transition: transform 300ms;
   }
 
   &>button:hover {
     background: rgb(241, 241, 241);
-    color     : black;
+    color: black;
   }
 }
 
 .fld-lbl {
-  cursor       : default;
-  white-space  : nowrap;
+  cursor: default;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -1194,7 +1194,7 @@ input[type="checkbox"].disabled:checked:before {
 
   &:hover .blk-icn-wrp {
     height: auto;
-    width : auto;
+    width: auto;
   }
 
   &:hover .blk-icn-wrp button {
@@ -1211,62 +1211,64 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .elm-settings {
-  background  : $bg;
-  height      : 100%;
-  max-width   : 500px;
+  background: $bg;
+  height: 100%;
+  max-width: 500px;
   margin-right: 0;
-  margin-left : auto;
-  font-size   : 18px;
+  margin-left: auto;
+  font-size: 18px;
 
   &>h4 {
-    margin        : 0 0 0 10px;
-    padding-top   : 10px;
+    margin: 0 0 0 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom : 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
   }
 
   &>.settings {
     font-size: 14px;
-    height   : calc(100% - 85px);
+    height: calc(100% - 85px);
   }
 }
 
 .elm-settings-title {
-  z-index          : 9;
+  z-index: 9;
   -webkit-clip-path: inset(-30px 0px);
-  clip-path        : inset(-30px 0px);
+  clip-path: inset(-30px 0px);
 }
 
 .btcd-inte-wrp {
-  align-items    : baseline;
+  align-items: baseline;
   justify-content: center;
   //overflow-y: scroll;
-  height         : 90%;
-  margin-bottom  : 20px;
+  height: 90%;
+  margin-bottom: 20px;
   width: 100%;
 }
 
 .btcd-inte-card {
-  position        : relative;
-  cursor          : pointer;
-  width           : 160px;
-  height          : 203px;
-  text-decoration : none;
-  overflow        : hidden;
-  border-radius   : 15px;
-  outline         : none;
-  box-shadow      : 1px 2px 3px #d7e0ed;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 160px;
+  height: 203px;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: 1px 2px 3px #d7e0ed;
   background-color: aliceblue;
-  transition      : box-shadow 0.2s, transform 0.3s;
+  transition: box-shadow 0.2s, transform 0.3s;
 
   &>.btcd-inte-atn {
     background: white;
-    position  : absolute;
-    bottom    : 38px;
-    height    : 0px;
-    width     : 100%;
+    position: absolute;
+    bottom: 38px;
+    height: 0px;
+    width: 100%;
     text-align: center;
-    overflow  : hidden;
+    overflow: hidden;
     transition: height 0.2s;
 
     & .btn {
@@ -1282,13 +1284,13 @@ input[type="checkbox"].disabled:checked:before {
     background: #fff;
 
     &>div {
-      width        : 85%;
-      font-size    : 14px;
-      height       : 17px;
+      width: 85%;
+      font-size: 14px;
+      height: 17px;
       text-overflow: ellipsis;
-      overflow     : hidden;
-      margin       : auto;
-      white-space  : pre;
+      overflow: hidden;
+      margin: auto;
+      white-space: pre;
     }
 
     & small {
@@ -1297,15 +1299,15 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   & a {
-    color          : inherit;
+    color: inherit;
     text-decoration: none;
   }
 
   &.add-inte {
-    color    : #ccd6fe;
+    color: #ccd6fe;
     font-size: 100px;
-    cursor   : pointer;
-    outline  : none;
+    cursor: pointer;
+    outline: none;
 
     &:hover {
       color: #b7c1ec;
@@ -1313,54 +1315,54 @@ input[type="checkbox"].disabled:checked:before {
   }
 
   &:hover:not(.btcd-inte-dis, .btcd-inte-pro, .pro-filter) {
-    transform : scale(1.02);
+    transform: scale(1.02);
     box-shadow: 2px 2px 7px #cdd4e7;
 
     &>.btcd-inte-atn {
-      height  : 42px;
+      height: 42px;
       overflow: visible;
     }
   }
 
   & img {
-    display    : block;
-    max-height : 160px;
-    max-width  : 160px;
-    transform  : scale(0.8);
+    display: block;
+    max-height: 150px;
+    max-width: 150px;
+    transform: scale(0.8);
     padding-top: 20px;
   }
 }
 
 .inte-sm {
-  background   : aliceblue;
-  position     : relative;
-  width        : 110px;
-  height       : 130px;
+  background: aliceblue;
+  position: relative;
+  width: 110px;
+  height: 130px;
   border-radius: 15px;
-  font-size    : 12px;
+  font-size: 12px;
   letter-spacing: 0.3px;
 
   & img {
-    width     : 100px;
-    height    : 100px;
-    max-width : 100px;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
     max-height: 100px;
     object-fit: contain;
-    margin    : 0 auto;
-    padding   : 12px;
+    margin: 0 auto;
+    padding: 12px;
   }
 
   &:before {
-    display        : flex;
-    background     : rgba(4, 37, 155, 0.18);
-    color          : #fff;
-    position       : absolute;
+    display: flex;
+    background: rgba(4, 37, 155, 0.18);
+    color: #fff;
+    position: absolute;
     justify-content: center;
-    align-items    : center;
-    font-size      : 100px;
-    width          : 100%;
-    height         : 100%;
-    z-index        : 9;
+    align-items: center;
+    font-size: 100px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
   }
 
   &:hover:not(.btcd-inte-dis, .btcd-inte-pro, .pro-filter, .inte-edit) {
@@ -1371,76 +1373,76 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .btcd-inte-dis {
-  pointer-events     : none;
-  -ms-user-select    : none;
+  pointer-events: none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  user-select        : none;
+  user-select: none;
 
   &>img {
     -webkit-filter: grayscale(1) !important;
-    filter        : grayscale(1) !important;
+    filter: grayscale(1) !important;
   }
 
   &::before {
-    display        : flex;
-    background     : rgba(17, 27, 76, 0.67);
-    position       : absolute;
-    z-index        : 9;
-    content        : "Coming Soon";
-    font-size      : 12px;
-    font-weight    : 500;
-    text-shadow    : 0px 0px 4px black;
-    width          : 100%;
-    height         : 100%;
+    display: flex;
+    background: rgba(17, 27, 76, 0.67);
+    position: absolute;
+    z-index: 9;
+    content: "Coming Soon";
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0px 0px 4px black;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    align-items    : center;
+    align-items: center;
   }
 }
 
 .btcd-inte-pro {
-  pointer-events     : none;
-  -ms-user-select    : none;
+  pointer-events: none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  user-select        : none;
+  user-select: none;
 
   & .pro-filter {
-    display        : flex;
-    background     : #4e5a9447;
-    position       : absolute;
-    text-align     : center;
-    align-items    : center;
+    display: flex;
+    background: #4e5a9447;
+    position: absolute;
+    text-align: center;
+    align-items: center;
     justify-content: center;
-    flex-direction : column;
-    height         : 100%;
-    width          : 100%;
-    z-index        : 9;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
 
     & div {
-      background : #ffffff78;
-      color      : #000000;
-      width      : auto;
-      font-size  : 11px;
+      background: #ffffff78;
+      color: #000000;
+      width: auto;
+      font-size: 11px;
       font-weight: 600;
-      padding    : 7px 5px;
+      padding: 7px 5px;
     }
 
     & .txt-pro {
-      background    : transparentize(white, 0.1);
-      padding       : 8px;
+      background: transparentize(white, 0.1);
+      padding: 8px;
       pointer-events: all;
-      font-size     : 14px;
-      font-weight   : 600;
-      margin-top    : 5px;
-      border-radius : 5px;
-      z-index       : 4;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 5px;
+      border-radius: 5px;
+      z-index: 4;
     }
   }
 }
 
 .setting-inp {
-  display       : inline-flex;
+  display: inline-flex;
   flex-direction: column;
-  width         : 100%;
+  width: 100%;
 
   & span {
     font-weight: 600;
@@ -1452,68 +1454,68 @@ input[type="checkbox"].disabled:checked:before {
 }
 
 .opt {
-  background   : #ecf1f9;
-  margin-top   : 20px;
-  padding      : 10px;
+  background: #ecf1f9;
+  margin-top: 20px;
+  padding: 10px;
   border-radius: 8px;
 }
 
 .btn {
-  display        : inline-flex;
-  color          : inherit;
-  border         : none;
-  padding        : 7px 10px;
-  border-radius  : 8px;
+  display: inline-flex;
+  color: inherit;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 8px;
   justify-content: center;
-  align-items    : center;
-  margin-top     : 10px;
-  margin-bottom  : 10px;
-  cursor         : pointer;
-  outline        : none;
-  font-size      : 14px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
   text-decoration: none;
-  white-space    : nowrap;
-  font-weight    : 600;
+  white-space: nowrap;
+  font-weight: 600;
 
   &:disabled {
     background-color: rgb(230, 230, 230);
-    box-shadow      : none;
+    box-shadow: none;
   }
 }
 
 .btcd-btn-o-blue {
   background: transparent;
-  color     : $blue !important;
-  border    : 1px solid $blue;
+  color: $blue !important;
+  border: 1px solid $blue;
   transition: background 0.2s !important;
 
   &:hover {
     background: $blue;
-    color     : white !important;
+    color: white !important;
   }
 }
 
 .btcd-btn-o-red {
   background: transparent;
-  color     : $red !important;
-  border    : 1px solid $red;
+  color: $red !important;
+  border: 1px solid $red;
   transition: background 0.2s !important;
 
   &:hover {
     background: $red;
-    color     : white !important;
+    color: white !important;
   }
 }
 
 .btcd-btn-o-gray {
   background: transparent;
-  color     : #4b4b4b !important;
-  border    : 1px solid #9c9c9c;
+  color: #4b4b4b !important;
+  border: 1px solid #9c9c9c;
   transition: background 0.2s !important;
 
   &:hover {
     background: #f7f7f7;
-    color     : black !important;
+    color: black !important;
   }
 }
 
@@ -1526,7 +1528,7 @@ input[type="checkbox"].disabled:checked:before {
   transition: transform 0.1s;
 
   &:active {
-    transform : scale(0.95);
+    transform: scale(0.95);
     box-shadow: none;
   }
 }
@@ -1536,28 +1538,28 @@ input[type="checkbox"].disabled:checked:before {
 
   &:hover .action-btn {
     display: flex;
-    cursor : pointer;
+    cursor: pointer;
   }
 }
 
 .input-disable {
   pointer-events: none;
-  opacity       : 0.5;
+  opacity: 0.5;
 }
 
 .action-btn {
-  display        : none;
-  position       : absolute;
-  top            : 20px;
-  right          : 20px;
-  align-items    : center;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  align-items: center;
   justify-content: center;
-  z-index        : 99;
-  height         : 20px;
-  width          : 20px;
-  border-radius  : 8px;
-  border         : 0.3px solid rgb(170, 170, 170);
-  padding        : 4px;
+  z-index: 99;
+  height: 20px;
+  width: 20px;
+  border-radius: 8px;
+  border: 0.3px solid rgb(170, 170, 170);
+  padding: 4px;
 
   &:hover {
     background: rgb(197, 197, 197);
@@ -1570,31 +1572,31 @@ input[type="checkbox"].disabled:checked:before {
 
   & svg {
     height: 11px;
-    width : 11px;
+    width: 11px;
 
     & line,
     circle {
-      fill  : none;
+      fill: none;
       stroke: rgb(56, 56, 56);
     }
   }
 }
 
 .btcd-btn-sm {
-  padding  : 5px;
+  padding: 5px;
   font-size: 10px;
 }
 
 .btcd-btn-lg {
   font-weight: bold;
-  padding    : 10px 20px;
-  height     : 40px;
+  padding: 10px 20px;
+  height: 40px;
 }
 
 .btn-md {
   font-weight: bold;
-  padding    : 5px 20px;
-  height     : 30px;
+  padding: 5px 20px;
+  height: 30px;
 }
 
 .btn-lg {
@@ -1607,15 +1609,15 @@ input[type="checkbox"].disabled:checked:before {
 
 .z-9 {
   overflow: visible;
-  z-index : 9;
+  z-index: 9;
 }
 
 .cls-btn {
-  background : #d8e0e8;
-  font-size  : 25px;
-  padding    : 1px;
-  width      : 25px;
-  height     : 25px;
+  background: #d8e0e8;
+  font-size: 25px;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
   line-height: 0px;
 
   &:hover {
@@ -1625,19 +1627,19 @@ input[type="checkbox"].disabled:checked:before {
 
 // navbar start
 nav.top-nav {
-  background : white;
-  position   : relative;
+  background: white;
+  position: relative;
   white-space: nowrap;
 }
 
 .logo {
-  background   : white;
-  height       : 40px;
-  width        : 40px;
-  overflow     : hidden;
+  background: white;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
   border-radius: 15px;
-  box-shadow   : 2px 2px 5px 0px #444444;
-  transition   : width 0.4s, border-radius 0.4s;
+  box-shadow: 2px 2px 5px 0px #444444;
+  transition: width 0.4s, border-radius 0.4s;
 
   &:hover {
     width: 275px;
@@ -1648,26 +1650,26 @@ nav.top-nav {
   }
 
   & span {
-    color      : $dp-bg;
+    color: $dp-bg;
     white-space: nowrap;
-    font-size  : 17px;
+    font-size: 17px;
     font-weight: 600;
   }
 }
 
 .nav-wrp {
   background: $dp-bg;
-  height    : 230px;
-  padding   : 20px;
+  height: 230px;
+  padding: 20px;
 }
 
 .route-wrp {
-  background   : white;
-  min-height   : 82vh;
-  margin       : -150px 20px 20px;
+  background: white;
+  min-height: 82vh;
+  margin: -150px 20px 20px;
   border-radius: 20px;
-  box-shadow   : 0px 0px 7px 1px rgba(17, 9, 52, 0.24);
-  overflow     : hidden;
+  box-shadow: 0px 0px 7px 1px rgba(17, 9, 52, 0.24);
+  overflow: hidden;
 
   &>div:not(#all-forms#form-res) {
     height: auto;
@@ -1675,33 +1677,33 @@ nav.top-nav {
 }
 
 .top-nav>a {
-  display        : inline-flex;
-  background     : $dp-bg;
-  color          : #fff;
-  align-items    : center;
+  display: inline-flex;
+  background: $dp-bg;
+  color: #fff;
+  align-items: center;
   justify-content: center;
-  height         : 40px;
-  font-size      : 13px;
+  height: 40px;
+  font-size: 13px;
   text-decoration: none;
-  z-index        : 10;
-  font-weight    : 500;
-  min-width      : 100px;
-  padding        : 12px 15px;
-  margin-left    : 5px;
-  text-align     : center;
-  cursor         : pointer;
-  border-radius  : 15px;
-  box-shadow     : none;
+  z-index: 10;
+  font-weight: 500;
+  min-width: 100px;
+  padding: 12px 15px;
+  margin-left: 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: none;
 
   &:hover {
     -webkit-filter: brightness(1.2);
-    filter        : brightness(1.2);
+    filter: brightness(1.2);
   }
 }
 
 nav.top-nav {
   background: transparent;
-  color     : black;
+  color: black;
 }
 
 // navbar end
@@ -1711,10 +1713,10 @@ nav.top-nav {
 }
 
 .f-table {
-  color          : #4b5668;
-  width          : 100%;
+  color: #4b5668;
+  width: 100%;
   border-collapse: collapse;
-  font-size      : 14px;
+  font-size: 14px;
 }
 
 .f-table [data-sticky-first-right-td="true"],
@@ -1730,41 +1732,41 @@ nav.top-nav {
 .f-table .thead {
   position: -webkit-sticky;
   position: sticky;
-  top     : 0;
-  z-index : 1;
+  top: 0;
+  z-index: 1;
 }
 
 .f-table .tbody {
   position: relative;
-  z-index : 0;
+  z-index: 0;
 }
 
 .f-table .thead .tr .th {
-  color              : $light-txt;
-  font-weight        : 500;
-  line-height        : 1.8;
-  -ms-user-select    : none;
+  color: $light-txt;
+  font-weight: 500;
+  line-height: 1.8;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  border-bottom      : 1px solid #dedce4;
-  overflow           : hidden;
-  box-shadow         : 0px 2px 2px rgb(223, 223, 223);
+  border-bottom: 1px solid #dedce4;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgb(223, 223, 223);
 
   &:hover {
     background: #f0f2f8;
-    color     : $dp-blue;
+    color: $dp-blue;
   }
 }
 
 .f-table .tbody .tr,
 .f-table .thead .tr {
-  position   : relative;
-  height     : 49px;
-  outline    : none;
+  position: relative;
+  height: 49px;
+  outline: none;
   align-items: center;
 
   &:hover {
     background: #f4f6ff;
-    z-index   : 9;
+    z-index: 9;
     box-shadow: 0px 1px 4px 1px #cacaca;
   }
 }
@@ -1774,16 +1776,16 @@ nav.top-nav {
 }
 
 .f-table .tbody .tr .td {
-  color        : $dp-bg;
-  line-height  : 1.9;
-  padding      : 5px 5px;
-  font-size    : 14px;
-  font-weight  : 600;
-  word-break   : break-all;
+  color: $dp-bg;
+  line-height: 1.9;
+  padding: 5px 5px;
+  font-size: 14px;
+  font-weight: 600;
+  word-break: break-all;
   border-bottom: 1px solid #dedce4;
   text-overflow: ellipsis;
-  overflow     : hidden;
-  white-space  : nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 
   &:hover {
     background: #eeeefd;
@@ -1806,17 +1808,17 @@ nav.top-nav {
 .f-table>.thead>.tr>.th,
 .f-table .tbody .tr .td {
   background-color: white;
-  text-align      : left;
-  padding         : 10px;
-  text-overflow   : ellipsis;
-  white-space     : nowrap;
+  text-align: left;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   // overflow: hidden;
-  height          : 100%;
+  height: 100%;
 }
 
 .f-table .thead .tr .th:nth-child(1),
 .f-table .tbody .tr .td:nth-child(1) {
-  width       : 70px;
+  width: 70px;
   padding-left: 20px;
 }
 
@@ -1826,15 +1828,15 @@ nav.top-nav {
 
 .btc-line-icn {
   & .line-icn {
-    fill        : none;
-    stroke      : $dp-blue;
+    fill: none;
+    stroke: $dp-blue;
     stroke-width: 16px;
   }
 }
 
 .border-icn {
-  width       : 13px;
-  height      : 13px;
+  width: 13px;
+  height: 13px;
   border-width: 1.5px;
   border-color: $dp-bg;
   border-style: solid;
@@ -1845,13 +1847,13 @@ nav.top-nav {
 }
 
 .btcd-t-action-wrp {
-  background     : white;
-  position       : absolute;
-  top            : 0;
-  right          : 0;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
   justify-content: flex-end;
-  height         : 100%;
-  width          : 100%;
+  height: 100%;
+  width: 100%;
 
   &:hover {
     background: linear-gradient(90deg,
@@ -1874,14 +1876,14 @@ nav.top-nav {
 }
 
 .btcd-accr {
-  background   : white;
+  background: white;
   border-radius: 8px;
 
   &>.btcd-accr-btn {
     border-radius: 8px 8px 0 0;
-    outline      : none;
-    padding      : 8px;
-    cursor       : pointer;
+    outline: none;
+    padding: 8px;
+    cursor: pointer;
 
     &>.icn-btn {
       font-weight: bold;
@@ -1901,25 +1903,25 @@ nav.top-nav {
 
     &>.btcd-accr-title>div {
       &>input {
-        background   : transparent;
-        border       : none;
-        line-height  : 1;
-        box-shadow   : none;
-        min-height   : 10px;
-        padding      : 0;
-        margin       : 0;
-        font-size    : 15px;
+        background: transparent;
+        border: none;
+        line-height: 1;
+        box-shadow: none;
+        min-height: 10px;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
         border-radius: 5px;
-        outline      : none;
-        cursor       : pointer;
+        outline: none;
+        cursor: pointer;
       }
 
       &>div {
-        display    : none;
+        display: none;
         margin-left: 3px;
 
         &>.btcd-icn {
-          color    : transparentize(#000, 0.5);
+          color: transparentize(#000, 0.5);
           font-size: 14px !important;
         }
       }
@@ -1934,9 +1936,9 @@ nav.top-nav {
 
       &:focus {
         background: transparentize($color: #fff, $amount: 0.4);
-        color     : black !important;
+        color: black !important;
         box-shadow: 0 0 0 1px transparentize($dp-blue, 0.8);
-        padding   : 0 4px;
+        padding: 0 4px;
       }
     }
   }
@@ -1950,50 +1952,50 @@ nav.top-nav {
   padding: 5px;
 
   &>small {
-    color    : gray;
+    color: gray;
     font-size: 12px;
   }
 }
 
 .f-search {
-  display      : flex;
-  font-size    : 12 !important;
-  float        : right;
-  margin-right : 25px;
+  display: flex;
+  font-size: 12 !important;
+  float: right;
+  margin-right: 25px;
   margin-bottom: 10px;
 
   & input {
-    background   : transparent;
+    background: transparent;
     border-radius: 0;
-    border       : 0;
-    width        : 100px;
+    border: 0;
+    width: 100px;
     border-bottom: 1px solid gray;
-    margin-left  : 7px;
-    padding      : 4px;
-    outline      : none;
-    transition   : width 0.5s;
+    margin-left: 7px;
+    padding: 4px;
+    outline: none;
+    transition: width 0.5s;
   }
 
   & input:focus {
-    width        : 150px;
+    width: 150px;
     border-bottom: 1px solid black;
   }
 }
 
 .icn-btn {
-  background   : transparent;
-  color        : $dp-blue;
-  position     : relative;
-  cursor       : pointer;
-  font-size    : 20px;
-  border       : 0;
-  width        : 32px;
-  height       : 32px;
-  min-width    : 32px;
-  min-height   : 32px;
+  background: transparent;
+  color: $dp-blue;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   border-radius: 50%;
-  line-height  : 1px;
-  outline      : none;
+  line-height: 1px;
+  outline: none;
 
   &:hover {
     background: #f3f3f3;
@@ -2005,15 +2007,15 @@ nav.top-nav {
 }
 
 .icn-btn-sm {
-  height   : 22px;
-  width    : 22px;
-  padding  : 2px;
+  height: 22px;
+  width: 22px;
+  padding: 2px;
   font-size: 17px;
 }
 
 .btcd-icn-lg {
-  width    : 40px;
-  height   : 40px;
+  width: 40px;
+  height: 40px;
   font-size: 25px;
 }
 
@@ -2026,30 +2028,30 @@ nav.top-nav {
 }
 
 .btcd-pagination {
-  display        : flex;
-  line-height    : 1;
+  display: flex;
+  line-height: 1;
   justify-content: space-between;
-  align-items    : center;
-  margin         : 10px;
-  padding-bottom : 10px;
+  align-items: center;
+  margin: 10px;
+  padding-bottom: 10px;
 
   &>small {
-    color       : #7b7676;
+    color: #7b7676;
     padding-left: 10px;
   }
 
   & select {
-    padding   : 5px;
+    padding: 5px;
     margin-top: 0;
-    width     : 105px;
+    width: 105px;
   }
 }
 
 //2nd toggle start
 .btcd-label {
-  display    : inline-flex;
+  display: inline-flex;
   align-items: center;
-  cursor     : pointer;
+  cursor: pointer;
 }
 
 .btcd-label-text {
@@ -2057,34 +2059,34 @@ nav.top-nav {
 }
 
 .btcd-toggle {
-  background   : #d6d6d6;
-  position     : relative;
-  isolation    : isolate;
-  height       : 19px;
-  width        : 39px;
+  background: #d6d6d6;
+  position: relative;
+  isolation: isolate;
+  height: 19px;
+  width: 39px;
   border-radius: 20px;
-  overflow     : hidden;
+  overflow: hidden;
 }
 
 .btcd-toggle-inner {
-  position     : absolute;
-  top          : 1px;
-  left         : 1px;
-  z-index      : 2;
-  height       : 17px;
-  width        : 37px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
+  height: 17px;
+  width: 37px;
   border-radius: 15px;
-  overflow     : hidden;
+  overflow: hidden;
 }
 
 .btcd-active-bg {
   background: $blue;
-  position  : absolute;
-  top       : 0;
-  left      : 0;
-  height    : 100%;
-  width     : 200%;
-  transform : translate3d(-100%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  transform: translate3d(-100%, 0, 0);
   transition: transform 0.05s linear 0.17s;
 }
 
@@ -2093,12 +2095,12 @@ nav.top-nav {
 }
 
 .btcd-indicator {
-  background   : white;
-  height       : 100%;
-  width        : 200%;
+  background: white;
+  height: 100%;
+  width: 200%;
   border-radius: 13px;
-  transform    : translate3d(-75%, 0, 0);
-  transition   : transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
 }
 
 .btcd-toggle-state:checked~.btcd-active-bg {
@@ -2115,26 +2117,26 @@ nav.top-nav {
   width: 200px;
 
   & input {
-    background    : whitesmoke;
-    color         : $dp-blue;
-    height        : 22px;
-    margin        : 0;
-    font-weight   : normal;
+    background: whitesmoke;
+    color: $dp-blue;
+    height: 22px;
+    margin: 0;
+    font-weight: normal;
     letter-spacing: 1px;
-    outline       : none;
-    padding       : 3px 10px;
-    width         : 160px;
-    border-radius : 15px 0 0 15px;
-    border        : none;
+    outline: none;
+    padding: 3px 10px;
+    width: 160px;
+    border-radius: 15px 0 0 15px;
+    border: none;
   }
 
   & button {
-    background   : #e0e0e0;
-    position     : relative;
-    height       : 22px;
-    outline      : none;
-    padding      : 3px 11px;
-    border       : none;
+    background: #e0e0e0;
+    position: relative;
+    height: 22px;
+    outline: none;
+    padding: 3px 11px;
+    border: none;
     border-radius: 0 15px 15px 0;
   }
 
@@ -2151,19 +2153,19 @@ nav.top-nav {
   margin: 6px auto 10px auto;
 
   & label {
-    display   : flex;
+    display: flex;
     word-break: break-all;
   }
 
   & input {
-    background   : white;
-    height       : 39px;
-    outline      : none;
-    width        : 82%;
-    padding      : 10px;
-    border       : 1px solid #e4e4e4;
+    background: white;
+    height: 39px;
+    outline: none;
+    width: 82%;
+    padding: 10px;
+    border: 1px solid #e4e4e4;
     border-radius: 8px 0 0 8px;
-    margin       : 0;
+    margin: 0;
   }
 
   & input.readonly {
@@ -2171,59 +2173,59 @@ nav.top-nav {
   }
 
   & button {
-    color        : $dp-blue;
-    position     : relative;
-    cursor       : pointer;
-    height       : 39px;
-    padding      : 11px;
-    border       : 1px solid #e4e4e4;
-    border-left  : none;
+    color: $dp-blue;
+    position: relative;
+    cursor: pointer;
+    height: 39px;
+    padding: 11px;
+    border: 1px solid #e4e4e4;
+    border-left: none;
     border-radius: 0 8px 8px 0;
 
     &:hover {
       background: $light-blue-bg;
-      color     : $blue;
+      color: $blue;
     }
   }
 }
 
 .tooltip {
   &::after {
-    display            : block;
-    background         : $dp-blue;
-    color              : white;
-    position           : absolute;
-    top                : 110%;
-    left               : var(--tt-left);
-    font-family        : "Montserrat", sans-serif;
-    line-height        : 1;
-    white-space        : pre-wrap;
-    font-size          : 13px;
-    font-weight        : 600;
-    content            : var(--tooltip-txt);
-    border-radius      : 50%;
-    padding            : 7px 10px;
-    width              : var(--tt-width);
-    transform-origin   : 0%;
-    transform          : scale(0.5) translate(-50%, 0);
-    white-space        : var(--tt-wrap);
-    z-index            : 999;
-    pointer-events     : none;
-    -ms-user-select    : none;
+    display: block;
+    background: $dp-blue;
+    color: white;
+    position: absolute;
+    top: 110%;
+    left: var(--tt-left);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    white-space: pre-wrap;
+    font-size: 13px;
+    font-weight: 600;
+    content: var(--tooltip-txt);
+    border-radius: 50%;
+    padding: 7px 10px;
+    width: var(--tt-width);
+    transform-origin: 0%;
+    transform: scale(0.5) translate(-50%, 0);
+    white-space: var(--tt-wrap);
+    z-index: 999;
+    pointer-events: none;
+    -ms-user-select: none;
     -webkit-user-select: none;
-    -webkit-user-drag  : none;
-    opacity            : 0;
-    transition         : transform 100ms, opacity 300ms,
+    -webkit-user-drag: none;
+    opacity: 0;
+    transition: transform 100ms, opacity 300ms,
       border-radius cubic-bezier(0, 0, 0, 1) 500ms;
   }
 
   &:hover::after {
-    left            : var(--tt-left);
-    border-radius   : 7px;
+    left: var(--tt-left);
+    border-radius: 7px;
     transform-origin: 0%;
-    opacity         : 1;
-    transform       : scale(1) translate(-50%, 0);
-    transition      : transform 400ms, border-radius cubic-bezier(0, 0, 0, 1) 500ms;
+    opacity: 1;
+    transform: scale(1) translate(-50%, 0);
+    transition: transform 400ms, border-radius cubic-bezier(0, 0, 0, 1) 500ms;
   }
 }
 
@@ -2232,51 +2234,51 @@ nav.top-nav {
 }
 
 .btcd-prgrs-wrp {
-  margin-left     : 7px;
-  width           : 70%;
-  height          : 6px;
-  border-radius   : 10px;
-  overflow        : hidden;
+  margin-left: 7px;
+  width: 70%;
+  height: 6px;
+  border-radius: 10px;
+  overflow: hidden;
   background-color: #c7d4ff;
 }
 
 .btcd-prgrs {
-  height          : inherit;
-  border-radius   : inherit;
+  height: inherit;
+  border-radius: inherit;
   background-color: $blue;
 }
 
 .btcd-menu {
-  position   : relative;
+  position: relative;
   font-weight: normal;
 }
 
 .btcd-menu-list {
-  background   : rgb(255, 255, 255);
-  position     : absolute;
-  left         : 0;
-  width        : 0;
-  height       : 0;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
   border-radius: 50%;
-  overflow     : hidden;
-  z-index      : 999;
-  box-shadow   : 0 0 5px 0 rgba(0, 0, 0, 0.22);
-  transition   : left 200ms, width 0.3s, height 0.3s, border-radius 0.5s;
+  overflow: hidden;
+  z-index: 999;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.22);
+  transition: left 200ms, width 0.3s, height 0.3s, border-radius 0.5s;
 
   &>a,
   button {
-    background     : transparent;
-    color          : inherit;
-    font-weight    : bold;
-    font-size      : 13px;
+    background: transparent;
+    color: inherit;
+    font-weight: bold;
+    font-size: 13px;
     text-decoration: none;
-    padding        : 10px;
-    cursor         : pointer;
-    border         : none;
-    width          : 100%;
-    height         : 30px;
-    text-align     : left;
-    outline        : none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    outline: none;
   }
 
   &>a:hover,
@@ -2291,34 +2293,34 @@ nav.top-nav {
 }
 
 .btcd-m-a {
-  background   : #fff;
-  left         : -90px;
-  width        : 110px;
-  height       : 155px;
+  background: #fff;
+  left: -90px;
+  width: 110px;
+  height: 155px;
   border-radius: 8px;
 }
 
 .btcd-menu-btn {
-  background   : #ffffff;
-  color        : $blue;
-  position     : relative;
-  margin-right : 10px;
-  border       : none;
-  font-size    : 14px;
+  background: #ffffff;
+  color: $blue;
+  position: relative;
+  margin-right: 10px;
+  border: none;
+  font-size: 14px;
   border-radius: 50px;
-  padding      : 5px;
-  width        : 30px;
-  height       : 30px;
-  min-width    : 30px;
-  min-height   : 30px;
-  line-height  : 0px;
-  outline      : none;
-  cursor       : pointer;
-  transition   : all 0.3s;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 0px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
 
   &:hover {
     background: $blue;
-    color     : white;
+    color: white;
   }
 }
 
@@ -2327,7 +2329,7 @@ nav.top-nav {
 
   &:hover {
     background: #f0f4ff;
-    color     : $blue;
+    color: $blue;
   }
 
   &::after {
@@ -2336,7 +2338,7 @@ nav.top-nav {
 
   &:focus {
     background: $blue;
-    color     : #fff;
+    color: #fff;
   }
 
   &:focus::after {
@@ -2350,7 +2352,7 @@ nav.top-nav {
   }
 
   & .btcd-modal {
-    transform    : scale(0);
+    transform: scale(0);
     border-radius: 300px;
   }
 }
@@ -2358,8 +2360,8 @@ nav.top-nav {
 .btc-mdl-trn-enter-active {
   & .btcd-modal {
     border-radius: 20px;
-    transform    : scale(1);
-    transition   : transform 0.1s, border-radius 0.2s;
+    transform: scale(1);
+    transition: transform 0.1s, border-radius 0.2s;
   }
 }
 
@@ -2368,31 +2370,31 @@ nav.top-nav {
 }
 
 .btcd-modal-wrp {
-  background             : rgba(18, 21, 60, 0.53);
-  position               : fixed;
-  top                    : 0;
-  left                   : 0;
-  height                 : 100%;
-  z-index                : 9999;
-  width                  : 100%;
-  justify-content        : center;
-  overflow               : auto;
+  background: rgba(18, 21, 60, 0.53);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9999;
+  width: 100%;
+  justify-content: center;
+  overflow: auto;
   -webkit-backdrop-filter: blur(1px);
-  backdrop-filter        : blur(1px);
+  backdrop-filter: blur(1px);
 }
 
 .btcd-modal {
-  background   : #fff;
+  background: #fff;
   border-radius: 20px;
-  overflow     : hidden;
-  width        : 700px;
-  height       : 70%;
-  transition   : transform 0.3s, border-radius 0.5s ease;
-  box-shadow   : 0 0 14px 1px rgba(0, 0, 0, 0.64);
+  overflow: hidden;
+  width: 700px;
+  height: 70%;
+  transition: transform 0.3s, border-radius 0.5s ease;
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.64);
 }
 
 .btcd-m-sm {
-  width : 400px !important;
+  width: 400px !important;
   height: auto !important;
 
   & .content {
@@ -2405,18 +2407,18 @@ nav.top-nav {
 }
 
 .btcd-m-lg {
-  width   : 80% !important;
+  width: 80% !important;
   overflow: auto;
-  height  : 90% !important;
+  height: 90% !important;
 }
 
 .btcd-modal-content {
   position: relative;
-  padding : 15px;
+  padding: 15px;
 }
 
 .custom-conf-mdl {
-  display   : block !important;
+  display: block !important;
   text-align: left;
 }
 
@@ -2431,43 +2433,43 @@ nav.top-nav {
 
 .btcd-mdl-close {
   background: #fafafa;
-  position  : absolute;
-  top       : 0;
-  right     : 0;
-  float     : right;
-  margin    : 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  margin: 10px;
 }
 
 .btcd-mdl-div {
-  border    : 0.5px solid #b0cae4;
+  border: 0.5px solid #b0cae4;
   margin-top: 7px;
 }
 
 .btcd-mdl-hdr-btn {
   position: absolute;
-  top     : 2px;
-  right   : 50px;
+  top: 2px;
+  right: 50px;
 }
 
 .btcd-tem {
-  position       : relative;
-  width          : 150px;
-  height         : 150px;
-  border         : 2px solid #e0e0e0;
-  border-radius  : 10px;
-  margin-top     : 10px;
-  margin-left    : 10px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
   justify-content: center;
-  flex-direction : column;
-  overflow       : hidden;
-  transition     : border 300ms;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border 300ms;
 
   &>div {
     margin-top: 10px;
   }
 
   &:hover {
-    border    : 2px solid $blue;
+    border: 2px solid $blue;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.29);
   }
 
@@ -2485,17 +2487,17 @@ nav.top-nav {
 }
 
 .btcd-hid-btn {
-  display   : block;
+  display: block;
   background: $blue;
-  position  : absolute;
-  bottom    : -53px;
-  left      : 0;
-  width     : 100%;
+  position: absolute;
+  bottom: -53px;
+  left: 0;
+  width: 100%;
   text-align: center;
   transition: bottom 300ms;
 
   &>a {
-    display        : inline-block;
+    display: inline-block;
     text-decoration: none;
   }
 }
@@ -2505,12 +2507,12 @@ nav.top-nav {
 
   &:hover {
     background: #f1f1f1;
-    color     : $blue;
+    color: $blue;
   }
 
   &:active {
     background: #e4e4e4;
-    color     : $blue;
+    color: $blue;
   }
 }
 
@@ -2518,56 +2520,56 @@ nav.top-nav {
   background: linear-gradient(90deg, #ffffff 12px, transparent 1%) center,
     linear-gradient(#ffffff 12px, transparent 1%) center, #000000;
   // background: white !important;
-  position       : fixed !important;
-  top            : 80px !important;
-  right          : 20px !important;
-  left           : 20px !important;
-  height         : 100%;
-  margin-bottom  : 30px !important;
-  border-radius  : 20px !important;
-  overflow       : hidden !important;
-  box-shadow     : 0px 0px 7px 0px rgba(132, 178, 176, 0.45);
+  position: fixed !important;
+  top: 80px !important;
+  right: 20px !important;
+  left: 20px !important;
+  height: 100%;
+  margin-bottom: 30px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0px 0px 7px 0px rgba(132, 178, 176, 0.45);
   background-size: 13px 13px;
   // transition: left 0.5s, right 0.5s, top 0.5s, margin-bottom 0.5s, border-radius 0.5s 0.5s !important;
 }
 
 .btcd-ful-scn {
-  top          : 0 !important;
-  right        : 0 !important;
-  left         : 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
   border-radius: 0 !important;
   margin-bottom: 0 !important;
 }
 
 .btcd-drawer {
-  background      : white;
-  position        : fixed;
-  top             : 0;
-  height          : 100%;
-  width           : 400px;
-  z-index         : 9;
-  padding         : 5px 20px 20px;
-  box-shadow      : -2px 0 4px 1px transparentize(#000000, 0.7);
+  background: white;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 400px;
+  z-index: 9;
+  padding: 5px 20px 20px;
+  box-shadow: -2px 0 4px 1px transparentize(#000000, 0.7);
   transition-delay: right 0.5s;
-  transition      : right 0.5s ease;
-  overflow-x      : hidden;
+  transition: right 0.5s ease;
+  overflow-x: hidden;
 }
 
 .btcd-drawer-title {
-  margin     : 0;
-  font-size  : 17px;
+  margin: 0;
+  font-size: 17px;
   font-weight: bold;
 }
 
 .btcd-row-detail-tbl {
   & tr th {
     text-align: left;
-    padding   : 10px;
-    min-width : 170px;
+    padding: 10px;
+    min-width: 170px;
   }
 
   & tr td {
-    padding   : 10px;
+    padding: 10px;
     word-break: break-all;
   }
 }
@@ -2577,27 +2579,27 @@ nav.top-nav {
 }
 
 .btcd-bld-nav {
-  display        : flex;
-  background     : $dp-bg;
-  height         : 40px;
-  overflow       : hidden;
+  display: flex;
+  background: $dp-bg;
+  height: 40px;
+  overflow: hidden;
   justify-content: space-between;
 }
 
 .btcd-bld-lnk {
-  display   : flex;
+  display: flex;
   box-shadow: none;
 
   &>a {
-    display        : inline-block;
-    background     : transparentize(#fff, 0.9);
-    color          : white;
-    padding        : 6px 15px;
-    margin         : 6px;
-    border-radius  : 100px;
+    display: inline-block;
+    background: transparentize(#fff, 0.9);
+    color: white;
+    padding: 6px 15px;
+    margin: 6px;
+    border-radius: 100px;
     text-decoration: none;
-    line-height    : 16px;
-    transition     : background 0.3s !important;
+    line-height: 16px;
+    transition: background 0.3s !important;
 
     &:hover {
       background: transparentize(#fff, 0.7);
@@ -2605,17 +2607,17 @@ nav.top-nav {
   }
 
   &>a>.btcd-icn {
-    font-size   : 26px;
+    font-size: 26px;
     margin-right: 5px;
   }
 
   &>a:nth-child(1) {
-    display    : flex;
+    display: flex;
     align-items: center;
-    width      : 38px;
-    overflow   : hidden;
-    padding    : 8px;
-    transition : width 0.5s !important;
+    width: 38px;
+    overflow: hidden;
+    padding: 8px;
+    transition: width 0.5s !important;
 
     &:hover {
       width: 100px;
@@ -2624,17 +2626,17 @@ nav.top-nav {
 }
 
 .btcd-bld-btn {
-  display    : flex;
+  display: flex;
   align-items: center;
 
   &>button,
   a {
-    height         : 28px;
-    border-radius  : 20px;
+    height: 28px;
+    border-radius: 20px;
     text-decoration: none;
-    margin         : 5px 10px 5px 5px;
-    padding        : 7px 25px;
-    box-shadow     : 0 2px 4px 0 rgba(0, 0, 0, 0.76);
+    margin: 5px 10px 5px 5px;
+    padding: 7px 25px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.76);
 
     &:disabled {
       background: transparentize($blue, 0.5) !important;
@@ -2642,15 +2644,15 @@ nav.top-nav {
   }
 
   &>.btcd-btn-close {
-    background   : transparentize(#fff, 0.6);
-    color        : white;
-    font-size    : 22px;
-    height       : 30px;
-    width        : 30px;
-    margin-right : 20px;
-    padding      : 0;
+    background: transparentize(#fff, 0.6);
+    color: white;
+    font-size: 22px;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    padding: 0;
     border-radius: 100px;
-    text-align   : center;
+    text-align: center;
 
     &:hover {
       background: rgb(255, 57, 57) !important;
@@ -2664,8 +2666,8 @@ nav.top-nav {
   }
 
   & .btn {
-    background   : crimson !important;
-    padding      : 15px 50px;
+    background: crimson !important;
+    padding: 15px 50px;
     border-radius: 100px;
   }
 }
@@ -2675,13 +2677,13 @@ nav.top-nav {
 
   &>.btcd-bld-title-inp {
     background: transparentize(#fff, 0.8);
-    color     : white;
+    color: white;
     margin-top: 5px;
-    padding   : 6px;
-    font-size : 16px;
-    border    : none;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
     text-align: center;
-    outline   : none;
+    outline: none;
   }
 
   &>.btcd-bld-title-inp:hover {
@@ -2689,8 +2691,8 @@ nav.top-nav {
   }
 
   &>.btcd-bld-title-inp:focus {
-    background : white;
-    color      : #0e112f;
+    background: white;
+    color: #0e112f;
     font-weight: bold;
   }
 }
@@ -2700,8 +2702,8 @@ nav.top-nav {
 }
 
 .app-link-active {
-  background : $light-bg !important;
-  color      : #0e112f !important;
+  background: $light-bg !important;
+  color: #0e112f !important;
   font-weight: bold !important;
 }
 
@@ -2711,35 +2713,35 @@ nav.top-nav {
 
 .btcd-f-sidebar {
   background: $dp-bg;
-  position  : fixed;
-  height    : 100%;
-  z-index   : 9;
-  width     : 230px;
+  position: fixed;
+  height: 100%;
+  z-index: 9;
+  width: 230px;
   box-shadow: -3px -6px 7px -1px rgb(0, 0, 0) inset;
 
   &::before {
-    position        : absolute;
-    right           : -15px;
-    content         : "";
-    height          : 15px;
-    width           : 15px;
+    position: absolute;
+    right: -15px;
+    content: "";
+    height: 15px;
+    width: 15px;
     background-color: transparent;
-    border-radius   : 15px 0 0 0;
-    box-shadow      : -5px -3px 0 2px $dp-bg;
+    border-radius: 15px 0 0 0;
+    box-shadow: -5px -3px 0 2px $dp-bg;
   }
 
   &>a {
-    display        : flex;
-    color          : white;
-    position       : relative;
-    align-items    : center;
-    font-size      : 15px;
-    padding        : 12px 10px 12px 20px;
-    margin-left    : 20px;
-    border-radius  : 50px 0 0 50px;
+    display: flex;
+    color: white;
+    position: relative;
+    align-items: center;
+    font-size: 15px;
+    padding: 12px 10px 12px 20px;
+    margin-left: 20px;
+    border-radius: 50px 0 0 50px;
     text-decoration: none;
-    font-weight    : 600;
-    margin-bottom  : 25px;
+    font-weight: 600;
+    margin-bottom: 25px;
 
     &:focus {
       box-shadow: none;
@@ -2757,44 +2759,44 @@ nav.top-nav {
 
 .btcd-f-a {
   background: $light-bg;
-  color     : $dp-blue !important;
+  color: $dp-blue !important;
   box-shadow: -4px 2px 3px 0 black;
 
   &:before {
-    background   : transparent;
-    position     : absolute;
-    top          : -18px;
-    right        : 0;
-    content      : "";
-    width        : 15px;
-    height       : 18px;
+    background: transparent;
+    position: absolute;
+    top: -18px;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 18px;
     border-radius: 0 0 15px 0;
-    box-shadow   : 5px 4px 0 3px $light-bg;
+    box-shadow: 5px 4px 0 3px $light-bg;
   }
 
   &:after {
-    background   : #6b424200;
-    position     : absolute;
-    right        : 0;
-    bottom       : -18px;
-    content      : "";
-    width        : 15px;
-    height       : 18px;
+    background: #6b424200;
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    content: "";
+    width: 15px;
+    height: 18px;
     border-radius: 0 15px 0 0;
-    box-shadow   : 5px -9px 0 4px $light-bg;
+    box-shadow: 5px -9px 0 4px $light-bg;
   }
 }
 
 .btcd-f-c-t-o {
-  display      : inline-block;
-  background   : white;
-  cursor       : pointer;
-  border       : 2.5px solid white;
-  outline      : none;
-  text-align   : center;
-  padding      : 10px;
+  display: inline-block;
+  background: white;
+  cursor: pointer;
+  border: 2.5px solid white;
+  outline: none;
+  text-align: center;
+  padding: 10px;
   border-radius: 8px;
-  margin-top   : 10px;
+  margin-top: 10px;
 
   &:hover:not(.btcd-f-c-t-o-a) {
     border-color: transparentize($blue, 0.6);
@@ -2802,16 +2804,16 @@ nav.top-nav {
 }
 
 .btcd-f-c-t-o-a {
-  color       : $blue;
-  position    : relative;
+  color: $blue;
+  position: relative;
   border-color: $blue;
 
   &:after {
-    position    : absolute;
-    top         : 100%;
-    left        : 50%;
-    content     : "";
-    margin-left : -10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    content: "";
+    margin-left: -10px;
     border-width: 8px;
     border-style: solid;
     border-color: $blue transparent transparent transparent;
@@ -2819,19 +2821,19 @@ nav.top-nav {
 }
 
 .btcd-s-wrp {
-  position   : relative;
-  padding    : 30px;
+  position: relative;
+  padding: 30px;
   margin-left: 0;
-  overflow   : auto;
+  overflow: auto;
 }
 
 .btcd-s-inp {
-  font-size    : 16px;
+  font-size: 16px;
   border-radius: 8px;
-  outline      : none;
-  width        : 60%;
-  line-height  : 0;
-  border       : 2px solid #c6e5ff;
+  outline: none;
+  width: 60%;
+  line-height: 0;
+  border: 2px solid #c6e5ff;
 
   &:focus {
     border: 2px solid $blue;
@@ -2851,19 +2853,19 @@ nav.top-nav {
 }
 
 .btcd-paper-inp {
-  color        : $dp-bg;
-  box-shadow   : none !important;
-  height       : auto;
-  width        : 100%;
-  font-family  : inherit;
-  line-height  : 1.2 !important;
-  font-size    : 15px !important;
-  padding      : 10px 10px 10px 10px !important;
-  outline      : none !important;
+  color: $dp-bg;
+  box-shadow: none !important;
+  height: auto;
+  width: 100%;
+  font-family: inherit;
+  line-height: 1.2 !important;
+  font-size: 15px !important;
+  padding: 10px 10px 10px 10px !important;
+  outline: none !important;
   border-radius: 8px !important;
-  min-height   : 15px !important;
-  border       : 1px solid #e2e2e2 !important;
-  transition   : box-shadow 0.3s !important;
+  min-height: 15px !important;
+  border: 1px solid #e2e2e2 !important;
+  transition: box-shadow 0.3s !important;
 
   &:hover:not(:disabled, :focus) {
     border-color: $dp-txt !important;
@@ -2871,11 +2873,11 @@ nav.top-nav {
 
   &:focus {
     border-color: $blue !important;
-    box-shadow  : 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
+    box-shadow: 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
   }
 
   &:disabled {
-    color           : #000 !important;
+    color: #000 !important;
     background-color: #eee !important;
   }
 }
@@ -2887,13 +2889,13 @@ nav.top-nav {
 
 .btcd-paper-drpdwn {
   --menu-max-height: 300px;
-  --font-size      : 15px;
-  --border-radius  : 8px;
-  --transition     : 200ms;
-  font-family      : inherit !important;
+  --font-size: 15px;
+  --border-radius: 8px;
+  --transition: 200ms;
+  font-family: inherit !important;
 
   .msl {
-    background  : white;
+    background: white;
     border-color: #e2e2e2;
 
     &:not(.msl-active):hover {
@@ -2914,7 +2916,7 @@ nav.top-nav {
   }
 
   & .msl-option {
-    padding      : 8px 5px;
+    padding: 8px 5px;
     border-radius: 4px;
   }
 }
@@ -2925,33 +2927,33 @@ nav.top-nav {
 
 select.btcd-paper-inp {
   background: url($select-arrow) no-repeat right #fff;
-  color     : $dp-bg !important;
+  color: $dp-bg !important;
   box-shadow: none;
-  max-width : initial !important;
-  height    : auto !important;
-  padding   : 10px 24px 10px 10px !important;
+  max-width: initial !important;
+  height: auto !important;
+  padding: 10px 24px 10px 10px !important;
   appearance: none;
   transition: background-position-y 0.2s, border 0.2s, box-shadow 0.2s !important;
 
   &:hover:not(:disabled),
   :focus {
-    color                : $dp-blue !important;
+    color: $dp-blue !important;
     background-position-y: 12px;
   }
 }
 
 .btcd-date-pick>.react-date-picker__wrapper,
 .react-time-picker__wrapper {
-  font-family  : inherit;
-  line-height  : 1 !important;
-  font-size    : 15px !important;
-  padding      : 9px !important;
+  font-family: inherit;
+  line-height: 1 !important;
+  font-size: 15px !important;
+  padding: 9px !important;
   border-radius: 8px;
-  border       : 1px solid #e2e2e2 !important;
+  border: 1px solid #e2e2e2 !important;
 
   &:focus {
     border-color: $blue !important;
-    box-shadow  : 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
+    box-shadow: 0 0 0 0px $blue, 0 0 0 4px rgba(0, 131, 243, 0.1) !important;
   }
 
   &:hover:not(:disabled, :focus) {
@@ -2963,60 +2965,60 @@ select.btcd-paper-inp {
   }
 
   & input {
-    border          : none;
-    box-shadow      : none;
-    line-height     : 1;
+    border: none;
+    box-shadow: none;
+    line-height: 1;
     background-color: none;
-    padding         : 0;
-    min-height      : 0;
+    padding: 0;
+    min-height: 0;
   }
 
   & select {
-    font-size    : 14px;
-    padding      : 0 22px 0 5px;
-    min-width    : 0;
-    min-height   : 0;
-    height       : auto I !important;
+    font-size: 14px;
+    padding: 0 22px 0 5px;
+    min-width: 0;
+    min-height: 0;
+    height: auto I !important;
     border-radius: 5px;
-    border-color : #ececec;
-    line-height  : 1;
+    border-color: #ececec;
+    line-height: 1;
   }
 }
 
 .react-time-picker__inputGroup__amPm {
-  border       : 1px solid #ececec !important;
+  border: 1px solid #ececec !important;
   border-radius: 7px;
 }
 
 .btcd-date-pick-cln,
 .react-time-picker__clock {
   border-radius: 10px;
-  border       : none !important;
-  box-shadow   : 0px 0px 4px #b8b8b8;
+  border: none !important;
+  box-shadow: 0px 0px 4px #b8b8b8;
 }
 
 .btcd-setting-opt {
-  height : 48px;
+  height: 48px;
   padding: 0 5px 0 15px;
 }
 
 .btcd-em-n-t-wrp {
-  padding      : 20px 0 20px 0;
-  box-shadow   : 0px 3px 5px 1px #0000002b;
+  padding: 20px 0 20px 0;
+  box-shadow: 0px 3px 5px 1px #0000002b;
   border-radius: 20px;
-  margin-top   : 15px;
-  height       : 400px;
-  overflow     : auto;
+  margin-top: 15px;
+  height: 400px;
+  overflow: auto;
 }
 
 .btcd-em-n-t {
-  width          : 100%;
+  width: 100%;
   border-collapse: collapse;
 
   &>thead>tr>th {
-    color        : #637192;
-    text-align   : left;
-    padding      : 0 0 10px 10px;
+    color: #637192;
+    text-align: left;
+    padding: 0 0 10px 10px;
     border-bottom: 2px solid #dce1f3;
   }
 
@@ -3027,8 +3029,8 @@ select.btcd-paper-inp {
   }
 
   &>tbody>tr>td {
-    color        : $dp-blue;
-    padding      : 10px 0 10px 10px;
+    color: $dp-blue;
+    padding: 10px 0 10px 10px;
     border-bottom: 1px solid #c9d6e2;
 
     &:hover {
@@ -3038,7 +3040,7 @@ select.btcd-paper-inp {
 }
 
 .btcd-tabl-lnk {
-  color          : $blue;
+  color: $blue;
   text-decoration: none;
 
   &:hover {
@@ -3046,19 +3048,19 @@ select.btcd-paper-inp {
   }
 
   &:focus {
-    color     : $dp-blue !important;
-    outline   : none !important;
+    color: $dp-blue !important;
+    outline: none !important;
     box-shadow: none !important;
   }
 }
 
 //table checkbox start
 .btcd-label-cbx {
-  display            : inline-block;
-  -ms-user-select    : none;
+  display: inline-block;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  cursor             : pointer;
-  margin-bottom      : 0;
+  cursor: pointer;
+  margin-bottom: 0;
 
   input {
     &:checked {
@@ -3109,108 +3111,108 @@ select.btcd-paper-inp {
   }
 
   .btcd-t-cbx {
-    position     : relative;
-    float        : left;
-    margin-right : 8px;
-    width        : 20px;
-    height       : 20px;
-    border       : 2px solid #c8ccd4;
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #c8ccd4;
     border-radius: 3px;
 
     svg {
       position: absolute;
-      top     : -2px;
-      left    : -2px;
+      top: -2px;
+      left: -2px;
 
       path {
-        fill             : none;
-        stroke           : $blue;
-        stroke-width     : 2;
-        stroke-linecap   : round;
-        stroke-linejoin  : round;
-        stroke-dasharray : 70px;
+        fill: none;
+        stroke: $blue;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 70px;
         stroke-dashoffset: 71px;
-        transition       : all 0.6s ease;
+        transition: all 0.6s ease;
       }
 
       polyline {
-        fill             : none;
-        stroke           : #fff;
-        stroke-width     : 2;
-        stroke-linecap   : round;
-        stroke-linejoin  : round;
-        stroke-dasharray : 18px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 18px;
         stroke-dashoffset: 18px;
-        transition       : all 0.3s ease;
+        transition: all 0.3s ease;
       }
 
       line {
-        stroke        : $blue;
-        stroke-width  : 0;
+        stroke: $blue;
+        stroke-width: 0;
         stroke-linecap: round;
       }
     }
   }
 
   >span {
-    line-height   : 1;
+    line-height: 1;
     vertical-align: middle;
   }
 }
 
 .btcd-cbx-invisible {
   position: absolute;
-  z-index : -1;
-  width   : 0;
-  height  : 0;
-  opacity : 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 // table checkbox end
 .btcd-t-resizer {
-  display      : inline-block;
-  background   : transparent;
-  position     : absolute;
-  top          : 0;
-  right        : 0;
-  width        : 15px;
-  height       : 100%;
+  display: inline-block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
   //border-left: 1px solid #eaeaea;
-  transform    : translateX(50%);
-  z-index      : 1;
-  touch-action : none;
+  transform: translateX(50%);
+  z-index: 1;
+  touch-action: none;
 
   &:hover {
     background: #dbdbdb;
-    z-index   : 9;
+    z-index: 9;
   }
 }
 
 .btcd-menu {
-  display : inline-block;
+  display: inline-block;
   position: relative;
 }
 
 .btcd-menu-li {
-  display                : none;
-  background             : transparentize($color: #fff, $amount: 0.1);
-  position               : absolute;
-  height                 : 350px;
-  width                  : max-content;
+  display: none;
+  background: transparentize($color: #fff, $amount: 0.1);
+  position: absolute;
+  height: 350px;
+  width: max-content;
   -webkit-backdrop-filter: blur(7px);
-  backdrop-filter        : blur(7px);
-  box-shadow             : 0 0 5px 0 rgba(0, 0, 0, 0.22);
-  z-index                : 999;
-  border-radius          : 10px;
-  overflow               : hidden;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.22);
+  z-index: 999;
+  border-radius: 10px;
+  overflow: hidden;
 
   &>div:not(.btcd-m-li-itm) {
     //height: 280px !important;
-    overflow-y   : auto;
-    overflow-x   : hidden;
-    width        : 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 200px;
     // mpadding: 10px;
-    min-width    : 100px;
+    min-width: 100px;
     border-bottom: 1px solid #eaeaf1;
     /* &         :hover {
       background : rgb(231, 234, 243);
@@ -3220,16 +3222,16 @@ select.btcd-paper-inp {
 
 .btcd-col-vis {
   background: red;
-  right     : 40px;
-  width     : 200px;
-  height    : 100px;
-  z-index   : 9;
+  right: 40px;
+  width: 200px;
+  height: 100px;
+  z-index: 9;
 }
 
 .btcd-pane {
-  white-space  : nowrap;
-  width        : 100% !important;
-  padding      : 10px;
+  white-space: nowrap;
+  width: 100% !important;
+  padding: 10px;
   border-bottom: 1px solid #eaeaf1;
 
   .sortable-chosen {
@@ -3249,34 +3251,34 @@ select.btcd-paper-inp {
   }
 
   & .btcd-label-cbx {
-    width   : 85%;
+    width: 85%;
     overflow: hidden;
 
     &>span {
-      display      : inline-block;
-      width        : 85%;
+      display: inline-block;
+      width: 85%;
       text-overflow: ellipsis;
-      overflow     : hidden;
+      overflow: hidden;
     }
   }
 }
 
 .btcd-pane-drg {
-  display            : none;
-  position           : relative;
-  float              : right;
-  line-height        : 1;
-  font-size          : 24px;
-  font-weight        : bold;
-  cursor             : move;
-  -ms-user-select    : none;
+  display: none;
+  position: relative;
+  float: right;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: move;
+  -ms-user-select: none;
   -webkit-user-select: none;
 
   &::before {
     background: red;
-    position  : absolute;
-    height    : 10px;
-    width     : 10px;
+    position: absolute;
+    height: 10px;
+    width: 10px;
   }
 }
 
@@ -3285,27 +3287,27 @@ select.btcd-paper-inp {
 }
 
 .btcd-t-actions {
-  display     : inline-block;
+  display: inline-block;
   padding-left: 15px;
-  width       : 500px;
+  width: 500px;
 }
 
 .btcd-t-link {
   position: relative;
-  height  : 32px;
+  height: 32px;
 
   &>a {
     text-decoration: none;
   }
 
   &>div {
-    display      : inline-block;
-    overflow     : hidden;
+    display: inline-block;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space  : nowrap;
+    white-space: nowrap;
 
     &>a {
-      color          : $dp-txt;
+      color: $dp-txt;
       text-decoration: none;
 
       &:hover {
@@ -3316,22 +3318,22 @@ select.btcd-paper-inp {
 
   &>a {
     display: none;
-    color  : $dp-txt;
+    color: $dp-txt;
   }
 
   &:hover {
     &>a {
-      display        : flex;
+      display: flex;
       justify-content: center;
     }
   }
 }
 
 .btcd-eye-t {
-  display            : inline-block;
-  -ms-user-select    : none;
+  display: inline-block;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  cursor             : pointer;
+  cursor: pointer;
 
   input:checked {
     + {
@@ -3352,14 +3354,14 @@ select.btcd-paper-inp {
 
 #form-res {
   background: white;
-  height    : 100%;
-  overflow  : auto;
+  height: 100%;
+  overflow: auto;
 }
 
 .btcd-pill {
-  background   : transparentize($blue, 0.8);
-  color        : $dp-blue;
-  padding      : 5px;
+  background: transparentize($blue, 0.8);
+  color: $dp-blue;
+  padding: 5px;
   border-radius: 5px;
 }
 
@@ -3372,46 +3374,46 @@ select.btcd-paper-inp {
 }
 
 .btcd-snack {
-  background         : #383838;
-  color              : white;
-  position           : fixed;
-  right              : 20px;
-  bottom             : -100px;
-  -ms-user-select    : none;
+  background: #383838;
+  color: white;
+  position: fixed;
+  right: 20px;
+  bottom: -100px;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  font-weight        : 500;
-  font-size          : 0.875rem;
-  padding            : 10px 15px;
-  border-radius      : 5px;
-  transition         : bottom 0.5s, transform 0.5s;
-  z-index            : 999999;
-  transform          : scale(0);
-  box-shadow         : 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: bottom 0.5s, transform 0.5s;
+  z-index: 999999;
+  transform: scale(0);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
 .btcd-snack-a-enter-active {
-  bottom    : 30px;
-  transform : scale(1);
+  bottom: 30px;
+  transform: scale(1);
   transition: bottom 0.5s, transform 0.5s;
 }
 
 .btcd-snack-cls {
-  display            : inline-block;
-  background         : transparentize(#fff, 0.95);
-  color              : white;
-  -ms-user-select    : none;
+  display: inline-block;
+  background: transparentize(#fff, 0.95);
+  color: white;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  height             : 25px;
-  width              : 25px;
-  border             : none;
-  font-size          : 21px;
-  padding            : 3px 6px;
-  border-radius      : 50px;
-  line-height        : 0.8;
-  margin-left        : 7px;
-  cursor             : pointer;
-  outline            : none;
+  height: 25px;
+  width: 25px;
+  border: none;
+  font-size: 21px;
+  padding: 3px 6px;
+  border-radius: 50px;
+  line-height: 0.8;
+  margin-left: 7px;
+  cursor: pointer;
+  outline: none;
 
   &:hover {
     background: transparentize(#fff, 0.8);
@@ -3419,28 +3421,28 @@ select.btcd-paper-inp {
 }
 
 .mce-tinymce.mce-container.mce-panel {
-  overflow     : hidden;
+  overflow: hidden;
   border-radius: 8px;
-  margin-top   : 5px;
-  box-shadow   : none;
+  margin-top: 5px;
+  box-shadow: none;
 }
 
 .btcd-param-t-wrp {
   & .btcd-param-t {
-    display      : inline-block;
-    resize       : horizontal;
-    border       : 1px solid #c7c7c7;
+    display: inline-block;
+    resize: horizontal;
+    border: 1px solid #c7c7c7;
     border-radius: 8px;
-    overflow     : visible;
+    overflow: visible;
 
     & .tr {
-      position : relative;
+      position: relative;
       min-width: 500px;
 
       &:first-child {
-        color        : gray;
+        color: gray;
         border-bottom: 1px solid #c7c7c7;
-        font-size    : 13px;
+        font-size: 13px;
 
         & .td {
           padding: 8px;
@@ -3452,12 +3454,12 @@ select.btcd-paper-inp {
       }
 
       & .p-atn {
-        display     : none;
-        position    : absolute;
-        top         : 0;
-        left        : 100%;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
         padding-left: 3px;
-        min-width   : 170px;
+        min-width: 170px;
 
         & select {
           width: 78%;
@@ -3472,18 +3474,18 @@ select.btcd-paper-inp {
     }
 
     & .td {
-      display : inline-block;
+      display: inline-block;
       position: relative;
-      padding : 5px;
-      width   : 50%;
+      padding: 5px;
+      width: 50%;
     }
 
     & .add-pram {
-      background   : #fafafa;
-      width        : 100%;
-      height       : 25px;
+      background: #fafafa;
+      width: 100%;
+      height: 25px;
       border-radius: 0 0 8px 8px;
-      font-weight  : bold;
+      font-weight: bold;
 
       &:hover {
         background: #eeeeff;
@@ -3493,17 +3495,17 @@ select.btcd-paper-inp {
 }
 
 .btcd-s-tab-link {
-  background     : transparent;
-  color          : $dp-blue;
-  position       : relative;
-  cursor         : pointer;
-  font-size      : 15px;
-  border         : none;
-  outline        : none;
-  margin-top     : 5px;
+  background: transparent;
+  color: $dp-blue;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
   justify-content: center;
-  padding        : 8px 10px 5px 8px;
-  border-radius  : 8px 8px 0 0;
+  padding: 8px 10px 5px 8px;
+  border-radius: 8px 8px 0 0;
 
   & .btcd-icn {
     font-size: 20px;
@@ -3511,7 +3513,7 @@ select.btcd-paper-inp {
 
   &:hover {
     background: transparentize($blue, 0.95) !important;
-    color     : $blue;
+    color: $blue;
   }
 
   &:focus {
@@ -3524,7 +3526,7 @@ select.btcd-paper-inp {
 
   & .sub {
     font-weight: 500;
-    font-size  : 12px;
+    font-size: 12px;
   }
 }
 
@@ -3533,46 +3535,46 @@ select.btcd-paper-inp {
   background: linear-gradient(43deg,
       rgba(15, 16, 49, 1) 0%,
       rgba(29, 58, 75, 1) 100%);
-  padding      : 15px 15px 15px 19px;
+  padding: 15px 15px 15px 19px;
   border-radius: 28px;
-  box-shadow   : 0 0 22px -7px #9498ce;
+  box-shadow: 0 0 22px -7px #9498ce;
 }
 
 .s-t-l-active {
-  color   : $blue;
+  color: $blue;
   position: relative;
 
   &::before {
-    background   : $blue;
-    position     : absolute;
-    top          : 94%;
-    content      : "";
+    background: $blue;
+    position: absolute;
+    top: 94%;
+    content: "";
     border-radius: 10px 10px 0 0;
-    height       : 4px;
-    width        : 85%;
+    height: 4px;
+    width: 85%;
   }
 }
 
 .btc-s-l {
-  display      : block;
-  background   : white;
-  color        : $dp-txt;
-  cursor       : pointer;
-  width        : 90%;
+  display: block;
+  background: white;
+  color: $dp-txt;
+  cursor: pointer;
+  width: 90%;
   border-radius: 8px;
-  padding      : 7px 12px;
-  margin-left  : auto;
-  margin-right : 20px;
-  font-weight  : 500;
+  padding: 7px 12px;
+  margin-left: auto;
+  margin-right: 20px;
+  font-weight: 500;
   //box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow   : 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
   & .lft-icn {
-    background     : #f5f5f5;
-    color          : $dp-blue;
-    min-width      : 40px;
-    min-height     : 40px;
-    border-radius  : 30;
+    background: #f5f5f5;
+    color: $dp-blue;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 30;
     justify-content: center;
   }
 
@@ -3581,7 +3583,7 @@ select.btcd-paper-inp {
 
     & .lft-icn {
       background: $light-blue-bg;
-      color     : $blue;
+      color: $blue;
 
       & .line-icn {
         stroke: $blue;
@@ -3595,10 +3597,10 @@ select.btcd-paper-inp {
 }
 
 .btcd-li-side-btn {
-  display : none;
+  display: none;
   position: absolute;
-  top     : 0;
-  left    : 100%;
+  top: 0;
+  left: 100%;
 }
 
 .pos-rel {
@@ -3610,18 +3612,18 @@ select.btcd-paper-inp {
 }
 
 .btcd-flow-icn {
-  color      : transparentize($dp-txt, 0.7);
-  font-size  : 24px;
-  font       : bolder;
+  color: transparentize($dp-txt, 0.7);
+  font-size: 24px;
+  font: bolder;
   line-height: 0;
 }
 
 .rev-icn {
-  transform        : rotateY(180deg);
+  transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-  -moz-transform   : rotateY(180deg);
-  -o-transform     : rotateY(180deg);
-  -ms-transform    : rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .btcd-wrk-logic {
@@ -3633,61 +3635,61 @@ select.btcd-paper-inp {
 }
 
 .btcd-mt-inp {
-  display      : inline-block;
-  color        : $dp-bg !important;
-  position     : relative;
-  line-height  : 1;
+  display: inline-block;
+  color: $dp-bg !important;
+  position: relative;
+  line-height: 1;
   border-radius: 8px;
-  width        : 100%;
-  padding-top  : 6px;
-  margin-top   : -6px;
-  font-size    : 16px;
-  line-height  : 1.5;
-  overflow     : hidden;
+  width: 100%;
+  padding-top: 6px;
+  margin-top: -6px;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
 }
 
 /* Input, Textarea */
 .btcd-mt-inp>input,
 .btcd-mt-inp>textarea {
-  color           : $dp-txt;
-  resize          : vertical;
-  box-sizing      : border-box;
-  margin          : 0;
-  border          : solid 1px;
+  color: $dp-txt;
+  resize: vertical;
+  box-sizing: border-box;
+  margin: 0;
+  border: solid 1px;
   /* Safari */
-  border-color    : $gray;
+  border-color: $gray;
   border-top-color: transparent;
-  border-radius   : 8px;
-  padding         : 7px 13px;
-  width           : 100%;
-  height          : inherit;
+  border-radius: 8px;
+  padding: 7px 13px;
+  width: 100%;
+  height: inherit;
   background-color: transparent;
-  box-shadow      : none;
+  box-shadow: none;
   /* Firefox */
-  font-family     : inherit;
-  font-size       : inherit;
-  line-height     : inherit;
-  caret-color     : $blue;
-  transition      : border 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: $blue;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 /* Span */
 .btcd-mt-inp>input+span,
 .btcd-mt-inp>textarea+span {
-  display            : flex;
-  color              : gray;
-  position           : absolute;
-  top                : 0;
-  left               : 0;
-  -ms-user-select    : none;
+  display: flex;
+  color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  border-color       : $gray;
-  width              : 100%;
-  max-height         : 100%;
-  font-size          : 75%;
-  line-height        : 15px;
-  cursor             : text;
-  transition         : color 0.2s, font-size 0.2s, line-height 0.2s;
+  border-color: $gray;
+  width: 100%;
+  max-height: 100%;
+  font-size: 75%;
+  line-height: 15px;
+  cursor: text;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 }
 
 /* Corners */
@@ -3695,38 +3697,38 @@ select.btcd-paper-inp {
 .btcd-mt-inp>input+span::after,
 .btcd-mt-inp>textarea+span::before,
 .btcd-mt-inp>textarea+span::after {
-  display         : block;
-  content         : "";
-  box-sizing      : border-box;
-  margin-top      : 6px;
-  border-top      : solid 1px;
+  display: block;
+  content: "";
+  box-sizing: border-box;
+  margin-top: 6px;
+  border-top: solid 1px;
   border-top-color: $gray;
-  min-width       : 10px;
-  height          : 8px;
-  pointer-events  : none;
-  box-shadow      : inset 0 1px transparent;
-  transition      : border-color 0.2s, box-shadow 0.2s;
+  min-width: 10px;
+  height: 8px;
+  pointer-events: none;
+  box-shadow: inset 0 1px transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .btcd-mt-inp>input+span::before,
 .btcd-mt-inp>textarea+span::before {
-  margin-right : 4px;
-  border-left  : solid 1px transparent;
+  margin-right: 4px;
+  border-left: solid 1px transparent;
   border-radius: 8px 0;
 }
 
 .btcd-mt-inp>input+span::after,
 .btcd-mt-inp>textarea+span::after {
-  flex-grow    : 1;
-  margin-left  : 4px;
-  border-right : solid 1px transparent;
+  flex-grow: 1;
+  margin-left: 4px;
+  border-right: solid 1px transparent;
   border-radius: 0 8px;
 }
 
 /* Hover */
 .btcd-mt-inp:hover>input,
 .btcd-mt-inp:hover>textarea {
-  border-color    : $dp-txt;
+  border-color: $dp-txt;
   border-top-color: transparent;
 }
 
@@ -3750,7 +3752,7 @@ select.btcd-paper-inp {
 
 .btcd-mt-inp>input:not(:focus):placeholder-shown+span,
 .btcd-mt-inp>textarea:not(:focus):placeholder-shown+span {
-  font-size  : inherit;
+  font-size: inherit;
   line-height: 52px;
 }
 
@@ -3764,10 +3766,10 @@ select.btcd-paper-inp {
 /* Focus */
 .btcd-mt-inp>input:focus,
 .btcd-mt-inp>textarea:focus {
-  border-color    : $blue;
+  border-color: $blue;
   border-top-color: transparent;
-  box-shadow      : inset 2px 0 $blue, inset -2px 0 $blue, inset 0 -2px $blue;
-  outline         : none;
+  box-shadow: inset 2px 0 $blue, inset -2px 0 $blue, inset 0 -2px $blue;
+  outline: none;
 }
 
 .btcd-mt-inp>input:focus+span,
@@ -3780,7 +3782,7 @@ select.btcd-paper-inp {
 .btcd-mt-inp>textarea:focus+span::before,
 .btcd-mt-inp>textarea:focus+span::after {
   border-top-color: $blue !important;
-  box-shadow      : inset 0 2px $blue;
+  box-shadow: inset 0 2px $blue;
 }
 
 /* Disabled */
@@ -3788,10 +3790,10 @@ select.btcd-paper-inp {
 .btcd-mt-inp>input:disabled+span,
 .btcd-mt-inp>textarea:disabled,
 .btcd-mt-inp>textarea:disabled+span {
-  color           : rgba(var(--deep, 0, 0, 0), 0.38);
-  border-color    : rgba(var(--deep, 0, 0, 0), 0.38) !important;
+  color: rgba(var(--deep, 0, 0, 0), 0.38);
+  border-color: rgba(var(--deep, 0, 0, 0), 0.38) !important;
   border-top-color: transparent !important;
-  pointer-events  : none;
+  pointer-events: none;
 }
 
 .btcd-mt-inp>input:disabled+span::before,
@@ -3833,44 +3835,44 @@ select.btcd-paper-inp {
 }
 
 .btcd-mt-sel {
-  display   : inline-block;
-  position  : relative;
-  width     : 100%;
+  display: inline-block;
+  position: relative;
+  width: 100%;
   margin-top: 6px;
 
   & small {
-    display            : block;
-    background         : white;
-    color              : gray;
-    position           : absolute;
-    top                : -7px;
-    -ms-user-select    : none;
+    display: block;
+    background: white;
+    color: gray;
+    position: absolute;
+    top: -7px;
+    -ms-user-select: none;
     -webkit-user-select: none;
-    font-size          : 12px;
-    margin-left        : 10px;
-    padding            : 0 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 0 4px;
   }
 
   & select {
-    display      : block;
-    background   : url($select-arrow) no-repeat right #fff;
-    color        : $dp-bg !important;
-    box-shadow   : none;
-    height       : auto;
-    line-height  : 1;
+    display: block;
+    background: url($select-arrow) no-repeat right #fff;
+    color: $dp-bg !important;
+    box-shadow: none;
+    height: auto;
+    line-height: 1;
     border-radius: 8px;
-    width        : 100%;
-    padding      : 10px;
-    outline      : none;
-    border       : 1px solid $gray;
-    transition   : background-position-y 0.2s, border 0.2s, box-shadow 0.2s;
-    appearance   : none;
-    font-size    : 16px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid $gray;
+    transition: background-position-y 0.2s, border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    font-size: 16px;
 
     &:focus {
-      border-color         : $blue;
+      border-color: $blue;
       background-position-y: 12px;
-      box-shadow           : 0 0 0 2px $blue inset;
+      box-shadow: 0 0 0 2px $blue inset;
 
       &~small {
         color: $blue;
@@ -3892,18 +3894,18 @@ select.btcd-paper-inp {
 }
 
 .btcd-ud-inp {
-  width        : 100%;
-  font-family  : inherit;
-  line-height  : 1 !important;
-  font-size    : 15px !important;
-  padding      : 10px !important;
-  outline      : none;
+  width: 100%;
+  font-family: inherit;
+  line-height: 1 !important;
+  font-size: 15px !important;
+  padding: 10px !important;
+  outline: none;
   border-radius: 8px !important;
-  min-height   : 15px !important;
-  border       : 1px solid #e2e2e2 !important;
+  min-height: 15px !important;
+  border: 1px solid #e2e2e2 !important;
 
   &:focus {
-    border    : 0;
+    border: 0;
     box-shadow: 0 0 0 3px $blue inset !important;
   }
 }
@@ -3915,23 +3917,23 @@ select.btcd-ud-inp {
 }
 
 .btcd-lgc {
-  display      : inline-block;
-  color        : #00a6ff;
-  border       : 2px solid #00a6ff;
-  padding      : 4px 10px;
+  display: inline-block;
+  color: #00a6ff;
+  border: 2px solid #00a6ff;
+  padding: 4px 10px;
   border-radius: 10px;
-  font-weight  : bold;
-  font-size    : 15px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .btcd-lgc-sm {
-  display      : inline-block;
-  color        : #6faaff;
-  border       : 1.5px solid #6faaff;
-  padding      : 2px 7px;
+  display: inline-block;
+  color: #6faaff;
+  border: 1.5px solid #6faaff;
+  padding: 2px 7px;
   border-radius: 8px;
-  font-size    : 11px;
-  font-weight  : bold;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .btcd-logic-grp {
@@ -3943,17 +3945,17 @@ select.btcd-ud-inp {
 }
 
 .btcd-logic-chip {
-  display        : inline-block !important;
-  background     : url($select-arrow) no-repeat right #fff !important;
-  color          : #00a6ff !important;
-  height         : auto;
-  appearance     : none !important;
-  border         : 2px solid #00a6ff !important;
-  padding        : 4px 20px 4px 5px !important;
-  border-radius  : 10px !important;
-  line-height    : 1 !important;
-  font-weight    : bold !important;
-  font-size      : 15px !important;
+  display: inline-block !important;
+  background: url($select-arrow) no-repeat right #fff !important;
+  color: #00a6ff !important;
+  height: auto;
+  appearance: none !important;
+  border: 2px solid #00a6ff !important;
+  padding: 4px 20px 4px 5px !important;
+  border-radius: 10px !important;
+  line-height: 1 !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
   background-size: 13px !important;
 
   &:focus {
@@ -3965,7 +3967,7 @@ select.btcd-ud-inp {
   display: inline-block;
 
   & button {
-    transform : scale(0);
+    transform: scale(0);
     transition: transform 0.3s;
 
     &:nth-child(1) {
@@ -3980,17 +3982,17 @@ select.btcd-ud-inp {
 
     & button:nth-child(3) {
       transition-delay: 0.1s;
-      transform       : scale(1);
+      transform: scale(1);
     }
 
     & button:nth-child(4) {
       transition-delay: 0.2s;
-      transform       : scale(1);
+      transform: scale(1);
     }
 
     & button:nth-child(5) {
       transition-delay: 0.3s;
-      transform       : scale(1);
+      transform: scale(1);
     }
   }
 }
@@ -3999,22 +4001,22 @@ select.btcd-ud-inp {
 .workflow-grp {
   &:hover {
     &>.btcd-li-side-btn {
-      display    : flex;
+      display: flex;
       align-items: center;
     }
   }
 }
 
 .btcd-neu-table {
-  padding      : 10px;
+  padding: 10px;
   border-radius: 10px;
-  border       : 1px solid #b2cce3;
+  border: 1px solid #b2cce3;
 
   & .thead {
-    color        : #244679;
-    font-weight  : bold;
-    font-size    : 14px;
-    padding      : 5px 5px 15px 5px;
+    color: #244679;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 5px 15px 5px;
     border-bottom: 2px solid #b2cce3;
 
     & .th {
@@ -4031,8 +4033,8 @@ select.btcd-ud-inp {
     margin: 3px;
 
     & .tr {
-      outline      : none;
-      padding      : 5px;
+      outline: none;
+      padding: 5px;
       border-bottom: 1px solid #b2cce3;
 
       &:last-child {
@@ -4049,7 +4051,7 @@ select.btcd-ud-inp {
       }
 
       &:hover:not(:last-child) {
-        background   : #ecf1ff;
+        background: #ecf1ff;
         border-radius: 5px;
       }
 
@@ -4061,18 +4063,18 @@ select.btcd-ud-inp {
 }
 
 .btcd-neu-btn {
-  display        : inline-block;
-  background     : $light-bg;
-  color          : $dp-bg;
+  display: inline-block;
+  background: $light-bg;
+  color: $dp-bg;
   text-decoration: none;
-  cursor         : pointer;
-  box-shadow     : 6px 6px 10px rgba(120, 136, 194, 0.4),
+  cursor: pointer;
+  box-shadow: 6px 6px 10px rgba(120, 136, 194, 0.4),
     -6px -6px 10px rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  padding      : 10px;
-  border       : none;
-  outline      : none;
-  transition   : transform 0.2s, box-shadow 0.2s;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     background-color: darken($light-bg, 5);
@@ -4087,9 +4089,9 @@ select.btcd-ud-inp {
 
 .btcd-neu-btn.icn {
   border-radius: 30px;
-  width        : 30px;
-  height       : 30px;
-  padding      : 6px 9px;
+  width: 30px;
+  height: 30px;
+  padding: 6px 9px;
 }
 
 .btcd-neu-btn.neu-sh-sm {
@@ -4098,17 +4100,17 @@ select.btcd-ud-inp {
 }
 
 .btcd-neu-inp {
-  display         : inline-block;
+  display: inline-block;
   background-color: $light-bg;
-  border-radius   : 10px;
+  border-radius: 10px;
 
   & input,
   textarea {
     background: lighten($light-bg, 5);
-    width     : 100%;
-    border    : 3px solid $light-bg;
-    outline   : none;
-    margin    : 0;
+    width: 100%;
+    border: 3px solid $light-bg;
+    outline: none;
+    margin: 0;
     transition: box-shadow 0.2s, border 0.2s;
 
     &:focus {
@@ -4121,28 +4123,28 @@ select.btcd-ud-inp {
 }
 
 .btcd-stp {
-  background         : rgb(236, 236, 236);
-  color              : gray;
-  height             : 35px;
-  width              : 35px;
-  font-weight        : bold;
-  -ms-user-select    : none;
+  background: rgb(236, 236, 236);
+  color: gray;
+  height: 35px;
+  width: 35px;
+  font-weight: bold;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  border             : 2px solid rgb(236, 236, 236);
-  border-radius      : 30px;
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 30px;
 
   &.stp-a {
-    background  : transparentize($blue, 0.9);
-    color       : $blue;
+    background: transparentize($blue, 0.9);
+    color: $blue;
     border-color: $blue;
   }
 }
 
 .btcd-stp-line {
-  display   : inline-block;
+  display: inline-block;
   background: rgb(236, 236, 236);
-  width     : 50px;
-  height    : 3px;
+  width: 50px;
+  height: 3px;
 
   &.stp-line-a {
     background: $blue;
@@ -4150,52 +4152,52 @@ select.btcd-ud-inp {
 }
 
 .btcd-stp-page {
-  padding         : 10px;
-  overflow        : hidden;
-  width           : 0;
-  height          : 0;
+  padding: 10px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
   transition-delay: height 1s;
-  transition      : width 0.4s, height 0.4s;
+  transition: width 0.4s, height 0.4s;
 }
 
 .error-404 {
   position: relative;
 
   & img {
-    display      : block;
+    display: block;
     border-radius: 20px;
   }
 
   & .four {
-    font-size  : 160px;
-    margin     : 0;
+    font-size: 160px;
+    margin: 0;
     line-height: 1;
     font-weight: bold;
     text-shadow: 36px 32px #0505320d;
   }
 
   &>div {
-    position  : absolute;
-    top       : 50px;
-    left      : 150px;
+    position: absolute;
+    top: 50px;
+    left: 150px;
     text-align: center;
 
     & .t {
-      position   : relative;
-      font-size  : 30px;
+      position: relative;
+      font-size: 30px;
       font-weight: 700;
-      margin-top : 20px;
+      margin-top: 20px;
     }
   }
 }
 
 .btcd-greeting {
   text-align: center;
-  
+
   & img {
     border-radius: 14px;
     margin-top: 160px;
-    width     : 600px;
+    width: 600px;
   }
 
   &>h2 {
@@ -4203,45 +4205,45 @@ select.btcd-ud-inp {
   }
 
   & .sub {
-    font-weight  : 600;
+    font-weight: 600;
     margin-bottom: 10px;
   }
 
   & button {
-    margin-top   : 20px;
+    margin-top: 20px;
     margin-bottom: 80px;
   }
 }
 
 .btcd-device-btn {
   position: absolute;
-  top     : 7px;
-  right   : 20%;
+  top: 7px;
+  right: 20%;
 
   & .active {
     background: transparentize(#fff, 0.7);
-    color     : transparentize(#fff, 0);
+    color: transparentize(#fff, 0);
   }
 
   &>button {
-    background   : transparentize(#fff, 0.9);
-    color        : transparentize(#fff, 0.4);
-    cursor       : pointer;
-    outline      : none;
-    width        : 34px;
-    height       : 29px;
-    margin-right : 5px;
+    background: transparentize(#fff, 0.9);
+    color: transparentize(#fff, 0.4);
+    cursor: pointer;
+    outline: none;
+    width: 34px;
+    height: 29px;
+    margin-right: 5px;
     border-radius: 5px;
-    border       : none;
-    font-size    : 21px;
+    border: none;
+    font-size: 21px;
 
     &:hover {
       background: transparentize(#fff, 0.7);
-      color     : transparentize(#fff, 0);
+      color: transparentize(#fff, 0);
     }
 
     &:focus {
-      color     : transparentize(#fff, 0);
+      color: transparentize(#fff, 0);
       box-shadow: 0 0 0 2px $blue;
     }
   }
@@ -4252,7 +4254,7 @@ select.btcd-ud-inp {
 
   & button.lap {
     padding-top: 4px;
-    font-size  : 23px;
+    font-size: 23px;
   }
 }
 
@@ -4268,14 +4270,14 @@ select.btcd-ud-inp {
   }
 
   & button {
-    background     : transparent;
-    color          : $blue;
-    outline        : none;
-    border         : 1px solid $blue;
-    width          : 22px;
-    height         : 22px;
-    padding        : 3px;
-    cursor         : pointer;
+    background: transparent;
+    color: $blue;
+    outline: none;
+    border: 1px solid $blue;
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    cursor: pointer;
     justify-content: center;
 
     &:hover {
@@ -4285,20 +4287,20 @@ select.btcd-ud-inp {
 }
 
 .btcd-app-setting-sidebar {
-  display     : inline-block;
-  padding     : 15px;
-  min-height  : 82vh;
+  display: inline-block;
+  padding: 15px;
+  min-height: 82vh;
   border-right: 1px solid #e8e8e8;
 
   &>a {
-    display      : flex;
-    color        : $dp-bg;
-    padding      : 12px 15px;
-    align-items  : center;
-    width        : 200px;
+    display: flex;
+    color: $dp-bg;
+    padding: 12px 15px;
+    align-items: center;
+    width: 200px;
     margin-bottom: 10px;
     border-radius: 50px;
-    font-weight  : 600;
+    font-weight: 600;
 
     &>span {
       margin-right: 10px;
@@ -4311,8 +4313,8 @@ select.btcd-ud-inp {
 }
 
 .btcd-app-s-a {
-  background : $dp-bg;
-  color      : white !important;
+  background: $dp-bg;
+  color: white !important;
   font-weight: bold;
 
   &:hover {
@@ -4327,7 +4329,7 @@ select.btcd-ud-inp {
 }
 
 .btcd-link {
-  color     : blue;
+  color: blue;
   box-shadow: none !important;
 
   &:hover {
@@ -4351,33 +4353,33 @@ _:-ms-fullscreen,
 }
 
 .sub-tree {
-  height       : 100%;
-  border-left  : 1px solid;
+  height: 100%;
+  border-left: 1px solid;
   border-bottom: 1px solid;
-  border-color : #eeeeee;
+  border-color: #eeeeee;
 }
 
 .coming-feature {
-  display                : flex;
-  background             : #07316f38;
-  pointer-events         : none;
-  justify-content        : center;
-  align-items            : center;
-  padding                : 5px;
+  display: flex;
+  background: #07316f38;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
   -webkit-backdrop-filter: blur(1px);
-  backdrop-filter        : blur(1px);
-  border-radius          : 8px;
+  backdrop-filter: blur(1px);
+  border-radius: 8px;
 
   &::before {
-    background      : white;
-    position        : absolute;
-    top             : 60%;
-    content         : "Coming Soon";
-    padding         : 5px 7px;
-    font-size       : 15px;
-    border-radius   : 10px;
+    background: white;
+    position: absolute;
+    top: 60%;
+    content: "Coming Soon";
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 10px;
     background-color: white;
-    box-shadow      : 0px 0 29px -9px #1e1d3f;
+    box-shadow: 0px 0 29px -9px #1e1d3f;
   }
 }
 
@@ -4387,21 +4389,21 @@ _:-ms-fullscreen,
 
 // paypal
 .btcd-code {
-  color        : #212121;
-  padding      : 3px;
+  color: #212121;
+  padding: 3px;
   border-radius: 5px;
 }
 
 .btcd-ttl-ellipsis {
-  display      : inline-block;
-  width        : 76%;
+  display: inline-block;
+  width: 76%;
   text-overflow: ellipsis;
-  overflow     : hidden;
-  white-space  : nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .btcd-hr {
-  max-width    : 97%;
+  max-width: 97%;
   border-bottom: 1px solid #e2e2e2;
 }
 
@@ -4426,14 +4428,14 @@ _:-ms-fullscreen,
 }
 
 .g-c {
-  display      : -ms-grid;
-  display      : grid;
+  display: -ms-grid;
+  display: grid;
   place-content: center;
 }
 
 .ig-c {
-  display      : -ms-inline-grid;
-  display      : inline-grid;
+  display: -ms-inline-grid;
+  display: inline-grid;
   place-content: center;
 }
 
@@ -4442,12 +4444,12 @@ _:-ms-fullscreen,
 }
 
 .flx {
-  display    : flex;
+  display: flex;
   align-items: center;
 }
 
 .g-flx {
-  display    : flex;
+  display: flex;
   align-items: center;
   gap: 8px;
 }
@@ -4472,7 +4474,7 @@ _:-ms-fullscreen,
   justify-content: center;
 }
 
-.flx-start{
+.flx-start {
   justify-content: start;
 }
 
@@ -4540,7 +4542,7 @@ _:-ms-fullscreen,
   margin-top: 25px;
 }
 
-.mt-i-3{
+.mt-i-3 {
   margin-top: 15px !important;
 }
 
@@ -4559,9 +4561,11 @@ _:-ms-fullscreen,
 .mr-8 {
   margin-right: 40px;
 }
+
 .mr-16 {
   margin-right: 80px;
 }
+
 .mr-18 {
   margin-right: 93px;
 }
@@ -4589,6 +4593,7 @@ _:-ms-fullscreen,
 .ml-6 {
   margin-left: 30px !important;
 }
+
 .ml-30 {
   margin-left: 150px !important;
 }
@@ -4652,12 +4657,15 @@ _:-ms-fullscreen,
 .wdt-200 {
   width: 200px !important;
 }
+
 .wdt-300 {
   width: 300px !important;
 }
+
 .wdt-400 {
   width: 400px !important;
 }
+
 .wdt-600 {
   width: 600px !important;
 }
@@ -4687,7 +4695,7 @@ _:-ms-fullscreen,
 }
 
 .py-1 {
-  padding-top   : 5px;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 
@@ -4713,18 +4721,18 @@ _:-ms-fullscreen,
 
 .us-n {
   -webkit--ms-user-select: none;
-  -webkit-user-select    : none;
-  -khtml--ms-user-select : none;
-  -moz--ms-user-select   : none;
-  -o--ms-user-select     : none;
-  -ms-user-select        : none;
-  user-select            : none;
+  -webkit-user-select: none;
+  -khtml--ms-user-select: none;
+  -moz--ms-user-select: none;
+  -o--ms-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .svg-icn {
-  fill           : none;
-  stroke         : currentColor;
-  stroke-linecap : round;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
   stroke-linejoin: round;
 }
 
@@ -4737,13 +4745,13 @@ _:-ms-fullscreen,
 }
 
 .popper-icn {
-  color  : $dp-bg;
+  color: $dp-bg;
   opacity: 0.3;
 }
 
 .popper-icn:hover {
   opacity: 1;
-  cursor : help;
+  cursor: help;
 }
 
 .txt-body {
@@ -4769,35 +4777,35 @@ _:-ms-fullscreen,
 /*.....Webhook Table Show....*/
 .webhook-table-scroll {
   /*width:100%; */
-  display    : block;
+  display: block;
   empty-cells: show;
 }
 
 .table-webhook-div {
   border-radius: 10px !important;
-  overflow     : auto !important;
-  border       : 1px solid #f0f0f0 !important;
+  overflow: auto !important;
+  border: 1px solid #f0f0f0 !important;
 }
 
 .webhook-table-scroll thead {
   background-color: #f1f1f1;
-  position        : relative;
-  display         : block;
-  width           : 100%;
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .webhook-table-scroll tbody {
   /* Position */
-  display   : block;
-  position  : relative;
-  width     : 100%;
+  display: block;
+  position: relative;
+  width: 100%;
   overflow-y: scroll;
   /* Decoration */
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .webhook-table-scroll tr {
-  width  : 100%;
+  width: 100%;
   display: flex;
 }
 
@@ -4805,8 +4813,8 @@ _:-ms-fullscreen,
 .webhook-table-scroll th {
   //flex-basis: 100%;
   //flex-grow : 2;
-  display   : block;
-  padding   : 1rem;
+  display: block;
+  padding: 1rem;
   text-align: left;
 }
 
@@ -4815,9 +4823,9 @@ _:-ms-fullscreen,
 }
 
 .txt-webhook-resbtn {
-  font-size   : 13px;
-  line-height : 16px;
-  color       : #0051E8;
+  font-size: 13px;
+  line-height: 16px;
+  color: #0051E8;
   margin-right: 6px;
 }
 
@@ -4826,7 +4834,7 @@ _:-ms-fullscreen,
 }
 
 .tbl-webhook-tdtxt {
-  font-size  : 14px;
+  font-size: 14px;
   line-height: 17px;
   align-items: center;
 }
@@ -4865,7 +4873,7 @@ _:-ms-fullscreen,
   padding-top: 3px;
 }
 
-.tab-box{
+.tab-box {
   display: flex;
   width: 97%;
   border-bottom: 1px solid #0069ff;
@@ -4884,7 +4892,7 @@ _:-ms-fullscreen,
 
     &.active {
       box-shadow: -1px -1px 4px 0px rgba(#0069ff, 0.2),
-                  1px 0 4px 0px rgba(#0069ff, 0.2);
+        1px 0 4px 0px rgba(#0069ff, 0.2);
     }
   }
 }
