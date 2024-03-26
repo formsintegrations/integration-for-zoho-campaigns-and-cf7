@@ -2,9 +2,10 @@
 
 /**
  * Plugin Name: Integrations of Zoho Campaigns and CF7
+ * Requires plugins: Contact Form 7
  * Plugin URI:  https://formsintegrations.com/integration-of-zoho-campaigns-and-cf7
  * Description: This plugin integrates CF7 forms with Zoho Campaigns
- * Version:     1.0.1
+ * Version:     1.0
  * Author:      Forms Integrations
  * Author URI:  https://formsintegrations.com
  * Text Domain: fitzocacf
