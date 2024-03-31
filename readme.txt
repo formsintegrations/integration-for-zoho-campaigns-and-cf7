@@ -1,4 +1,4 @@
-=== Integrations of Zoho Campaigns and CF7 ===
+=== Integrations for Zoho Campaigns and CF7 ===
 Contributors: formsintegrations
 Tags: Zoho with CF7,  CF7 with Zoho, Zoho and CF7, CF7 and Zoho, Zoho Integration, CF7 Integration, Zoho Campaigns, Integration, CF7 Form
 Requires at least: 5.1
