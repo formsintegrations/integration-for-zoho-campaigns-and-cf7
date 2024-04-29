@@ -10,6 +10,7 @@
  * Text Domain: fitzocacf
  * Requires PHP: 5.6
  * Requires at least: 5.0
+ * Requires Plugins: contact-form-7
  * Domain Path: /languages
  * License: GPLv2 or later
  */

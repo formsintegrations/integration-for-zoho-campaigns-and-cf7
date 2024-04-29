@@ -13,9 +13,9 @@ final class SmartTags
     {
         $post = [];
         if ($isReferer && isset($_SERVER['HTTP_REFERER'])) {
-            $postId = url_to_postid(sanitize_url($_SERVER['HTTP_REFERER']));
-        } else {
-            $postId = url_to_postid(sanitize_url($_SERVER['REQUEST_URI']));
+            $postId = url_to_postid(esc_url_raw(wp_unslash($_SERVER['HTTP_REFERER'])));
+        } elseif (isset($_SERVER['REQUEST_URI'])) {
+            $postId = url_to_postid(esc_url_raw(wp_unslash($_SERVER['REQUEST_URI'])));
         }
 
         if ($postId) {
@@ -57,7 +57,7 @@ final class SmartTags
             '_bi_date.y/m/d'         => wp_date('y/m/d'),
             '_bi_time'               => wp_date(get_option('time_format')),
             '_bi_weekday'            => wp_date('l'),
-            '_bi_http_referer_url'   => isset($_SERVER['HTTP_REFERER']) ? sanitize_url($_SERVER['HTTP_REFERER']) : '',
+            '_bi_http_referer_url'   => isset($_SERVER['HTTP_REFERER']) ? esc_url_raw(wp_unslash($_SERVER['HTTP_REFERER'])) : '',
             '_bi_ip_address'         => IpTool::getIP(),
             '_bi_browser_name'       => isset($browser) ? $browser : '',
             '_bi_operating_system'   => isset($operating) ? $operating : '',

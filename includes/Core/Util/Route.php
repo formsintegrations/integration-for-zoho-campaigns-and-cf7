@@ -26,9 +26,12 @@ final class Route
     public static function request($method, $hook, $invokeAble)
     {
         if (
-            $_SERVER['REQUEST_METHOD'] != $method
+            !isset($_SERVER['REQUEST_METHOD'])
+            || $_SERVER['REQUEST_METHOD'] != $method
+            //phpcs:ignore WordPress.Security.NonceVerification.Recommended
             || !isset($_REQUEST['action'])
-            || strpos($_REQUEST['action'], $hook) === false
+            //phpcs:ignore WordPress.Security.NonceVerification.Recommended
+            || strpos(sanitize_text_field(wp_unslash($_REQUEST['action'])), $hook) === false //will verify nonce in action method
         ) {
             if (static::$_no_auth) {
                 static::$_no_auth = false;
@@ -41,12 +44,13 @@ final class Route
             return;
         }
 
+        $requestMethod = sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD']));
         if (static::$_ignore_token) {
             static::$_ignore_token                                                                         = false;
-            static::$_invokeAble[Config::VAR_PREFIX . $hook][$_SERVER['REQUEST_METHOD'] . '_ignore_token'] = true;
+            static::$_invokeAble[Config::VAR_PREFIX . $hook][$requestMethod . '_ignore_token'] = true;
         }
 
-        static::$_invokeAble[Config::VAR_PREFIX . $hook][$_SERVER['REQUEST_METHOD']] = $invokeAble;
+        static::$_invokeAble[Config::VAR_PREFIX . $hook][$requestMethod] = $invokeAble;
         Hooks::add('wp_ajax_' . Config::VAR_PREFIX . $hook, [__CLASS__, 'action']);
         if (static::$_no_auth) {
             static::$_no_auth = false;
@@ -57,21 +61,32 @@ final class Route
     public static function action()
     {
         if (
+            !isset($_SERVER['REQUEST_METHOD'])
+            || !isset($_REQUEST['action'])
+        ) {
+            return;
+        }
+
+        $requestMethod = sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD']));
+        $action = sanitize_text_field(wp_unslash($_REQUEST['action']));
+        if (
             isset(
-                static::$_invokeAble[sanitize_text_field($_REQUEST['action'])][$_SERVER['REQUEST_METHOD']
-                    . '_ignore_token']
+                static::$_invokeAble[$action][$requestMethod . '_ignore_token']
             )
             || isset($_REQUEST['_ajax_nonce'])
-            && wp_verify_nonce(sanitize_text_field($_REQUEST['_ajax_nonce']), Config::VAR_PREFIX . 'nonce')
+            && wp_verify_nonce(sanitize_text_field(wp_unslash($_REQUEST['_ajax_nonce'])), Config::VAR_PREFIX . 'nonce')
         ) {
-            $invokeAble = static::$_invokeAble[sanitize_text_field($_REQUEST['action'])][$_SERVER['REQUEST_METHOD']];
+            $invokeAble = static::$_invokeAble[$action][$requestMethod];
             unset($_POST['_ajax_nonce'], $_POST['action'], $_GET['_ajax_nonce'], $_GET['action']);
+
+            $contentType = isset($_SERVER['CONTENT_TYPE']) ? sanitize_title(wp_unslash($_SERVER['CONTENT_TYPE']))
+                : 'application/json';
+
             if (method_exists($invokeAble[0], $invokeAble[1])) {
-                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                if ($requestMethod == 'POST') {
                     if (
-                        isset($_SERVER['CONTENT_TYPE'])
-                        && strpos($_SERVER['CONTENT_TYPE'], 'form-data')             === false
-                        && strpos($_SERVER['CONTENT_TYPE'], 'x-www-form-urlencoded') === false
+                        strpos($contentType, 'form-data')             === false
+                        && strpos($contentType, 'x-www-form-urlencoded') === false
                     ) {
                         $inputJSON = file_get_contents('php://input');
                         $data      = \is_string($inputJSON) ? json_decode($inputJSON) : $inputJSON;

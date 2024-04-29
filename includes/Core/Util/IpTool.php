@@ -46,7 +46,7 @@ final class IpTool
         } elseif (getenv('HTTP_FORWARDED')) {
             $ip = getenv('HTTP_FORWARDED');
         } else {
-            $ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP);
+            $ip = isset($_SERVER['REMOTE_ADDR']) ? filter_var(wp_unslash($_SERVER['REMOTE_ADDR']), FILTER_VALIDATE_IP) : '';
         }
 
         return $ip;
@@ -59,16 +59,10 @@ final class IpTool
      */
     private static function _checkDevice()
     {
-        if (isset($_SERVER)) {
-            $userAgent = sanitize_text_field($_SERVER['HTTP_USER_AGENT']);
+        if (isset($_SERVER['HTTP_USER_AGENT'])) {
+            $userAgent = sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT']));
         } else {
-            global $HTTP_SERVER_VARS;
-            if (isset($HTTP_SERVER_VARS)) {
-                $userAgent = $HTTP_SERVER_VARS['HTTP_USER_AGENT'];
-            } else {
-                global $HTTP_USER_AGENT;
-                $userAgent = $HTTP_USER_AGENT;
-            }
+            return '';
         }
 
         return IpTool::_getBrowserName($userAgent) . '|' . IpTool::_getOS($userAgent);

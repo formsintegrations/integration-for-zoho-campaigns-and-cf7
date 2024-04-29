@@ -128,4 +128,5 @@
             </property>
         </properties>
     </rule>
+    <rule ref="WordPress.Security" />
 </ruleset>

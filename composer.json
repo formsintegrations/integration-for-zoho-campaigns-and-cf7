@@ -1,8 +1,7 @@
 {
   "name": "formsintegrations/zcforminator",
   "description": "An Integration plugin for wordpress",
-  "license": "gpl-2",
-  "require": {},
+  "license": "GPL-2.0-or-later",
   "autoload": {
     "psr-4": {
       "FormInteg\\ZOCACFLite\\": "includes/"
@@ -17,7 +16,8 @@
     "friendsofphp/php-cs-fixer": "^3.10",
     "sirbrillig/phpcs-variable-analysis": "*",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "phpcompatibility/phpcompatibility-wp": "*"
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "wp-coding-standards/wpcs": "^3.0"
   },
   "config": {
     "allow-plugins": {
