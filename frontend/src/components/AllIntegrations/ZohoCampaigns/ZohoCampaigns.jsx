@@ -20,8 +20,8 @@ function ZohoCampaigns({ formFields, setFlow, flow, allIntegURL }) {
   const [campaignsConf, setCampaignsConf] = useState({
     name: 'Zoho Campaigns',
     type: 'Zoho Campaigns',
-    clientId: process.env.NODE_ENV === 'development' ? '1000.K11WD288GBYU18O09VZRC6T782Y06H' : '',
-    clientSecret: process.env.NODE_ENV === 'development' ? '553f29ae63658dcc604fa90fa36f28be4fd4222c87' : '',
+    clientId: process.env.NODE_ENV === 'development' ? '1000.QROR7EKA42DN9M5T6DPX7ZZ514COUF' : '',
+    clientSecret: process.env.NODE_ENV === 'development' ? '7c2438a3b72c810202fdf2330476fb6ba637b58266' : '',
     list: '',
     field_map: [
       { formField: '', zohoFormField: '' },

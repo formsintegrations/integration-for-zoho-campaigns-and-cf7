@@ -49,7 +49,7 @@ final class SmartTags
         }
 
         $smartTags = [
-            '_bi_current_time'       => date('Y-m-d H:i:s'),
+            '_bi_current_time'       => gmdate('Y-m-d H:i:s'),
             '_bi_admin_email'        => get_bloginfo('admin_email'),
             '_bi_date_default'       => wp_date(get_option('date_format')),
             '_bi_date.m/d/y'         => wp_date('m/d/y'),
