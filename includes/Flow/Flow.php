@@ -75,6 +75,7 @@ final class Flow
     public function get($data)
     {
         $missingField = null;
+        error_log(print_r($data, true));
         if (!property_exists($data, 'id')) {
             $missingField = 'Integration ID';
         }
@@ -98,7 +99,7 @@ final class Flow
 
         $integration = $integrations[0];
         if (!($trigger = self::isTriggerExists($integration->triggered_entity))) {
-            wp_send_json_error('Trigger does not exists. Trigger: '. $integration->triggered_entity);
+            wp_send_json_error('Trigger does not exists. Trigger: ' . $integration->triggered_entity);
         }
         if (\is_string($integration->flow_details)) {
             $integration->flow_details = json_decode($integration->flow_details);
@@ -122,20 +123,20 @@ final class Flow
 
     public function save($data)
     {
-        $missing_field = null;
+        $missingField = null;
         if (!property_exists($data, 'trigger')) {
-            $missing_field = 'Trigger';
+            $missingField = 'Trigger';
         }
 
         if (!property_exists($data, 'triggered_entity_id')) {
-            $missing_field = (\is_null($missing_field) ? null : ', ') . 'Triggered form ID';
+            $missingField = (\is_null($missingField) ? null : ', ') . 'Triggered form ID';
         }
 
         if (!property_exists($data, 'flow_details')) {
-            $missing_field = (\is_null($missing_field) ? null : ', ') . 'Integration details';
+            $missingField = (\is_null($missingField) ? null : ', ') . 'Integration details';
         }
-        if (!\is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'fitzocacf'), $missing_field));
+        if (!\is_null($missingField)) {
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'fitzocacf'), $missingField));
         }
         $name               = !empty($data->name) ? $data->name : '';
         $integrationHandler = new FlowController();
@@ -183,15 +184,15 @@ final class Flow
 
     public function update($data)
     {
-        $missing_field = null;
+        $missingField = null;
         if (empty($data->id)) {
-            $missing_field = 'Integration id';
+            $missingField = 'Integration id';
         }
         if (empty($data->flow_details)) {
-            $missing_field = 'Flow details';
+            $missingField = 'Flow details';
         }
-        if (!\is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'fitzocacf'), $missing_field));
+        if (!\is_null($missingField)) {
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'fitzocacf'), $missingField));
         }
         $name               = !empty($data->name) ? $data->name : '';
         $integrationHandler = new FlowController();
@@ -212,12 +213,12 @@ final class Flow
 
     public function delete($data)
     {
-        $missing_field = null;
+        $missingField = null;
         if (empty($data->id)) {
-            $missing_field = 'Integration id';
+            $missingField = 'Integration id';
         }
-        if (!\is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'fitzocacf'), $missing_field));
+        if (!\is_null($missingField)) {
+            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'fitzocacf'), $missingField));
         }
         $integrationHandler = new FlowController();
         $deleteStatus       = $integrationHandler->delete($data->id);
@@ -244,15 +245,15 @@ final class Flow
 
     public function toggle_status($data)
     {
-        $missing_field = null;
+        $missingField = null;
         if (!property_exists($data, 'status')) {
-            $missing_field = 'status';
+            $missingField = 'status';
         }
         if (empty($data->id)) {
-            $missing_field = 'Integration id';
+            $missingField = 'Integration id';
         }
-        if (!\is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'fitzocacf'), $missing_field));
+        if (!\is_null($missingField)) {
+            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'fitzocacf'), $missingField));
         }
         $integrationHandler = new FlowController();
         $toggleStatus       = $integrationHandler->updateStatus($data->id, $data->status);

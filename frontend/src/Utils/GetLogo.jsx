@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import PlaceholderIcon from '../Icons/PlaceholderIcon'
 
-function GetLogo({ name, style }) {
-    const dynamicModule = import(`../resource/img/integ/${name}.png`)
+function GetLogo({ name, style, ext }) {
+    const dynamicModule = import(`../resource/img/integ/${name}.${ext}`)
     const [Component, setComponent] = useState(null)
 
     useEffect(() => {
@@ -10,7 +10,7 @@ function GetLogo({ name, style }) {
             console.log('module', module)
             setComponent(() => module.default)
         })
-    }, [])
+    }, [name])
 
     const loaderStyle = {
         display: 'flex',

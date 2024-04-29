@@ -11,7 +11,6 @@ import Loader from '../Loaders/Loader'
 import LoaderSm from '../Loaders/LoaderSm'
 import Note from '../Utilities/Note'
 import SnackMsg from '../Utilities/SnackMsg'
-import TriggerMultiOption from './TriggerMultiOption'
 import { FormPluginStateHelper } from './TriggerHelpers/TriggerStateHelper'
 import { action, trigger } from '../../Config'
 import { useHistory } from 'react-router-dom'
@@ -97,7 +96,6 @@ const FormPlugin = () => {
                 singleSelect
                 style={{ width: '100%', minWidth: 400, maxWidth: 450 }}
               />
-              <TriggerMultiOption flow={newFlow} setFlowData={setFlowData} />
               <div>
                 <button type="button" onClick={updatedStep} className="btn ml-auto btcd-btn-lg green sh-sm flx mt-4" disabled={!newFlow?.triggerData?.formID}>
                   &nbsp;Next

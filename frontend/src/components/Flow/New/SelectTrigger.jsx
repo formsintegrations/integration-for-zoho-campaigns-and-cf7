@@ -69,7 +69,7 @@ export default function SelectTrigger() {
           ? (
             <>
               <div role="button" className="btcd-inte-card flx-col flx-center flx-wrp mr-4 mt-3" tabIndex="0">
-                <GetLogo name={newFlow.triggerDetail.name} />
+                <GetLogo name={newFlow.triggerDetail.name} ext={'svg'}/>
                 <div className="txt-center">
                   {newFlow.triggerDetail.name}
                 </div>
@@ -105,7 +105,7 @@ export default function SelectTrigger() {
                           <span className="txt-pro"><a href={proUrl} target="_blank" rel="noreferrer">{__('Premium')}</a></span>
                         </div>
                       )}
-                      <GetLogo name={allTriggers?.data[inte].name} />
+                      <GetLogo name={allTriggers?.data[inte].name} ext={'svg'} />
                       <div className="txt-center">
                         {allTriggers?.data[inte].name}
                       </div>

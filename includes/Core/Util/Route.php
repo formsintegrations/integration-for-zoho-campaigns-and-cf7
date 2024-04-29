@@ -44,7 +44,7 @@ final class Route
             return;
         }
 
-        $requestMethod = sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD']));
+        $requestMethod = sanitize_text_field(wp_unslash($_SERVER['REQUEST_METHOD']));
         if (static::$_ignore_token) {
             static::$_ignore_token                                                                         = false;
             static::$_invokeAble[Config::VAR_PREFIX . $hook][$requestMethod . '_ignore_token'] = true;
@@ -67,7 +67,7 @@ final class Route
             return;
         }
 
-        $requestMethod = sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD']));
+        $requestMethod = sanitize_text_field(wp_unslash($_SERVER['REQUEST_METHOD']));
         $action = sanitize_text_field(wp_unslash($_REQUEST['action']));
         if (
             isset(
@@ -79,7 +79,7 @@ final class Route
             $invokeAble = static::$_invokeAble[$action][$requestMethod];
             unset($_POST['_ajax_nonce'], $_POST['action'], $_GET['_ajax_nonce'], $_GET['action']);
 
-            $contentType = isset($_SERVER['CONTENT_TYPE']) ? sanitize_title(wp_unslash($_SERVER['CONTENT_TYPE']))
+            $contentType = isset($_SERVER['CONTENT_TYPE']) ? sanitize_text_field(wp_unslash($_SERVER['CONTENT_TYPE']))
                 : 'application/json';
 
             if (method_exists($invokeAble[0], $invokeAble[1])) {
