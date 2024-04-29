@@ -16,11 +16,11 @@ class AdminAjax
     public function updatedAppConfig($data)
     {
         if (!property_exists($data, 'data')) {
-            wp_send_json_error(__('Data can\'t be empty', 'fitzocacf'));
+            wp_send_json_error(__('Data can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'));
         }
 
         update_option(Config::withPrefix('app_conf'), $data->data);
-        wp_send_json_success(__('save successfully done', 'fitzocacf'));
+        wp_send_json_success(__('save successfully done', 'integrations-for-zoho-campaigns-and-cf7'));
     }
 
     public function getAppConfig()

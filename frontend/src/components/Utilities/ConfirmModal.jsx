@@ -17,7 +17,7 @@ function ConfirmModal({ close, action, mainMdlCls, show, btnTxt, body, btn2Txt, 
           {children}
         </div>
         <div className={`txt-center ${warning && 'mt-3'}`}>
-          {!btn2Txt && <button onClick={close} className={`btn btcd-btn-o-gray green w-4 mr-2 br-50 ${!className && 'btn-lg'}`} type="button">{__('Cancel', 'fitzocacf')}</button>}
+          {!btn2Txt && <button onClick={close} className={`btn btcd-btn-o-gray green w-4 mr-2 br-50 ${!className && 'btn-lg'}`} type="button">{__('Cancel', 'integrations-for-zoho-campaigns-and-cf7')}</button>}
           {btn2Txt && <button onClick={btn2Action} className={`btn green w-4 mr-2 br-50 ${!className && 'btn-lg'}`} type="button">{btn2Txt}</button>}
           <button onClick={action} className={`btn ${btnClass || 'red'} w-4 br-50 ${!className && 'btn-lg'}`} type="button">{btnTxt}</button>
         </div>

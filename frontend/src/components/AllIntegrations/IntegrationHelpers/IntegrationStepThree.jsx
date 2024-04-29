@@ -35,7 +35,7 @@ export default function IntegrationStepThree({ step, saveConfig, edit, disabled,
       {dataConf?.condition && edit && (
         <>
           <div className="flx">
-            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={dataConf?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'fitzocacf')} />
+            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={dataConf?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'integrations-for-zoho-campaigns-and-cf7')} />
           </div>
           <br />
           {dataConf?.condition?.action_behavior === 'cond' && (
@@ -48,7 +48,7 @@ export default function IntegrationStepThree({ step, saveConfig, edit, disabled,
       {dataConf?.condition && step === 2 && !edit && (
         <>
           <div className="flx pl-2">
-            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={dataConf?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'fitzocacf')} />
+            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={dataConf?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'integrations-for-zoho-campaigns-and-cf7')} />
           </div>
           <br />
           {dataConf?.condition?.action_behavior === 'cond' && (

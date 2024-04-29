@@ -37,7 +37,7 @@ function ZohoCampaigns({ formFields, setFlow, flow, allIntegURL }) {
       document.getElementById('btcd-settings-wrp').scrollTop = 0
     }, 300)
     if (!checkMappedFields(campaignsConf)) {
-      setSnackbar({ show: true, msg: __('Please map mandatory fields', 'fitzocacf') })
+      setSnackbar({ show: true, msg: __('Please map mandatory fields', 'integrations-for-zoho-campaigns-and-cf7') })
       return
     }
 
@@ -81,7 +81,7 @@ function ZohoCampaigns({ formFields, setFlow, flow, allIntegURL }) {
           className="btn f-right btcd-btn-lg green sh-sm flx"
           type="button"
         >
-          {__('Next', 'fitzocacf')}
+          {__('Next', 'integrations-for-zoho-campaigns-and-cf7')}
           <BackIcn className="ml-1 rev-icn" />
         </button>
 

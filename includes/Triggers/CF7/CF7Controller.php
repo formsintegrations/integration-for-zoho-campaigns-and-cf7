@@ -35,7 +35,7 @@ final class CF7Controller
     public function getAll()
     {
         if (!class_exists('WPCF7_ContactForm')) {
-            wp_send_json_error(__('Contact Form 7 is not installed or activated', 'fitzocacf'));
+            wp_send_json_error(__('Contact Form 7 is not installed or activated', 'integrations-for-zoho-campaigns-and-cf7'));
         }
         $forms = \WPCF7_ContactForm::find();
         $all_forms = [];
@@ -55,10 +55,10 @@ final class CF7Controller
             $missing_field = 'Form ID';
         }
         if (!is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'fitzocacf'), $missing_field));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missing_field));
         }
         if (empty($fields)) {
-            wp_send_json_error(__('Form doesn\'t exists any field', 'fitzocacf'));
+            wp_send_json_error(__('Form doesn\'t exists any field', 'integrations-for-zoho-campaigns-and-cf7'));
         }
 
         $responseData['fields'] = $fields;

@@ -8,7 +8,7 @@
  * Version:     1.0
  * Author:      Forms Integrations
  * Author URI:  https://formsintegrations.com
- * Text Domain: fitzocacf
+ * Text Domain: integrations-for-zoho-campaigns-and-cf7
  * Requires PHP: 5.6
  * Requires at least: 5.0
  * Requires Plugins: contact-form-7

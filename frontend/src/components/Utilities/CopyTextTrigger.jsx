@@ -7,7 +7,7 @@ export default function CopyTextTrigger({ value, setSnackbar, toastShow, classNa
   const copyText = e => {
     const cpyBtn = e.target
     cpyBtn.setAttribute('style', '--tooltip-txt: "Copied"')
-    setSnackbar && setSnackbar({ show: true, msg: __('Copied on Clipboard.', 'fitzocacf') })
+    setSnackbar && setSnackbar({ show: true, msg: __('Copied on Clipboard.', 'integrations-for-zoho-campaigns-and-cf7') })
     const text = e.target.parentNode.children[0]
     text.select()
     text.setSelectionRange(0, 99999)

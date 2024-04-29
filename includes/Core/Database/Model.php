@@ -44,7 +44,7 @@ class Model
     public function insert($data = [])
     {
         if (\is_null($data)) {
-            return new WP_Error('empty_data', __('Form data is empty', 'fitzocacf'));
+            return new WP_Error('empty_data', __('Form data is empty', 'integrations-for-zoho-campaigns-and-cf7'));
         }
         $result = $this->app_db->insert(
             $this->table_name,
@@ -150,7 +150,7 @@ class Model
                 return new WP_Error('db_error', $this->app_db->last_error);
             }
 
-            return new WP_Error('db_error', __('Result is empty', 'fitzocacf'));
+            return new WP_Error('db_error', __('Result is empty', 'integrations-for-zoho-campaigns-and-cf7'));
         }
 
         return $this->app_db->last_result;
@@ -175,7 +175,7 @@ class Model
         } else {
             return new WP_Error(
                 'update_error',
-                __('Nothing to update', 'fitzocacf')
+                __('Nothing to update', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
         $update_condition = (!\is_null($condition)
@@ -208,7 +208,7 @@ class Model
         } else {
             return new WP_Error(
                 'update_error',
-                __('Nothing to update', 'fitzocacf')
+                __('Nothing to update', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
 
@@ -261,7 +261,7 @@ class Model
             && array_keys($duplicate) === range(0, \count($duplicate) - 1))) {
             return new WP_Error(
                 'duplicate_error',
-                __('Nothing to duplicate', 'fitzocacf')
+                __('Nothing to duplicate', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
 
@@ -306,7 +306,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'fitzocacf')
+                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
         $update_condition = (!\is_null($condition)
@@ -331,7 +331,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'fitzocacf')
+                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
         $result = $this->app_db->delete(
@@ -353,7 +353,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'fitzocacf')
+                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
         $formatted_conditions = $this->getFormatedCondition($delete_condition);
@@ -365,7 +365,7 @@ class Model
 
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'fitzocacf')
+                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
             );
         }
         $result = $this->app_db->query(
@@ -454,7 +454,7 @@ class Model
         }
         // echo " Q S " . $preparedQuery . " Q  EE";
         if (empty($preparedQuery)) {
-            $this->db_response = new WP_Error('null_query', __('prepared query is empty', 'fitzocacf'));
+            $this->db_response = new WP_Error('null_query', __('prepared query is empty', 'integrations-for-zoho-campaigns-and-cf7'));
         } else {
             $this->db_response = stripos($preparedQuery, 'DELETE') !== false ? $this->app_db->query($preparedQuery)
                 : $this->app_db->get_results($preparedQuery, OBJECT_K);
@@ -476,7 +476,7 @@ class Model
             if (is_wp_error($db_response)) {
                 $response = $db_response;
             }
-            $response = new WP_Error('result_empty', __('Result is empty', 'fitzocacf'));
+            $response = new WP_Error('result_empty', __('Result is empty', 'integrations-for-zoho-campaigns-and-cf7'));
         } elseif (\is_array($this->app_db->last_result) && !empty($this->app_db->last_result)) {
             $response = $this->app_db->last_result;
         } elseif ($this->app_db->insert_id) {

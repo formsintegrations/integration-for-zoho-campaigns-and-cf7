@@ -116,7 +116,7 @@ final class Route
             wp_send_json_error(
                 __(
                     'Token expired or invalid. Please refresh the page and try again.',
-                    'fitzocacf'
+                    'integrations-for-zoho-campaigns-and-cf7'
                 ),
                 401
             );

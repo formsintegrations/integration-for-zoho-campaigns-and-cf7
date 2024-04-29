@@ -4,7 +4,7 @@ export default function Note({ note }) {
   return (
     <div className="note">
       <h4 className="mt-0">Note</h4>
-      <div className="note-text" dangerouslySetInnerHTML={{ __html: __(note, 'fitzocacf') }} />
+      <div className="note-text" dangerouslySetInnerHTML={{ __html: __(note, 'integrations-for-zoho-campaigns-and-cf7') }} />
     </div>
   )
 }

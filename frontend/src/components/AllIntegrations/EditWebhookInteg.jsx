@@ -39,11 +39,11 @@ function EditWebhookInteg({ setSnackbar }) {
   }
   return (
     <div className="flx mt-3">
-      <b className="wdt-200 d-in-b">{__('Webhook URL:', 'fitzocacf')}</b>
+      <b className="wdt-200 d-in-b">{__('Webhook URL:', 'integrations-for-zoho-campaigns-and-cf7')}</b>
       <div className="w-5">
         <CopyText value={`${api.base}/callback/${hookID}`} className="field-key-cpy w-10 ml-0" setSnackbar={setSnackbar} readOnly />
         <button onClick={handleFetch} className="btn btcd-btn-lg green sh-sm flx mt-1 ml-1" type="button">
-          {flow.triggerDetail?.data ? __('Fetched ✔', 'fitzocacf') : __('Fetch', 'fitzocacf')}
+          {flow.triggerDetail?.data ? __('Fetched ✔', 'integrations-for-zoho-campaigns-and-cf7') : __('Fetch', 'integrations-for-zoho-campaigns-and-cf7')}
           {isLoading && <LoaderSm size="20" clr="#022217" className="ml-2" />}
         </button>
       </div>

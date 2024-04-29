@@ -11,8 +11,8 @@ function LogicChip({ logic, nested, onChange }) {
 
       <div>
         <select value={logic} onChange={onChange} className={`btcd-logic-chip ${nested && 'scl-7 op-8'}`}>
-          <option value="or">{__('OR', 'fitzocacf')}</option>
-          <option value="and">{__('AND', 'fitzocacf')}</option>
+          <option value="or">{__('OR', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+          <option value="and">{__('AND', 'integrations-for-zoho-campaigns-and-cf7')}</option>
         </select>
       </div>
 

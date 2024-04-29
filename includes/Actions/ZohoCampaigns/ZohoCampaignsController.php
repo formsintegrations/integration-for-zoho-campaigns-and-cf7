@@ -10,7 +10,6 @@ use FormInteg\ZOCACFLite\Core\Util\IpTool;
 use FormInteg\ZOCACFLite\Core\Util\HttpHelper;
 
 use FormInteg\ZOCACFLite\Actions\ZohoCampaigns\RecordApiHelper;
-use FormInteg\ZOCACFLite\Core\Util\ApiResponse as UtilApiResponse;
 use FormInteg\ZOCACFLite\Flow\FlowController;
 use FormInteg\ZOCACFLite\Log\LogHandler;
 use WP_Error;
@@ -25,7 +24,6 @@ class ZohoCampaignsController
     public function __construct($integrationID)
     {
         $this->_integrationID = $integrationID;
-        //$this->_logResponse = new UtilApiResponse();
     }
 
 
@@ -49,7 +47,7 @@ class ZohoCampaignsController
             wp_send_json_error(
                 __(
                     'Requested parameter is empty',
-                    'fitzocacf'
+                    'integrations-for-zoho-campaigns-and-cf7'
                 ),
                 400
             );
@@ -92,7 +90,7 @@ class ZohoCampaignsController
             wp_send_json_error(
                 __(
                     'Requested parameter is empty',
-                    'fitzocacf'
+                    'integrations-for-zoho-campaigns-and-cf7'
                 ),
                 400
             );
@@ -217,7 +215,7 @@ class ZohoCampaignsController
         if (!empty($others['required'])) {
             $newDetails->default->required = $others['required'];
         }
-        $flow->update($integrationID, ['flow_details' => \json_encode($newDetails)]);
+        $flow->update($integrationID, ['flow_details' => wp_json_encode($newDetails)]);
     }
 
     public function execute($integrationData, $fieldValues)
@@ -238,7 +236,7 @@ class ZohoCampaignsController
             || empty($list)
             || empty($fieldMap)
         ) {
-            $error = new WP_Error('REQ_FIELD_EMPTY', __('list are required for zoho campaigns api', 'fitzocacf'));
+            $error = new WP_Error('REQ_FIELD_EMPTY', __('list are required for zoho campaigns api', 'integrations-for-zoho-campaigns-and-cf7'));
             LogHandler::save($this->_integrationID, 'record', 'validation', $error);
             return $error;
         }
@@ -248,7 +246,7 @@ class ZohoCampaignsController
             $requiredParams['clientSecret'] = $integrationDetails->clientSecret;
             $requiredParams['dataCenter'] = $integrationDetails->dataCenter;
             $requiredParams['tokenDetails'] = $tokenDetails;
-            $newTokenDetails = self::refreshAccessToken((object)$requiredParams);
+            $newTokenDetails = self::refreshAccessToken((object) $requiredParams);
             if ($newTokenDetails) {
                 self::saveRefreshedToken($this->_integrationID, $newTokenDetails);
                 $tokenDetails = $newTokenDetails;

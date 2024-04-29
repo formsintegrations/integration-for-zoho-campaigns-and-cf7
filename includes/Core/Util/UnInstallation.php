@@ -42,19 +42,16 @@ final class UnInstallation
             $wpdb->prefix . Config::VAR_PREFIX . 'log',
         ];
         foreach ($tableArray as $tablename) {
-            $dropTable = $wpdb->prepare("DROP TABLE IF EXISTS %s", $tablename);
-            $wpdb->query($dropTable);
+            $wpdb->query($wpdb->prepare("DROP TABLE IF EXISTS %s", $tablename));
         }
 
         $columns = $columns + [Config::withPrefix('app_conf')];
 
         foreach ($columns as $column) {
-            $dltOption = $wpdb->prepare("DELETE FROM `{$wpdb->prefix}options` WHERE option_name = %s", $column);
-            $wpdb->query($dltOption);
+            $wpdb->query($wpdb->prepare("DELETE FROM `{$wpdb->prefix}options` WHERE option_name = %s", $column));
         }
 
         $prefix = Config::VAR_PREFIX . 'webhook_%';
-        $sql = $wpdb->prepare("DELETE FROM `{$wpdb->prefix}options` WHERE `option_name` LIKE %s", $prefix);
-        $wpdb->query($sql);
+        $wpdb->query($wpdb->prepare("DELETE FROM `{$wpdb->prefix}options` WHERE `option_name` LIKE %s", $prefix));
     }
 }

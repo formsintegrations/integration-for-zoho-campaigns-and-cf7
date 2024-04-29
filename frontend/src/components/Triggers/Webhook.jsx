@@ -118,7 +118,7 @@ const Webhook = () => {
     <div className="trigger-webhook-width">
       <SnackMsg snack={snack} setSnackbar={setSnackbar} />
       <div className="mt-3">
-        <b>{__('Webhook URL:', 'fitzocacf')}</b>
+        <b>{__('Webhook URL:', 'integrations-for-zoho-campaigns-and-cf7')}</b>
       </div>
       <CopyText
         value={`${api.base}/callback/${hookID}`}
@@ -134,8 +134,8 @@ const Webhook = () => {
           disabled={!hookID}
         >
           {newFlow.triggerDetail?.data
-            ? __('Fetched ✔', 'fitzocacf')
-            : __('Fetch', 'fitzocacf')}
+            ? __('Fetched ✔', 'integrations-for-zoho-campaigns-and-cf7')
+            : __('Fetch', 'integrations-for-zoho-campaigns-and-cf7')}
           {isLoading && (
             <LoaderSm size="20" clr="#022217" className="ml-2" />
           )}
