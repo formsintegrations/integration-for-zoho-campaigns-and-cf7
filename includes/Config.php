@@ -176,14 +176,15 @@ class Config
             ],
         ];
 
-        if (!Plugin::instance()->isLicenseActive()) {
-            $links['Pro'] = [
-                'title' => __('Go Pro', 'integration-for-zoho-campaigns-and-cf7'),
-                'url'   => self::PRO_URL,
-                'attr'  => 'style="color:green;font-weight:bolder;"',
-            ];
-        }
+        $links['Pro'] = [
+            'title' => __('Go Pro', 'integration-for-zoho-campaigns-and-cf7'),
+            'url'   => self::PRO_URL,
+            'attr'  => 'style="color:green;font-weight:bolder;"',
+        ];
 
-        return $links;
+        return apply_filters(
+            'forminteg_zocacflite_plugin_page_links',
+            $links
+        );
     }
 }
