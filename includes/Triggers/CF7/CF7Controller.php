@@ -6,19 +6,16 @@ use FormInteg\ZOCACFLite\Flow\Flow;
 
 final class CF7Controller
 {
-    
+
     public static function info()
     {
         $plugin_path = 'contact-form-7/wp-contact-form-7.php';
         return [
             'name' => 'Contact Form 7',
             'title' => 'Just another contact form plugin. Simple but flexible.',
-            'icon_url' => 'https://ps.w.org/contact-form-7/assets/icon.svg',
             'slug' => $plugin_path,
             'type' => 'form',
             'is_active' => class_exists('WPCF7_ContactForm'),
-            'activation_url' => wp_nonce_url(self_admin_url('plugins.php?action=activate&amp;plugin=' . $plugin_path . '&amp;plugin_status=all&amp;paged=1&amp;s'), 'activate-plugin_' . $plugin_path),
-            'install_url' => wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=' . $plugin_path), 'install-plugin_' . $plugin_path),
             'list' => [
                 'action' => 'cf7/get',
                 'method' => 'get',
@@ -35,7 +32,7 @@ final class CF7Controller
     public function getAll()
     {
         if (!class_exists('WPCF7_ContactForm')) {
-            wp_send_json_error(__('Contact Form 7 is not installed or activated', 'integrations-for-zoho-campaigns-and-cf7'));
+            wp_send_json_error(__('Contact Form 7 is not installed or activated', 'integration-for-zoho-campaigns-and-cf7'));
         }
         $forms = \WPCF7_ContactForm::find();
         $all_forms = [];
@@ -55,10 +52,10 @@ final class CF7Controller
             $missing_field = 'Form ID';
         }
         if (!is_null($missing_field)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missing_field));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missing_field));
         }
         if (empty($fields)) {
-            wp_send_json_error(__('Form doesn\'t exists any field', 'integrations-for-zoho-campaigns-and-cf7'));
+            wp_send_json_error(__('Form doesn\'t exists any field', 'integration-for-zoho-campaigns-and-cf7'));
         }
 
         $responseData['fields'] = $fields;
@@ -83,7 +80,7 @@ final class CF7Controller
         }
 
         $fields = [];
-        
+
         foreach ($fieldDetails as $field) {
             if (!empty($field->name) && $field->type !== 'submit') {
                 $fields[] = [

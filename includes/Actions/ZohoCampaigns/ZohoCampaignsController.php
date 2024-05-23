@@ -47,7 +47,7 @@ class ZohoCampaignsController
             wp_send_json_error(
                 __(
                     'Requested parameter is empty',
-                    'integrations-for-zoho-campaigns-and-cf7'
+                    'integration-for-zoho-campaigns-and-cf7'
                 ),
                 400
             );
@@ -90,7 +90,7 @@ class ZohoCampaignsController
             wp_send_json_error(
                 __(
                     'Requested parameter is empty',
-                    'integrations-for-zoho-campaigns-and-cf7'
+                    'integration-for-zoho-campaigns-and-cf7'
                 ),
                 400
             );
@@ -236,7 +236,7 @@ class ZohoCampaignsController
             || empty($list)
             || empty($fieldMap)
         ) {
-            $error = new WP_Error('REQ_FIELD_EMPTY', __('list are required for zoho campaigns api', 'integrations-for-zoho-campaigns-and-cf7'));
+            $error = new WP_Error('REQ_FIELD_EMPTY', __('list are required for zoho campaigns api', 'integration-for-zoho-campaigns-and-cf7'));
             LogHandler::save($this->_integrationID, 'record', 'validation', $error);
             return $error;
         }

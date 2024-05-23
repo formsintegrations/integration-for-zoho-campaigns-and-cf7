@@ -44,8 +44,9 @@ class Model
     public function insert($data = [])
     {
         if (\is_null($data)) {
-            return new WP_Error('empty_data', __('Form data is empty', 'integrations-for-zoho-campaigns-and-cf7'));
+            return new WP_Error('empty_data', __('Form data is empty', 'integration-for-zoho-campaigns-and-cf7'));
         }
+
         $result = $this->app_db->insert(
             $this->table_name,
             $data
@@ -150,7 +151,7 @@ class Model
                 return new WP_Error('db_error', $this->app_db->last_error);
             }
 
-            return new WP_Error('db_error', __('Result is empty', 'integrations-for-zoho-campaigns-and-cf7'));
+            return new WP_Error('db_error', __('Result is empty', 'integration-for-zoho-campaigns-and-cf7'));
         }
 
         return $this->app_db->last_result;
@@ -175,7 +176,7 @@ class Model
         } else {
             return new WP_Error(
                 'update_error',
-                __('Nothing to update', 'integrations-for-zoho-campaigns-and-cf7')
+                __('Nothing to update', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
         $update_condition = (!\is_null($condition)
@@ -208,7 +209,7 @@ class Model
         } else {
             return new WP_Error(
                 'update_error',
-                __('Nothing to update', 'integrations-for-zoho-campaigns-and-cf7')
+                __('Nothing to update', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
 
@@ -261,7 +262,7 @@ class Model
             && array_keys($duplicate) === range(0, \count($duplicate) - 1))) {
             return new WP_Error(
                 'duplicate_error',
-                __('Nothing to duplicate', 'integrations-for-zoho-campaigns-and-cf7')
+                __('Nothing to duplicate', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
 
@@ -306,7 +307,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
+                __('At least 1 condition needed', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
         $update_condition = (!\is_null($condition)
@@ -331,7 +332,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
+                __('At least 1 condition needed', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
         $result = $this->app_db->delete(
@@ -353,7 +354,7 @@ class Model
         } else {
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
+                __('At least 1 condition needed', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
         $formatted_conditions = $this->getFormatedCondition($delete_condition);
@@ -365,7 +366,7 @@ class Model
 
             return new WP_Error(
                 'deletion_error',
-                __('At least 1 condition needed', 'integrations-for-zoho-campaigns-and-cf7')
+                __('At least 1 condition needed', 'integration-for-zoho-campaigns-and-cf7')
             );
         }
         $result = $this->app_db->query(
@@ -452,14 +453,14 @@ class Model
         } else {
             $preparedQuery = $this->app_db->prepare($sql, $values);
         }
-        // echo " Q S " . $preparedQuery . " Q  EE";
+
         if (empty($preparedQuery)) {
-            $this->db_response = new WP_Error('null_query', __('prepared query is empty', 'integrations-for-zoho-campaigns-and-cf7'));
+            $this->db_response = new WP_Error('null_query', __('prepared query is empty', 'integration-for-zoho-campaigns-and-cf7'));
         } else {
             $this->db_response = stripos($preparedQuery, 'DELETE') !== false ? $this->app_db->query($preparedQuery)
                 : $this->app_db->get_results($preparedQuery, OBJECT_K);
         }
-        // print_r($this->app_db->last_query);
+
         return $this;
     }
 
@@ -469,6 +470,7 @@ class Model
         if (!empty($this->app_db->last_error)) {
             return new WP_Error('db_error', $this->app_db->last_error);
         }
+
         if (!$db_response) {
             if ($this->app_db->num_rows > 0) {
                 $response = $this->app_db->num_rows;
@@ -476,7 +478,7 @@ class Model
             if (is_wp_error($db_response)) {
                 $response = $db_response;
             }
-            $response = new WP_Error('result_empty', __('Result is empty', 'integrations-for-zoho-campaigns-and-cf7'));
+            $response = new WP_Error('result_empty', __('Result is empty', 'integration-for-zoho-campaigns-and-cf7'));
         } elseif (\is_array($this->app_db->last_result) && !empty($this->app_db->last_result)) {
             $response = $this->app_db->last_result;
         } elseif ($this->app_db->insert_id) {

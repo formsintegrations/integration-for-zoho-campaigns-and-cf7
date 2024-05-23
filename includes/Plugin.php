@@ -32,13 +32,6 @@ final class Plugin
     private static $_instance;
 
     /**
-     * Updater instance
-     *
-     * @var Updater
-     */
-    private $_updater;
-
-    /**
      * Initialize the hooks
      *
      * @return void
@@ -74,10 +67,6 @@ final class Plugin
         new HookService();
     }
 
-    public function isLicenseActive()
-    {
-        return isset($this->_updater) ? $this->_updater->isLicenseActive() : false;
-    }
     /**
      * Plugin action links
      *

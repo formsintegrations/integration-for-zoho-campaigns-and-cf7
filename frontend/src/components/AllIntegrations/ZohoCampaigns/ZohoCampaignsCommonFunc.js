@@ -62,12 +62,12 @@ export const refreshLists = (formID, campaignsConf, setCampaignsConf, setIsLoadi
         if (result.data.tokenDetails) {
           newConf.tokenDetails = result.data.tokenDetails
         }
-        setSnackbar({ show: true, msg: __('Lists refreshed', 'integrations-for-zoho-campaigns-and-cf7') })
+        setSnackbar({ show: true, msg: __('Lists refreshed', 'integration-for-zoho-campaigns-and-cf7') })
         setCampaignsConf({ ...newConf })
       } else if ((result && result.data && result.data.data) || (!result.success && typeof result.data === 'string')) {
-        setSnackbar({ show: true, msg: `${__('Lists refresh failed Cause:', 'integrations-for-zoho-campaigns-and-cf7')}${result.data.data || result.data}. ${__('please try again', 'integrations-for-zoho-campaigns-and-cf7')}` })
+        setSnackbar({ show: true, msg: `${__('Lists refresh failed Cause:', 'integration-for-zoho-campaigns-and-cf7')}${result.data.data || result.data}. ${__('please try again', 'integration-for-zoho-campaigns-and-cf7')}` })
       } else {
-        setSnackbar({ show: true, msg: __('Lists refresh failed. please try again', 'integrations-for-zoho-campaigns-and-cf7') })
+        setSnackbar({ show: true, msg: __('Lists refresh failed. please try again', 'integration-for-zoho-campaigns-and-cf7') })
       }
       setIsLoading(false)
     })
@@ -101,9 +101,9 @@ export const refreshContactFields = (formID, campaignsConf, setCampaignsConf, se
           if (result.data.tokenDetails) {
             newConf.tokenDetails = result.data.tokenDetails
           }
-          setSnackbar({ show: true, msg: __('Contact Fields refreshed', 'integrations-for-zoho-campaigns-and-cf7') })
+          setSnackbar({ show: true, msg: __('Contact Fields refreshed', 'integration-for-zoho-campaigns-and-cf7') })
         } else {
-          setSnackbar({ show: true, msg: __('Zoho didn\'t provide fields names for this list', 'integrations-for-zoho-campaigns-and-cf7') })
+          setSnackbar({ show: true, msg: __('Zoho didn\'t provide fields names for this list', 'integration-for-zoho-campaigns-and-cf7') })
         }
 
         if (result.data.tokenDetails) {
@@ -111,7 +111,7 @@ export const refreshContactFields = (formID, campaignsConf, setCampaignsConf, se
         }
         setCampaignsConf({ ...newConf })
       } else {
-        setSnackbar({ show: true, msg: __('Contact Fields refresh failed. please try again', 'integrations-for-zoho-campaigns-and-cf7') })
+        setSnackbar({ show: true, msg: __('Contact Fields refresh failed. please try again', 'integration-for-zoho-campaigns-and-cf7') })
       }
       setIsLoading(false)
     })

@@ -44,7 +44,7 @@ function GlobalFilter({ globalFilter, setGlobalFilter, setSearch, exportImportMe
         <input
           value={globalFilter || ''}
           onChange={handleSearch}
-          placeholder={__('Search', 'integrations-for-zoho-campaigns-and-cf7')}
+          placeholder={__('Search', 'integration-for-zoho-campaigns-and-cf7')}
         />
       </label>
     </div>
@@ -144,10 +144,10 @@ function Table(props) {
 
   const showBulkDupMdl = () => {
     confMdl.action = () => { props.duplicateData(selectedFlatRows, data, { fetchData, data: { pageIndex, pageSize, sortBy, filters, globalFilter: search } }); closeConfMdl() }
-    confMdl.btnTxt = __('Clone', 'integrations-for-zoho-campaigns-and-cf7')
+    confMdl.btnTxt = __('Clone', 'integration-for-zoho-campaigns-and-cf7')
     confMdl.btn2Txt = null
     confMdl.btnClass = 'blue'
-    confMdl.body = `${__('Do You want Deplicate these', 'integrations-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('item', 'integrations-for-zoho-campaigns-and-cf7')} ?`
+    confMdl.body = `${__('Do You want Deplicate these', 'integration-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('item', 'integration-for-zoho-campaigns-and-cf7')} ?`
     confMdl.show = true
     setconfMdl({ ...confMdl })
   }
@@ -155,19 +155,19 @@ function Table(props) {
   const showStModal = () => {
     confMdl.action = (e) => { props.setBulkStatus(e, selectedFlatRows); closeConfMdl() }
     confMdl.btn2Action = (e) => { props.setBulkStatus(e, selectedFlatRows); closeConfMdl() }
-    confMdl.btnTxt = __('Disable', 'integrations-for-zoho-campaigns-and-cf7')
-    confMdl.btn2Txt = __('Enable', 'integrations-for-zoho-campaigns-and-cf7')
-    confMdl.body = `${__('Do you want to change these', 'integrations-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('status', 'integrations-for-zoho-campaigns-and-cf7')} ?`
+    confMdl.btnTxt = __('Disable', 'integration-for-zoho-campaigns-and-cf7')
+    confMdl.btn2Txt = __('Enable', 'integration-for-zoho-campaigns-and-cf7')
+    confMdl.body = `${__('Do you want to change these', 'integration-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('status', 'integration-for-zoho-campaigns-and-cf7')} ?`
     confMdl.show = true
     setconfMdl({ ...confMdl })
   }
 
   const showDelModal = () => {
     confMdl.action = () => { props.setBulkDelete(selectedFlatRows, { fetchData, data: { pageIndex, pageSize, sortBy, filters, globalFilter: search } }); closeConfMdl() }
-    confMdl.btnTxt = __('Delete', 'integrations-for-zoho-campaigns-and-cf7')
+    confMdl.btnTxt = __('Delete', 'integration-for-zoho-campaigns-and-cf7')
     confMdl.btn2Txt = null
     confMdl.btnClass = ''
-    confMdl.body = `${__('Are you sure to delete these', 'integrations-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('items', 'integrations-for-zoho-campaigns-and-cf7')} ?`
+    confMdl.body = `${__('Are you sure to delete these', 'integration-for-zoho-campaigns-and-cf7')} ${selectedFlatRows.length} ${__('items', 'integration-for-zoho-campaigns-and-cf7')} ?`
     confMdl.show = true
     setconfMdl({ ...confMdl })
   }
@@ -215,7 +215,7 @@ function Table(props) {
                 <small className="btcd-pill">
                   {selectedFlatRows.length}
                   {' '}
-                  {__('Row Selected', 'integrations-for-zoho-campaigns-and-cf7')}
+                  {__('Row Selected', 'integration-for-zoho-campaigns-and-cf7')}
                 </small>
               </>
             )}
@@ -306,7 +306,7 @@ function Table(props) {
       <div className="btcd-pagination">
         <small>
           {props.countEntries >= 0 && (
-            `${__('Total Response:', 'integrations-for-zoho-campaigns-and-cf7')}
+            `${__('Total Response:', 'integration-for-zoho-campaigns-and-cf7')}
             ${props.countEntries}`
           )}
         </small>
@@ -329,12 +329,12 @@ function Table(props) {
           {' '}
           <small>
             &nbsp;
-            {__('Page', 'integrations-for-zoho-campaigns-and-cf7')}
+            {__('Page', 'integration-for-zoho-campaigns-and-cf7')}
             {' '}
             <strong>
               {pageIndex + 1}
               {' '}
-              {__('of', 'integrations-for-zoho-campaigns-and-cf7')}
+              {__('of', 'integration-for-zoho-campaigns-and-cf7')}
               {' '}
               {pageOptions.length}
               {' '}
@@ -356,7 +356,7 @@ function Table(props) {
             >
               {[10, 20, 30, 40, 50].map(pageSiz => (
                 <option key={pageSiz} value={pageSiz}>
-                  {__('Show', 'integrations-for-zoho-campaigns-and-cf7')}
+                  {__('Show', 'integration-for-zoho-campaigns-and-cf7')}
                   {' '}
                   {pageSiz}
                 </option>

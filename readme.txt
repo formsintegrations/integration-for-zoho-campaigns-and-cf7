@@ -42,7 +42,7 @@ Here you can see the API response from Zoho Campaigns after Contact Form 7 is su
 
 **FEATURES ON FREE VERSION:**
 
-1. User can send any Contact Form 7 data to list of Zoho Campaigns.
+1. User can send any Contact Form 7 data to list of [Zoho Campaigns](https://accounts.zoho.com).
 2. Users can make one integration at a time.
 3. Users can map only one field of Zoho Campaigns.
 4. This plugin allow user to send custom value also.
@@ -66,7 +66,7 @@ Note : When you send data in Zoho Campaigns an email confirmation message will g
 4. Use the browse button to select the plugin zip file that was downloaded, and then click on Install Now.
 5. Once installed, click “Activate”.
 
-Plugin Github [Repository](https://github.com/formsintegrations/integration-of-zoho-campaigns-and-cf7)
+Plugin Github [Repository](https://github.com/formsintegrations/integration-for-zoho-campaigns-and-cf7)
 
 
 == Changelog ==

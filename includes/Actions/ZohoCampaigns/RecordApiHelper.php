@@ -45,7 +45,7 @@ class RecordApiHelper
                 }
             }
             if (empty($fieldData[$fieldPair->zohoFormField]) && \in_array($fieldPair->zohoFormField, $required)) {
-                $error = new WP_Error('REQ_FIELD_EMPTY', wp_sprintf(__('%s is required for zoho campaigns', 'integrations-for-zoho-campaigns-and-cf7'), $fieldPair->zohoFormField));
+                $error = new WP_Error('REQ_FIELD_EMPTY', wp_sprintf(__('%s is required for zoho campaigns', 'integration-for-zoho-campaigns-and-cf7'), $fieldPair->zohoFormField));
                 // $this->_logResponse->apiResponse($this->_logID, $this->_integrationID, ['type' => 'record', 'type_name' => 'field'], 'validation', $error);
 
                 LogHandler::save($this->_integrationID, wp_json_encode(['type' => 'record', 'type_name' => 'field']), 'error', wp_json_encode($error));

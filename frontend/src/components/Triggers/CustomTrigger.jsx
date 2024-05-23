@@ -121,7 +121,7 @@ const CustomTrigger = () => {
     <div className="trigger-custom-width">
       <SnackMsg snack={snack} setSnackbar={setSnackbar} />
       <div className="mt-3">
-        <b>{__('Custom action trigger:', 'integrations-for-zoho-campaigns-and-cf7')}</b>
+        <b>{__('Custom action trigger:', 'integration-for-zoho-campaigns-and-cf7')}</b>
       </div>
       <CopyTextTrigger
         value={triggerAbeleHook}
@@ -139,8 +139,8 @@ const CustomTrigger = () => {
           disabled={!hookID}
         >
           {newFlow.triggerDetail?.data
-            ? __('Fetched ✔', 'integrations-for-zoho-campaigns-and-cf7')
-            : __('Fetch', 'integrations-for-zoho-campaigns-and-cf7')}
+            ? __('Fetched ✔', 'integration-for-zoho-campaigns-and-cf7')
+            : __('Fetch', 'integration-for-zoho-campaigns-and-cf7')}
           {isLoading && (
             <LoaderSm size="20" clr="#022217" className="ml-2" />
           )}

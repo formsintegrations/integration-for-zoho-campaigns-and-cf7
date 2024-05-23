@@ -6,7 +6,6 @@ use FormInteg\ZOCACFLite\Config;
 use FormInteg\ZOCACFLite\Core\Util\Capabilities;
 use FormInteg\ZOCACFLite\Core\Util\DateTimeHelper;
 use FormInteg\ZOCACFLite\Core\Util\Hooks;
-use FormInteg\ZOCACFLite\Plugin;
 
 /**
  * The admin menu and page handler class
@@ -18,7 +17,6 @@ class Admin_Bar
         Hooks::add('in_admin_header', [$this, 'RemoveAdminNotices']);
         Hooks::add('admin_menu', [$this, 'adminMenu'], 12);
         Hooks::add('admin_enqueue_scripts', [$this, 'adminAssets'], 12);
-        Hooks::filter(Config::VAR_PREFIX . 'localized_script', [$this, 'filterAdminScriptVar']);
     }
 
     /**
@@ -55,23 +53,6 @@ class Admin_Bar
                 30
             );
         }
-    }
-
-    /**
-     * Filter variables for admin script
-     *
-     * @param array $previousValue Current values
-     *
-     * @return $previousValue Filtered Values
-     */
-    public function filterAdminScriptVar(array $previousValue)
-    {
-        global $isBitFiLicActive;
-        if ($isBitFiLicActive) {
-            $previousValue['isPro'] = true;
-        }
-
-        return $previousValue;
     }
 
     /**
@@ -127,14 +108,16 @@ class Admin_Bar
 
         $users    = get_users(['fields' => ['ID', 'user_nicename', 'user_email', 'display_name']]);
         $userMail = [];
-        foreach ($users as $key => $value) {
-            $userMail[$key]['label'] = !empty($value->display_name) ? $value->display_name : '';
-            $userMail[$key]['value'] = !empty($value->user_email) ? $value->user_email : '';
-            $userMail[$key]['id']    = $value->ID;
+        if (current_user_can('manage_options')) {
+            foreach ($users as $key => $value) {
+                $userMail[$key]['label'] = !empty($value->display_name) ? $value->display_name : '';
+                $userMail[$key]['value'] = !empty($value->user_email) ? $value->user_email : '';
+                $userMail[$key]['id']    = $value->ID;
+            }
         }
 
         $scriptExtraData = apply_filters(
-            'izcef_localized_script',
+            'forminteg_zocacflite_localized_script',
             [
                 'nonce'      => wp_create_nonce(Config::VAR_PREFIX . 'nonce'),
                 'prefix'     => Config::VAR_PREFIX,
@@ -145,13 +128,13 @@ class Admin_Bar
                 'baseURL'    => Config::get('ADMIN_URL') . 'admin.php?page=' . Config::DASH_URL . '#',
                 'siteURL'    => site_url(),
                 'proUrl'     => Config::PRO_URL,
-                'isPro'      => Plugin::instance()->isLicenseActive(),
+                'isPro'      => false,
                 'ajaxURL'    => admin_url('admin-ajax.php'),
                 'api'        => Config::get('API_URL'),
                 'dateFormat' => get_option('date_format'),
                 'timeFormat' => get_option('time_format'),
                 'timeZone'   => DateTimeHelper::wp_timezone_string(),
-                'userMail'   => $userMail
+                'userMail'   => $userMail,
             ]
         );
         if (get_locale() !== 'en_US' && file_exists(Config::get('BASEDIR') . '/languages/generatedString.php')) {

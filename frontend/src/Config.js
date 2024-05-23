@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search)
-export const configs = params.has('page') ? window[params.get('page').replace('-', '_')] : {}
+export const configs = params.has('page') ? window[params.get('page').replaceAll('-', '_')] : {}
 
 export const slug = params.has('page') ? params.get('page') : ''
 export const nonce = configs?.nonce

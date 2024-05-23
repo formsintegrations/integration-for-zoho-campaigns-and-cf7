@@ -91,17 +91,17 @@ final class Route
                         $inputJSON = file_get_contents('php://input');
                         $data      = \is_string($inputJSON) ? json_decode($inputJSON) : $inputJSON;
                     } else {
-                        $data = (object) $_POST;
+                        $data = wp_unslash($_POST);
                     }
                 } else {
-                    $data = (object) $_GET;
+                    $data = wp_unslash($_GET);
                 }
 
                 $reflectionMethod = new ReflectionMethod($invokeAble[0], $invokeAble[1]);
                 $response         = $reflectionMethod->invoke(
                     $reflectionMethod->isStatic()
                         ? null : new $invokeAble[0](),
-                    $data
+                    (object) $data
                 );
 
                 if (is_wp_error($response)) {
@@ -116,7 +116,7 @@ final class Route
             wp_send_json_error(
                 __(
                     'Token expired or invalid. Please refresh the page and try again.',
-                    'integrations-for-zoho-campaigns-and-cf7'
+                    'integration-for-zoho-campaigns-and-cf7'
                 ),
                 401
             );

@@ -84,7 +84,7 @@ final class LogHandler
         if (is_wp_error($deleteStatus)) {
             wp_send_json_error($deleteStatus->get_error_code());
         }
-        wp_send_json_success(__('Log deleted successfully', 'integrations-for-zoho-campaigns-and-cf7'));
+        wp_send_json_success(__('Log deleted successfully', 'integration-for-zoho-campaigns-and-cf7'));
     }
 
     public static function delete($data)

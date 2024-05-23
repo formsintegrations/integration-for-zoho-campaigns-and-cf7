@@ -7,6 +7,7 @@ import useFetch from '../../hooks/useFetch'
 import { __ } from '../../Utils/i18nwrap'
 import Loader from '../Loaders/Loader'
 import SnackMsg from '../Utilities/SnackMsg'
+console.log('action', action)
 const appName = action.replace(' ', '')
 const ActionToEdit = lazy(() => import(`./${appName}/Edit${appName}`))
 const loaderStyle = {

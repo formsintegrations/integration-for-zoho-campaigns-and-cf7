@@ -140,7 +140,7 @@ export default function WebHooksIntegration({ formFields, webHooks, setWebHooks,
       {webHooks?.condition && (
         <>
           <div className="flx">
-            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={webHooks?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'integrations-for-zoho-campaigns-and-cf7')} isInfo={isInfo} />
+            <TableCheckBox onChange={e => checkedCondition(e.target.value, e.target.checked)} checked={webHooks?.condition?.action_behavior === 'cond'} className="wdt-200 mt-4 mr-2" value="cond" title={__('Conditional Logics', 'integration-for-zoho-campaigns-and-cf7')} isInfo={isInfo} />
           </div>
           <br />
           {webHooks?.condition?.action_behavior === 'cond' && (

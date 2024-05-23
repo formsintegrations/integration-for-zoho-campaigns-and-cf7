@@ -21,11 +21,11 @@ class Config
 
     const ACTION = 'Zoho Campaigns';
 
-    const DASH_URL = 'integrations-for-zoho-campaigns-and-cf7';
+    const DASH_URL = 'integration-for-zoho-campaigns-and-cf7';
 
     const LOGO = '<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 250 250"><rect width="250" height="250" rx="59.5" fill="#a7aaad"/><path d="M174 126h23v23h-23z"/><path d="M150 54a47 47 0 0 0-47 47v23H89a36 36 0 0 0-36 36v36h36a36 36 0 0 0 36-35v-12h42v-23h-42v-25a25 25 0 0 1 25-25h47V54Zm-47 107a14 14 0 0 1-14 13H76v-14a14 14 0 0 1 13-13h14Z"/></svg>';
 
-    const VAR_PREFIX = 'integrations-for-zoho-campaigns-and-cf7';
+    const VAR_PREFIX = 'integration-for-zoho-campaigns-and-cf7';
 
     const VERSION = '1.0';
 
@@ -167,18 +167,18 @@ class Config
     {
         $links = [
             'Home'    => [
-                'title' => __('Home', 'integrations-for-zoho-campaigns-and-cf7'),
+                'title' => __('Home', 'integration-for-zoho-campaigns-and-cf7'),
                 'url'   => self::get('ADMIN_URL') . 'admin.php?page=fitzocacf',
             ],
             'Support' => [
-                'title' => __('Support', 'integrations-for-zoho-campaigns-and-cf7'),
+                'title' => __('Support', 'integration-for-zoho-campaigns-and-cf7'),
                 'url'   => 'https://formsintegrations.com',
             ],
         ];
 
         if (!Plugin::instance()->isLicenseActive()) {
             $links['Pro'] = [
-                'title' => __('Go Pro', 'integrations-for-zoho-campaigns-and-cf7'),
+                'title' => __('Go Pro', 'integration-for-zoho-campaigns-and-cf7'),
                 'url'   => self::PRO_URL,
                 'attr'  => 'style="color:green;font-weight:bolder;"',
             ];

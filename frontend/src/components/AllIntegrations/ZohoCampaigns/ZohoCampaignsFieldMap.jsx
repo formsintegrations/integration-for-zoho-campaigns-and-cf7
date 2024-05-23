@@ -43,13 +43,13 @@ export default function ZohoCampaignsFieldMap({ i, formFields, field, campaignsC
       className={`flx flx-around mt-2 ${isNotRequired && 'mr-1'}`}
     >
       <select className="btcd-paper-inp mr-2" name="formField" value={field.formField || ''} onChange={(ev) => handleFieldMapping(ev, i, campaignsConf, setCampaignsConf)}>
-        <option value="">{__('Select Field', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+        <option value="">{__('Select Field', 'integration-for-zoho-campaigns-and-cf7')}</option>
         <optgroup label="Form Fields">
           {
             formFields.map(f => f.type !== 'file' && <option key={`ff-zhcrm-${f.name}`} value={f.name}>{f.label}</option>)
           }
         </optgroup>
-        <option value="custom">{__('Custom...', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+        <option value="custom">{__('Custom...', 'integration-for-zoho-campaigns-and-cf7')}</option>
         <optgroup label={`General Smart Codes ${isPro ? '' : '(PRO)'}`}>
           {isPro && SmartTagField?.map(f => (
             <option key={`ff-rm-${f.name}`} value={f.name}>
@@ -59,10 +59,10 @@ export default function ZohoCampaignsFieldMap({ i, formFields, field, campaignsC
         </optgroup>
       </select>
 
-      {field.formField === 'custom' && <TagifyInput onChange={e => handleCustomValue(e, i, campaignsConf, setCampaignsConf)} label={__('Custom Value', 'integrations-for-zoho-campaigns-and-cf7')} className="mr-2" type="text" value={field.customValue} placeholder={__('Custom Value', 'integrations-for-zoho-campaigns-and-cf7')} formFields={formFields} />}
+      {field.formField === 'custom' && <TagifyInput onChange={e => handleCustomValue(e, i, campaignsConf, setCampaignsConf)} label={__('Custom Value', 'integration-for-zoho-campaigns-and-cf7')} className="mr-2" type="text" value={field.customValue} placeholder={__('Custom Value', 'integration-for-zoho-campaigns-and-cf7')} formFields={formFields} />}
 
       <select className="btcd-paper-inp" name="zohoFormField" value={field.zohoFormField || ''} disabled={!isNotRequired} onChange={(ev) => handleFieldMapping(ev, i, campaignsConf, setCampaignsConf)}>
-        <option value="">{__('Select Field', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+        <option value="">{__('Select Field', 'integration-for-zoho-campaigns-and-cf7')}</option>
         {
           isNotRequired
             ? campaignsConf?.default?.fields?.[campaignsConf.list]?.fields && campaignsConf.default.fields[campaignsConf.list].fields.map(contactField => contactField !== 'Contact Email'
@@ -73,7 +73,7 @@ export default function ZohoCampaignsFieldMap({ i, formFields, field, campaignsC
               ))
             : (
               <option key="contact_email" value="Contact Email">
-                {__('Contact Email', 'integrations-for-zoho-campaigns-and-cf7')}
+                {__('Contact Email', 'integration-for-zoho-campaigns-and-cf7')}
               </option>
             )
         }

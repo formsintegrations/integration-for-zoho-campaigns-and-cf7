@@ -23,7 +23,7 @@ function EditZohoCampaigns({ allIntegURL }) {
   const formFields = useRecoilValue($formFields)
   const saveConfig = () => {
     if (!checkMappedFields(campaignsConf)) {
-      setSnackbar({ show: true, msg: __('Please map mandatory fields', 'integrations-for-zoho-campaigns-and-cf7') })
+      setSnackbar({ show: true, msg: __('Please map mandatory fields', 'integration-for-zoho-campaigns-and-cf7') })
       return
     }
 
@@ -35,8 +35,8 @@ function EditZohoCampaigns({ allIntegURL }) {
       <SnackMsg snack={snack} setSnackbar={setSnackbar} />
 
       <div className="flx mt-3">
-        <b className="wdt-100 d-in-b">{__('Integration Name:', 'integrations-for-zoho-campaigns-and-cf7')}</b>
-        <input className="btcd-paper-inp w-7" onChange={e => handleInput(e, formID, campaignsConf, setCampaignsConf)} name="name" value={campaignsConf.name} type="text" placeholder={__('Integration Name...', 'integrations-for-zoho-campaigns-and-cf7')} />
+        <b className="wdt-100 d-in-b">{__('Integration Name:', 'integration-for-zoho-campaigns-and-cf7')}</b>
+        <input className="btcd-paper-inp w-7" onChange={e => handleInput(e, formID, campaignsConf, setCampaignsConf)} name="name" value={campaignsConf.name} type="text" placeholder={__('Integration Name...', 'integration-for-zoho-campaigns-and-cf7')} />
       </div>
       <br />
       <br />

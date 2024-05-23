@@ -47,7 +47,7 @@ function LogicBlock({ fieldVal, delLogic, lgcInd, subLgcInd, subSubLgcInd, value
         style={{ width: 620 }}
         onChange={e => changeFormField(e.target.value, lgcInd, subLgcInd, subSubLgcInd)}
       >
-        <option value="">{__('Select Form Field', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+        <option value="">{__('Select Form Field', 'integration-for-zoho-campaigns-and-cf7')}</option>
         {formFields?.map(itm => !itm.type.match(/^(file|recaptcha)$/) && <option key={`ff-lb-${itm.name}`} value={itm.name}>{itm.label}</option>)}
       </MtSelect>
 
@@ -61,20 +61,20 @@ function LogicBlock({ fieldVal, delLogic, lgcInd, subLgcInd, subSubLgcInd, value
         onChange={e => changeLogic(e.target.value, lgcInd, subLgcInd, subSubLgcInd)}
         className="w-5"
       >
-        <option value="">{__('Select One', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="equal">{__('Equal', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="not_equal">{__('Not Equal', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="null">{__('Is Null', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="not_null">{__('Is Not Null', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="contain">{__('Contain', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        {/* ((fldType === 'select' && fields?.[fieldKey]?.mul) || fldType === 'check') && <option value="contain_all">{__('Contain All', 'integrations-for-zoho-campaigns-and-cf7')}</option> */}
-        <option value="not_contain">{__('Not Contain', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="greater">{__('Greater Than (Number)', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="less">{__('Less Than (Number)', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="greater_or_equal">{__('Greater Than or Equal (Number)', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="less_or_equal">{__('Less Than or Equal (Number)', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="start_with">{__('Start With', 'integrations-for-zoho-campaigns-and-cf7')}</option>
-        <option value="end_with">{__('End With', 'integrations-for-zoho-campaigns-and-cf7')}</option>
+        <option value="">{__('Select One', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="equal">{__('Equal', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="not_equal">{__('Not Equal', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="null">{__('Is Null', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="not_null">{__('Is Not Null', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="contain">{__('Contain', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        {/* ((fldType === 'select' && fields?.[fieldKey]?.mul) || fldType === 'check') && <option value="contain_all">{__('Contain All', 'integration-for-zoho-campaigns-and-cf7')}</option> */}
+        <option value="not_contain">{__('Not Contain', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="greater">{__('Greater Than (Number)', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="less">{__('Less Than (Number)', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="greater_or_equal">{__('Greater Than or Equal (Number)', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="less_or_equal">{__('Less Than or Equal (Number)', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="start_with">{__('Start With', 'integration-for-zoho-campaigns-and-cf7')}</option>
+        <option value="end_with">{__('End With', 'integration-for-zoho-campaigns-and-cf7')}</option>
       </MtSelect>
 
       <svg height="35" width="100" className="mt-1">

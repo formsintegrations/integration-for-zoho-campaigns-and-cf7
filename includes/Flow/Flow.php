@@ -80,7 +80,7 @@ final class Flow
             $missingField = 'Integration ID';
         }
         if (!\is_null($missingField)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingField));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingField));
         }
         $integrationHandler = new FlowController();
         $integrations       = $integrationHandler->get(
@@ -136,7 +136,7 @@ final class Flow
             $missingField = (\is_null($missingField) ? null : ', ') . 'Integration details';
         }
         if (!\is_null($missingField)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingField));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingField));
         }
         $name               = !empty($data->name) ? $data->name : '';
         $integrationHandler = new FlowController();
@@ -144,7 +144,7 @@ final class Flow
         if (is_wp_error($saveStatus)) {
             wp_send_json_error($saveStatus->get_error_message());
         }
-        wp_send_json_success(['id' => $saveStatus, 'msg' => __('Integration saved successfully', 'integrations-for-zoho-campaigns-and-cf7')]);
+        wp_send_json_success(['id' => $saveStatus, 'msg' => __('Integration saved successfully', 'integration-for-zoho-campaigns-and-cf7')]);
     }
 
     public function flowClone($data)
@@ -155,7 +155,7 @@ final class Flow
             $missingId = 'Flow ID';
         }
         if (!\is_null($missingId)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingId));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingId));
         }
         $integrationHandler = new FlowController();
         $integrations       = $integrationHandler->get(
@@ -178,7 +178,7 @@ final class Flow
             }
             wp_send_json_success(['id' => $saveStatus, 'created_at' => $user_details['time']]);
         } else {
-            wp_send_json_error(__('Flow ID is not exists', 'integrations-for-zoho-campaigns-and-cf7'));
+            wp_send_json_error(__('Flow ID is not exists', 'integration-for-zoho-campaigns-and-cf7'));
         }
     }
 
@@ -192,7 +192,7 @@ final class Flow
             $missingField = 'Flow details';
         }
         if (!\is_null($missingField)) {
-            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingField));
+            wp_send_json_error(sprintf(__('%s can\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingField));
         }
         $name               = !empty($data->name) ? $data->name : '';
         $integrationHandler = new FlowController();
@@ -208,7 +208,7 @@ final class Flow
         if (is_wp_error($updateStatus) && $updateStatus->get_error_code() !== 'result_empty') {
             wp_send_json_error($updateStatus->get_error_message());
         }
-        wp_send_json_success(__('Integration updated successfully', 'integrations-for-zoho-campaigns-and-cf7'));
+        wp_send_json_success(__('Integration updated successfully', 'integration-for-zoho-campaigns-and-cf7'));
     }
 
     public function delete($data)
@@ -218,20 +218,20 @@ final class Flow
             $missingField = 'Integration id';
         }
         if (!\is_null($missingField)) {
-            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingField));
+            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingField));
         }
         $integrationHandler = new FlowController();
         $deleteStatus       = $integrationHandler->delete($data->id);
         if (is_wp_error($deleteStatus)) {
             wp_send_json_error($deleteStatus->get_error_message());
         }
-        wp_send_json_success(__('Integration deleted successfully', 'integrations-for-zoho-campaigns-and-cf7'));
+        wp_send_json_success(__('Integration deleted successfully', 'integration-for-zoho-campaigns-and-cf7'));
     }
 
     public function bulkDelete($param)
     {
         if (!\is_array($param->flowID) || $param->flowID === []) {
-            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), 'Integration id'));
+            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), 'Integration id'));
         }
 
         $integrationHandler = new FlowController();
@@ -240,7 +240,7 @@ final class Flow
         if (is_wp_error($deleteStatus)) {
             wp_send_json_error($deleteStatus->get_error_message());
         }
-        wp_send_json_success(__('Integration deleted successfully', 'integrations-for-zoho-campaigns-and-cf7'));
+        wp_send_json_success(__('Integration deleted successfully', 'integration-for-zoho-campaigns-and-cf7'));
     }
 
     public function toggle_status($data)
@@ -253,14 +253,14 @@ final class Flow
             $missingField = 'Integration id';
         }
         if (!\is_null($missingField)) {
-            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integrations-for-zoho-campaigns-and-cf7'), $missingField));
+            wp_send_json_error(sprintf(__('%s cann\'t be empty', 'integration-for-zoho-campaigns-and-cf7'), $missingField));
         }
         $integrationHandler = new FlowController();
         $toggleStatus       = $integrationHandler->updateStatus($data->id, $data->status);
         if (is_wp_error($toggleStatus)) {
             wp_send_json_error($toggleStatus->get_error_message());
         }
-        wp_send_json_success(__('Status changed successfully', 'integrations-for-zoho-campaigns-and-cf7'));
+        wp_send_json_success(__('Status changed successfully', 'integration-for-zoho-campaigns-and-cf7'));
     }
 
     /**
@@ -347,7 +347,7 @@ final class Flow
                     // echo "status: " . !Common::checkCondition($flowData->flow_details->condition->logics, $data) . "<br>";
                     // print_r(json_encode($flowData->flow_details->condition->logics));
 
-                    $error = new WP_Error('Conditional Logic False', __('Conditional Logic not matched', 'integrations-for-zoho-campaigns-and-cf7'));
+                    $error = new WP_Error('Conditional Logic False', __('Conditional Logic not matched', 'integration-for-zoho-campaigns-and-cf7'));
                     if (isset($flowData->id)) {
                         LogHandler::save($flowData->id, 'Conditional Logic', 'validation', $error);
                     }
