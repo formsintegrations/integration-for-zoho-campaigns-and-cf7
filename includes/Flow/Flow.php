@@ -75,7 +75,7 @@ final class Flow
     public function get($data)
     {
         $missingField = null;
-        error_log(print_r($data, true));
+
         if (!property_exists($data, 'id')) {
             $missingField = 'Integration ID';
         }
@@ -84,7 +84,7 @@ final class Flow
         }
         $integrationHandler = new FlowController();
         $integrations       = $integrationHandler->get(
-            ['id' => $data->id],
+            ['id' => intval($data->id)],
             [
                 'id',
                 'name',
@@ -159,7 +159,7 @@ final class Flow
         }
         $integrationHandler = new FlowController();
         $integrations       = $integrationHandler->get(
-            ['id' => $data->id],
+            ['id' => intval($data->id)],
             [
                 'id',
                 'name',
