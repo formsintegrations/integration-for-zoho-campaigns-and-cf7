@@ -42,7 +42,7 @@ Here you can see the API response from Zoho Campaigns after Contact Form 7 is su
 
 **FEATURES ON FREE VERSION:**
 
-1. User can send any Contact Form 7 data to list of [Zoho Campaigns](https://accounts.zoho.com).
+1. User can send any Contact Form 7 data to list of [Zoho Campaigns]("https://campaigns.zoho.com).
 2. Users can make one integration at a time.
 3. Users can map only one field of Zoho Campaigns.
 4. This plugin allow user to send custom value also.
@@ -51,7 +51,7 @@ Here you can see the API response from Zoho Campaigns after Contact Form 7 is su
 
 Note : When you send data in Zoho Campaigns an email confirmation message will go to the typed email. The data will not insert before the confirmation. If you want to send data without email confirmation, you have to change some settings in the Zoho Campaigns. Have to disable SIGNUP FORM.
 
- 1. All the lists from Zoho Campaigns are available in pro plugin.
+ 1. All the lists from Zoho Campaigns are available in [pro plugin](https://formsintegrations.com).
  2. Zoho Campaigns Custom list modules are available.
  3. You can map unlimited field of Contact Form 7s and Zoho Campaigns.
  4. WordPress meta data/smart data fields are available for field mapping with Zoho Campaigns.

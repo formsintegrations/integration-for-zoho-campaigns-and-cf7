@@ -39,15 +39,15 @@ class InstallerProvider
         global $wp_version;
         if (version_compare($wp_version, Config::REQUIRED_WP_VERSION, '<')) {
             wp_die(
-                esc_html__('This plugin requires WordPress version 5.1 or higher.'),
-                esc_html__('Error Activating')
+                esc_html('This plugin requires WordPress version 5.1 or higher.'),
+                esc_html('Error Activating')
             );
         }
 
         if (version_compare(PHP_VERSION, Config::REQUIRED_PHP_VERSION, '<')) {
             wp_die(
-                esc_html__('Forms Integrations requires PHP version 5.6.'),
-                esc_html__('Error Activating')
+                esc_html('Forms Integrations requires PHP version 5.6.'),
+                esc_html('Error Activating')
             );
         }
 

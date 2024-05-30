@@ -7,7 +7,7 @@
 namespace FormInteg\ZOCACFLite\Core\Database;
 
 /**
- * Undocumented class
+ * A wrapper for wpdb with some convenience method
  */
 
 use WP_Error;
@@ -25,7 +25,7 @@ class Model
     protected $db_response;
 
     /**
-     * Undocumented function
+     * Initialize the model and wrap wpdb with app_db
      */
     public function __construct()
     {
@@ -35,7 +35,7 @@ class Model
     }
 
     /**
-     * Undocumented function
+     * Inserts data to database
      *
      * @param mixed $data
      *
@@ -56,7 +56,7 @@ class Model
     }
 
     /**
-     * Undocumented function
+     * Retrieves data from database
      *
      * @param string     $item
      * @param array      $condition
@@ -112,7 +112,7 @@ class Model
     }
 
     /**
-     * Undocumented function
+     * Counts row
      *
      * @param string $item
      * @param array  $condition
@@ -158,7 +158,7 @@ class Model
     }
 
     /**
-     * Undocumented function
+     * Update function
      *
      * @param array $data_to_update
      * @param array $condition
