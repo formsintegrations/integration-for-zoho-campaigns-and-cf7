@@ -1,4 +1,4 @@
-=== Integrations for Zoho Campaigns and CF7 ===
+=== Integration for Zoho Campaigns and CF7 ===
 Contributors: formsintegrations
 Tags: Zoho with CF7,  CF7 with Zoho, Zoho and CF7, CF7 and Zoho, Zoho Integration, CF7 Integration, Zoho Campaigns, Integration, CF7 Form
 Requires at least: 5.1
@@ -8,7 +8,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 
 
-A powerful integration tool to connect CF7 with Zoho Campaigns.
+A simple integration tool to send Contact Form 7 submissions to [Zoho Campaigns](https://www.zoho.com/campaigns).
 
 == Description ==
 
@@ -18,7 +18,7 @@ Looking for an easy way to integrate **Contact Form 7 with Zoho Campaigns**? Loo
 
 **Things you need to use this plug-in :**
 1. Contact Form 7.
-2. Zoho Campaigns account.
+2. [Zoho Campaigns account](https://accounts.zoho.com).
 
 **Setup process for Contact Form 7 integration with Zoho Campaigns:**
 
@@ -27,9 +27,9 @@ Looking for an easy way to integrate **Contact Form 7 with Zoho Campaigns**? Loo
 3. Then go to Zoho Campaigns authorization page
 4. Click on "[Zoho API Console](https://api-console.zoho.com/)"
 5. Select "Server Side Applications"
-6. Give a client name but I cannot contain keyword "**Zoho**"
+6. Give a client name but It cannot contain keyword "**Zoho**"
 7. Copy "Homepage URL" and "Authorized Redirect URIs" from the plugin
-8. It will generate "Client ID" and "Client Secret", paste it in the plugin
+8. It will generate "Client ID" and "Client Secret", paste it in the plugin. You can select data center[au, com, eu, in,..] from api console.
 9. Complete the authorization process
 10. Now select Zoho Campaigns module and layout where you want to send data
 11. Map Contact Form 7 fields with Zoho Campaigns fields
