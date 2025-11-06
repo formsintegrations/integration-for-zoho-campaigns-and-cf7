@@ -10,7 +10,7 @@ import SnackMsg from '../Utilities/SnackMsg'
 const Loader = lazy(() => import('../Loaders/Loader'))
 
 const appName = action.replace(' ', '')
-const dynamicModule = import(`./${appName}/${appName}Authorization`)
+const dynamicModule = import(`./${appName}/${appName}Authorization.jsx`)
 
 export default function IntegInfo() {
   const { id, type } = useParams()

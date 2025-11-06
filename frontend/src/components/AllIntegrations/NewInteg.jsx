@@ -8,7 +8,7 @@ import { $newFlow } from '../../GlobalStates'
 import { __ } from '../../Utils/i18nwrap'
 import Loader from '../Loaders/Loader'
 const appName = action.replace(' ', '')
-const Action = lazy(() => import(`./${appName}/${appName}`))
+const Action = lazy(() => import(`./${appName}/${appName}.jsx`))
 
 export default function NewInteg({ allIntegURL }) {
   const { integUrlName } = useParams()

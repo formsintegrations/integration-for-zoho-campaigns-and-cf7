@@ -9,7 +9,6 @@
 const gettextParser = require('gettext-parser');
 const { isEmpty } = require('lodash');
 const fs = require('fs');
-const { name } = require('file-loader');
 
 if (!fs.existsSync('./package.json')) {
     console.log('[package.json] is required')
