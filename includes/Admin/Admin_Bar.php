@@ -17,6 +17,7 @@ class Admin_Bar
         Hooks::add('in_admin_header', [$this, 'RemoveAdminNotices']);
         Hooks::add('admin_menu', [$this, 'adminMenu'], 12);
         Hooks::add('admin_enqueue_scripts', [$this, 'adminAssets'], 12);
+        Hooks::filter('script_loader_tag', [$this, 'filterScriptTag'], 0, 3);
     }
 
     /**
@@ -38,7 +39,7 @@ class Admin_Bar
                 Config::TRIGGER . '-' . Config::ACTION,
                 $capability,
                 Config::DASH_URL,
-                $rootExists ? '' : [$this, 'rootPage'],
+                [$this, 'rootPage'],
                 'data:image/svg+xml;base64,' . base64_encode(Config::LOGO),
                 30
             );
@@ -49,7 +50,7 @@ class Admin_Bar
                 'Integrations',
                 $capability,
                 Config::DASH_URL,
-                $rootExists ? '' : [$this, 'rootPage'],
+                [$this, 'rootPage'],
                 30
             );
         }
@@ -62,49 +63,48 @@ class Admin_Bar
      *
      * @return void
      */
-    public function adminAssets($currentPage)
+    public function adminAssets($hook)
     {
-        if (strpos($currentPage, Config::DASH_URL) === false) {
+        if (strpos($hook, Config::DASH_URL) === false) {
             return;
         }
 
-        wp_enqueue_script(
-            Config::withPrefix('vendors'),
-            Config::get('ASSET_JS_URI') . '/vendors-main.js',
-            null,
-            Config::VERSION,
-            true
-        );
+        $parsed_url = wp_parse_url(get_admin_url());
+        $site_url = $parsed_url['scheme'] . '://' . $parsed_url['host'];
+        $site_url .= empty($parsed_url['port']) ? null : ':' . $parsed_url['port'];
+        $base_path_admin = str_replace($site_url, '', get_admin_url());
 
-        wp_enqueue_script(
-            Config::withPrefix('runtime'),
-            Config::get('ASSET_JS_URI') . '/runtime.js',
-            null,
-            Config::VERSION,
-            true
-        );
+        $prefix = 'FITZOCACF';
+        if (is_readable(Config::get('BASEDIR') . DIRECTORY_SEPARATOR . 'port')) {
+            $devPort = file_get_contents(Config::get('BASEDIR') . DIRECTORY_SEPARATOR . 'port');
+            $devUrl = 'http://localhost:' . $devPort;
+            wp_enqueue_script(
+                'vite-client-helper-' . $prefix . '-MODULE',
+                $devUrl . '/config/devHotModule.js',
+                [],
+                null
+            );
 
-        if (wp_script_is('wp-i18n')) {
-            $deps = [Config::withPrefix('vendors'), Config::withPrefix('runtime'), 'wp-i18n'];
+            wp_enqueue_script(
+                'vite-client-' . $prefix . '-MODULE',
+                $devUrl . '/@vite/client',
+                [],
+                null
+            );
+            wp_enqueue_script(
+                'index-' . $prefix . '-MODULE',
+                $devUrl . '/index.jsx',
+                [],
+                null
+            );
         } else {
-            $deps = [Config::withPrefix('vendors'), Config::withPrefix('runtime')];
+            wp_enqueue_script(
+                'index-' . $prefix . '-MODULE',
+                Config::get('ASSET_URI') . "/index-" . Config::VERSION . ".js",
+                [],
+                null
+            );
         }
-
-        wp_enqueue_script(
-            Config::withPrefix('admin-script'),
-            Config::get('ASSET_JS_URI') . '/index.js',
-            $deps,
-            Config::VERSION,
-            true
-        );
-
-        wp_enqueue_style(
-            Config::withPrefix('styles'),
-            Config::get('ASSET_CSS_URI') . '/app.css',
-            null,
-            Config::VERSION,
-            'screen'
-        );
 
         $users    = get_users(['fields' => ['ID', 'user_nicename', 'user_email', 'display_name']]);
         $userMail = [];
@@ -142,7 +142,25 @@ class Admin_Bar
             $scriptExtraData['translations'] = $i18nStrings;
         }
 
-        wp_localize_script(Config::withPrefix('admin-script'), str_replace('-', '_', Config::DASH_URL), $scriptExtraData);
+        wp_localize_script('index-' . $prefix . '-MODULE', str_replace('-', '_', Config::DASH_URL), $scriptExtraData);
+    }
+
+    /**
+     * Filter script tag to add type="module" attribute
+     *
+     * @param string $html   The script tag HTML
+     * @param string $handle The script handle
+     *
+     * @return string
+     */
+    public function filterScriptTag($html, $handle)
+    {
+        $newTag = $html;
+        $prefix = 'FITZOCACF';
+        if (preg_match('/' . $prefix . '-MODULE/', $handle)) {
+            $newTag = preg_replace('/<script /', '<script type="module" ', $newTag);
+        }
+        return $newTag;
     }
 
     /**
