@@ -236,7 +236,7 @@ class Model
         }
         $result = $this->app_db->query(
             $this->app_db->prepare(
-                "UPDATE {$this->table_name} SET {$update_fields} {$condition_to_check}",
+                "UPDATE `{$this->table_name}` SET {$update_fields} {$condition_to_check}",
                 $all_values
             )
         );
@@ -289,8 +289,8 @@ class Model
             $condition_to_check = $formatted_conditions['conditions'];
             $all_values         = array_merge($all_values, $formatted_conditions['values']);
         }
-        $query = "INSERT INTO {$this->table_name} ({$insCol})
-        SELECT {$dupCol} FROM {$this->table_name} {$condition_to_check}";
+        $query = "INSERT INTO `{$this->table_name}` ({$insCol})
+        SELECT {$dupCol} FROM `{$this->table_name}` {$condition_to_check}";
         $this->execute($query, $all_values);
 
         return $this->getResult($result);
@@ -371,7 +371,7 @@ class Model
         }
         $result = $this->app_db->query(
             $this->app_db->prepare(
-                "DELETE FROM {$this->table_name} {$condition_to_check}",
+                "DELETE FROM `{$this->table_name}` {$condition_to_check}",
                 $all_values
             )
         );
