@@ -27,7 +27,7 @@ class Config
 
     const VAR_PREFIX = 'integration-for-zoho-campaigns-and-cf7';
 
-    const VERSION = '1.0';
+    const VERSION = '1.1.2';
 
     const DB_VERSION = '1.0';
 
