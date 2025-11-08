@@ -1,2 +1,8 @@
 .gitignore merge=ours
+# Mark image files as binary to prevent corruption
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
 * text eol=lf
