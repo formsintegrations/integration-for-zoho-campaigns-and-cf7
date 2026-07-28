@@ -34,7 +34,8 @@
     "clear-lint-cache": "eslint . --cache --cache-file eslint-cache/eslintcache",
     "i18n:json": "npx po2json locale.pot ../languages/e_zc-admin-script.json -f jed1.x",
     "i18n:php": "[ ! -d \"languages/\" ] && mkdir languages/;wp i18n make-pot ./ locale.pot --include='*.php' --skip-js --slug=fitzocacf --headers='{\"Last-Translator\":\"support@formsintegrations.com\",\"Language-Team\":\"support@formsintegrations.com\",\"PO-Revision-Date\":\"\",\"Report-Msgid-Bugs-To\":\"\"}' && node ./pot-to-php.js locale.pot languages/generatedString.php i18nStrings",
-    "clean": "npx rimraf node_modules yarn.lock package-lock.json"
+    "clean": "npx rimraf node_modules yarn.lock package-lock.json",
+    "zip": "bin/build-zip.sh"
   },
   "husky": {
     "hooks": {
