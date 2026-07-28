@@ -2,9 +2,9 @@
 Contributors: formsintegrations
 Tags: Zoho with CF7,  CF7 with Zoho, Zoho and CF7, CF7 and Zoho, Zoho Integration, CF7 Integration, Zoho Campaigns, Integration, CF7 Form
 Requires at least: 5.1
-Tested up to: 6.8
+Tested up to: 7.0.2
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 
 
@@ -70,6 +70,9 @@ Plugin Github [Repository](https://github.com/formsintegrations/integration-for-
 
 
 == Changelog ==
+
+= 1.1.3 =
+* Compatibility: tested up to WordPress 7.0.2
 
 = 1.1.2 =
 * Plugin is not rendering issue fix
